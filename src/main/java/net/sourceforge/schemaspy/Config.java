@@ -1073,7 +1073,7 @@ public class Config
         this.columnDetails = new ArrayList<String>();
         if (columnDetails == null || columnDetails.length() == 0) {
             // not specified, so use defaults
-            columnDetails = "id table column type size nulls auto default";
+            columnDetails = "id table column type size nulls auto default comments";
         }
 
         for (String detail : columnDetails.split("[\\s,'\"]")) {
@@ -1388,7 +1388,7 @@ public class Config
             if (include == null)
                 break;
 
-            int separator = include.indexOf("::");
+            int separator = include.indexOf(":");
             if (separator == -1)
                 throw new InvalidConfigurationException("include directive in " + dbPropertiesLoadedFrom + " must have '::' between dbType and key");
 
