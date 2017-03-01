@@ -1073,7 +1073,7 @@ public class Config
         this.columnDetails = new ArrayList<String>();
         if (columnDetails == null || columnDetails.length() == 0) {
             // not specified, so use defaults
-            columnDetails = "id table column type size nulls auto default comments comments comments comments";
+            columnDetails = "id table column type size nulls auto default comments";
         }
 
         for (String detail : columnDetails.split("[\\s,'\"]")) {
