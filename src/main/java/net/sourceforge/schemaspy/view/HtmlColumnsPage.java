@@ -231,7 +231,7 @@ public class HtmlColumnsPage extends HtmlFormatter {
             headings.put("default", getTH(selectedColumn, "Default", "Default value", null));
             headings.put("children", getTH(selectedColumn, "Children", "Columns in tables that reference this column", null));
             headings.put("parents", getTH(selectedColumn, "Parents", "Columns in tables that are referenced by this column", null));
-            headings.put("comments", "<th title='Comments' class='comment'><span class='notSortedByColumn'>Comments</span></th>");
+            headings.put("comments", "<th title='Label' class='comment'><span class='notSortedByColumn'>Label</span></th>");
 
             // output the headings in the order specified
             if (details != null) {  // redundant, but keeps compiler happy

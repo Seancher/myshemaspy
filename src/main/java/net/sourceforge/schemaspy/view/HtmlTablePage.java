@@ -212,17 +212,39 @@ public class HtmlTablePage extends HtmlFormatter {
             writeRelatives(column, true, path, even, out);
             out.writeln(" </td>");
         }
-        out.write(" <td class='comment detail'>");
+
+        // Comments: Label (LABEL), Help (HELP), Column label (COL-LABEL), Description (DESC)
+        int idxCurFrom = 0;
+        int idxCurTo = 0;
         String comments = column.getComments();
+        comments = "abc|def|ghi|jkl";
+        for (int i = 0; i < 4; i++) {
+            idxCurTo = comments.indexOf('|', idxCurFrom) == -1 ? comments.length(): comments.indexOf('|', idxCurFrom);
+            writeCommentColumns(comments, idxCurFrom, idxCurTo, out);
+            idxCurFrom = idxCurTo + 1;
+        }
+
+        out.writeln("</tr>");
+    }
+
+    /**
+     * Write comments column
+     * @param comments String
+     * @param idxFrom int
+     * @param idxTo int
+     * @param out LineWriter
+     * @throws IOException
+     */
+    private void writeCommentColumns(String comments, int idxFrom, int idxTo, LineWriter out) throws IOException {
+        out.write(" <td class='comment detail'>");
         if (comments != null) {
             if (encodeComments)
-                for (int i = 0; i < comments.length(); ++i)
+                for (int i = idxFrom; i < idxTo; ++i)
                     out.write(HtmlEncoder.encodeToken(comments.charAt(i)));
             else
                 out.write(comments);
         }
         out.writeln("</td>");
-        out.writeln("</tr>");
     }
 
     /**
