@@ -168,7 +168,7 @@ public class HtmlColumnsPage extends HtmlFormatter {
         html.writeln("<p>");
         html.writeln("<form name='options' action=''>");
         if (Config.getInstance().getColumnDetails().contains("comments"))
-            html.writeln(" <label for='showComments'><input type=checkbox id='showComments'>Comments</label>");
+            html.writeln(" <label for='showComments'><input type=checkbox checked id='showComments'>Comments</label>");
         html.writeln(" <label for='showLegend'><input type=checkbox checked id='showLegend'>Legend</label>");
         html.writeln("</form>");
         html.writeln("</table>");
@@ -209,6 +209,9 @@ public class HtmlColumnsPage extends HtmlFormatter {
                 else
                     out.writeln("<colgroup>");
             }
+            // Add borders for the comment's columns (Label, Help, Col.Label, Description)
+            for (int i = 0; i < 3; i++)
+                out.writeln("<colgroup class='comment'>");
         } else {
             int numCols = hasTableIds ? 9 : 8;
             for (int i = 0; i < numCols; ++i) {
@@ -239,6 +242,11 @@ public class HtmlColumnsPage extends HtmlFormatter {
                     out.writeln(headings.get(detail));
                 }
             }
+            // Comments: Label (LABEL) (*label is set separately see 8 lines above),
+            //           Help (HELP), Column label (COL-LABEL), Description (DESC)
+            out.writeln("  <th title='Help' class='comment'><span class='notSortedByColumn'>Help</span></th>");
+            out.writeln("  <th title='Column Label' class='comment'><span class='notSortedByColumn'>Col.Label</span></th>");
+            out.writeln("  <th title='Description' class='comment'><span class='notSortedByColumn'>Description</span></th>");
         } else {
             if (hasTableIds)
                 out.writeln(getTH(selectedColumn, "ID", null, "right"));
