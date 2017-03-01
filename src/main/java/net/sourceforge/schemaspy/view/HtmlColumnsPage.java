@@ -213,7 +213,7 @@ public class HtmlColumnsPage extends HtmlFormatter {
             for (int i = 0; i < 3; i++)
                 out.writeln("<colgroup class='comment'>");
         } else {
-            int numCols = hasTableIds ? 9 : 8;
+            int numCols = hasTableIds ? 12 : 11;
             for (int i = 0; i < numCols; ++i) {
                 out.writeln("<colgroup>");
             }
@@ -259,6 +259,9 @@ public class HtmlColumnsPage extends HtmlFormatter {
             out.writeln(getTH(selectedColumn, "Children", "Columns in tables that reference this column", null));
             out.writeln(getTH(selectedColumn, "Parents", "Columns in tables that are referenced by this column", null));
             out.writeln("  <th title='Comments' class='comment'><span class='notSortedByColumn'>Comments</span></th>");
+            out.writeln("  <th title='Help' class='comment'><span class='notSortedByColumn'>Help</span></th>");
+            out.writeln("  <th title='Column Label' class='comment'><span class='notSortedByColumn'>Col.Label</span></th>");
+            out.writeln("  <th title='Description' class='comment'><span class='notSortedByColumn'>Description</span></th>");
         }
 
         out.writeln("</tr>");
