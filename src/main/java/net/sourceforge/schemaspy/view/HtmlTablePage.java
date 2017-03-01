@@ -217,7 +217,6 @@ public class HtmlTablePage extends HtmlFormatter {
         int idxCurFrom = 0;
         int idxCurTo = 0;
         String comments = column.getComments();
-        comments = "abc|def|ghi|jkl";
         for (int i = 0; i < 4; i++) {
             idxCurTo = comments.indexOf('|', idxCurFrom) == -1 ? comments.length(): comments.indexOf('|', idxCurFrom);
             writeCommentColumns(comments, idxCurFrom, idxCurTo, out);
