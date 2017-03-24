@@ -255,17 +255,16 @@ public class HtmlColumnsPage extends HtmlFormatter {
             if (hasTableIds)
                 out.writeln(getTH(selectedColumn, "ID", null, "right"));
             out.writeln(getTH(selectedColumn, "Column", null, null));
-            out.writeln(getTH(selectedColumn, "Type", null, null));
-            out.writeln(getTH(selectedColumn, "Size", null, null));
+            out.writeln("  <th title='Type' class='comment'><span class='notSortedByColumn'>Type</span></th>");
+            out.writeln("  <th title='Format' class='comment'><span class='notSortedByColumn'>Format</span></th>");
             out.writeln(getTH(selectedColumn, "Nulls", "Are nulls allowed?", null));
-            out.writeln(getTH(selectedColumn, "Auto", "Is column automatically updated?", null));
             out.writeln(getTH(selectedColumn, "Default", "Default value", null));
             out.writeln(getTH(selectedColumn, "Children", "Columns in tables that reference this column", null));
             out.writeln(getTH(selectedColumn, "Parents", "Columns in tables that are referenced by this column", null));
-            out.writeln("  <th title='Comments' class='comment'><span class='notSortedByColumn'>Comments</span></th>");
-            out.writeln("  <th title='Help' class='comment'><span class='notSortedByColumn'>Help</span></th>");
+            out.writeln("  <th title='Label' class='comment'><span class='notSortedByColumn'>Label</span></th>");
             out.writeln("  <th title='Column Label' class='comment'><span class='notSortedByColumn'>Col.Label</span></th>");
-            out.writeln("  <th title='Description1' class='comment'><span class='notSortedByColumn'>Description1</span></th>");
+            out.writeln("  <th title='Help' class='comment'><span class='notSortedByColumn'>Help</span></th>");
+            out.writeln("  <th title='Description' class='comment'><span class='notSortedByColumn'>Description</span></th>");
         }
 
         out.writeln("</tr>");
