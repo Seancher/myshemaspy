@@ -210,7 +210,7 @@ public class HtmlColumnsPage extends HtmlFormatter {
                     out.writeln("<colgroup>");
             }
             // Add borders for the comment's columns (Label, Help, Col.Label, Description)
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < 6; i++)
                 out.writeln("<colgroup class='comment'>");
         } else {
             int numCols = hasTableIds ? 12 : 11;
@@ -240,12 +240,17 @@ public class HtmlColumnsPage extends HtmlFormatter {
             if (details != null) {  // redundant, but keeps compiler happy
                 for (String detail : details) {
                     out.writeln(headings.get(detail));
+                    if (detail.equals("column")) {
+                        out.writeln("  <th title='Type' class='comment'><span class='notSortedByColumn'>Type</span></th>");
+                        out.writeln("  <th title='Format' class='comment'><span class='notSortedByColumn'>Format</span></th>");
+                    }
                 }
             }
             // Comments: Label (LABEL) (*label is set separately see 8 lines above),
             //           Help (HELP), Column label (COL-LABEL), Description (DESC)
-            out.writeln("  <th title='Help' class='comment'><span class='notSortedByColumn'>Help</span></th>");
+            out.writeln("  <th title='Label' class='comment'><span class='notSortedByColumn'>Label</span></th>");
             out.writeln("  <th title='Column Label' class='comment'><span class='notSortedByColumn'>Col.Label</span></th>");
+            out.writeln("  <th title='Help' class='comment'><span class='notSortedByColumn'>Help</span></th>");
             out.writeln("  <th title='Description' class='comment'><span class='notSortedByColumn'>Description</span></th>");
         } else {
             if (hasTableIds)
@@ -261,7 +266,7 @@ public class HtmlColumnsPage extends HtmlFormatter {
             out.writeln("  <th title='Comments' class='comment'><span class='notSortedByColumn'>Comments</span></th>");
             out.writeln("  <th title='Help' class='comment'><span class='notSortedByColumn'>Help</span></th>");
             out.writeln("  <th title='Column Label' class='comment'><span class='notSortedByColumn'>Col.Label</span></th>");
-            out.writeln("  <th title='Description' class='comment'><span class='notSortedByColumn'>Description</span></th>");
+            out.writeln("  <th title='Description1' class='comment'><span class='notSortedByColumn'>Description1</span></th>");
         }
 
         out.writeln("</tr>");
