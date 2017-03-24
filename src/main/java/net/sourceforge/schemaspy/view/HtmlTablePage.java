@@ -166,25 +166,43 @@ public class HtmlTablePage extends HtmlFormatter {
             out.write(" <td class='detail'>");
         out.write(column.getName());
         out.writeln("</td>");
-        out.write(" <td class='detail'>");
-        out.write(column.getTypeName().toLowerCase());
-        out.writeln("</td>");
-        out.write(" <td class='detail' align='right'>");
-        out.write(column.getDetailedSize());
-        out.writeln("</td>");
+
+//        Type
+//        out.write(" <td class='detail'>");
+//        out.write(column.getTypeName().toLowerCase());
+//        out.writeln("</td>");
+
+//        Size
+//        out.write(" <td class='detail' align='right'>");
+//        out.write(column.getDetailedSize());
+//        out.writeln("</td>");
+
+        // Type, Format
+        int idxCurFrom = 0;
+        int idxCurTo = 0;
+        String comments = column.getComments();
+        for (int i = 0; i < 2; i++) {
+            idxCurTo = comments.indexOf('|', idxCurFrom) == -1 ? comments.length(): comments.indexOf('|', idxCurFrom);
+            writeCommentColumns(comments, idxCurFrom, idxCurTo, out);
+            idxCurFrom = idxCurTo + 1;
+        }
+
+//        Null
         out.write(" <td class='detail' align='center'");
         if (column.isNullable())
             out.write(" title='nullable'>&nbsp;&radic;&nbsp;");
         else
             out.write(">");
         out.writeln("</td>");
-        out.write(" <td class='detail' align='center'");
-        if (column.isAutoUpdated()) {
-            out.write(" title='Automatically updated by the database'>&nbsp;&radic;&nbsp;");
-        } else {
-            out.write(">");
-        }
-        out.writeln("</td>");
+
+//        Auto
+//        out.write(" <td class='detail' align='center'");
+//        if (column.isAutoUpdated()) {
+//            out.write(" title='Automatically updated by the database'>&nbsp;&radic;&nbsp;");
+//        } else {
+//            out.write(">");
+//        }
+//        out.writeln("</td>");
 
         Object defaultValue = column.getDefaultValue();
         if (defaultValue != null || column.isNullable()) {
@@ -214,9 +232,6 @@ public class HtmlTablePage extends HtmlFormatter {
         }
 
         // Comments: Label (LABEL), Help (HELP), Column label (COL-LABEL), Description (DESC)
-        int idxCurFrom = 0;
-        int idxCurTo = 0;
-        String comments = column.getComments();
         for (int i = 0; i < 4; i++) {
             idxCurTo = comments.indexOf('|', idxCurFrom) == -1 ? comments.length(): comments.indexOf('|', idxCurFrom);
             writeCommentColumns(comments, idxCurFrom, idxCurTo, out);

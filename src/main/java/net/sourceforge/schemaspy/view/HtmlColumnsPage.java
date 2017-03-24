@@ -248,7 +248,6 @@ public class HtmlColumnsPage extends HtmlFormatter {
             }
             // Comments: Label (LABEL) (*label is set separately see 8 lines above),
             //           Help (HELP), Column label (COL-LABEL), Description (DESC)
-            out.writeln("  <th title='Label' class='comment'><span class='notSortedByColumn'>Label</span></th>");
             out.writeln("  <th title='Column Label' class='comment'><span class='notSortedByColumn'>Col.Label</span></th>");
             out.writeln("  <th title='Help' class='comment'><span class='notSortedByColumn'>Help</span></th>");
             out.writeln("  <th title='Description' class='comment'><span class='notSortedByColumn'>Description</span></th>");
