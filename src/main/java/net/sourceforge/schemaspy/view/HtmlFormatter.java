@@ -77,7 +77,7 @@ public class HtmlFormatter {
         out.write("  <td class='heading' valign='middle'>");
         out.write("<span class='header'>");
         if (table == null)
-            out.write("SchemaSpy Analysis of ");
+            out.write("Analysis of OpenEdge RBS database");
         out.write(getDescription(db, table, text, true));
         out.write("</span>");
         if (table == null && db.getDescription() != null)
@@ -146,28 +146,28 @@ public class HtmlFormatter {
             else
                 description.append("Table ");
         }
-        if (hoverHelp)
-            description.append("<span title='Database'>");
-        description.append(db.getName());
-        if (hoverHelp)
-            description.append("</span>");
-        if (db.getSchema() != null) {
-            description.append('.');
-            if (hoverHelp)
-                description.append("<span title='Schema'>");
-            description.append(db.getSchema());
-            if (hoverHelp)
-                description.append("</span>");
-        } else if (db.getCatalog() != null) {
-            description.append('.');
-            if (hoverHelp)
-                description.append("<span title='Catalog'>");
-            description.append(db.getCatalog());
-            if (hoverHelp)
-                description.append("</span>");
-        }
+//        if (hoverHelp)
+//            description.append("<span title='Database'>");
+//        description.append(db.getName());
+//        if (hoverHelp)
+//            description.append("</span>");
+//        if (db.getSchema() != null) {
+//            description.append('.');
+//            if (hoverHelp)
+//                description.append("<span title='Schema'>");
+//            description.append(db.getSchema());
+//            if (hoverHelp)
+//                description.append("</span>");
+//        } else if (db.getCatalog() != null) {
+//            description.append('.');
+//            if (hoverHelp)
+//                description.append("<span title='Catalog'>");
+//            description.append(db.getCatalog());
+//            if (hoverHelp)
+//                description.append("</span>");
+//        }
         if (table != null) {
-            description.append('.');
+//            description.append('.');
             if (hoverHelp)
                 description.append("<span title='Table'>");
             description.append(table.getName());
