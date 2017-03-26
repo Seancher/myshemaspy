@@ -243,6 +243,7 @@ public class HtmlColumnsPage extends HtmlFormatter {
                     if (detail.equals("column")) {
                         out.writeln("  <th title='Type' class='comment'><span class='notSortedByColumn'>Type</span></th>");
                         out.writeln("  <th title='Format' class='comment'><span class='notSortedByColumn'>Format</span></th>");
+                        out.writeln("  <th title='# of Uniques' class='comment'><span class='notSortedByColumn'># of Uniques</span></th>");
                     }
                 }
             }
@@ -257,6 +258,7 @@ public class HtmlColumnsPage extends HtmlFormatter {
             out.writeln(getTH(selectedColumn, "Column", null, null));
             out.writeln("  <th title='Type' class='comment'><span class='notSortedByColumn'>Type</span></th>");
             out.writeln("  <th title='Format' class='comment'><span class='notSortedByColumn'>Format</span></th>");
+            out.writeln("  <th title='# of Uniques' class='comment'><span class='notSortedByColumn'># of Uniques</span></th>");
             out.writeln(getTH(selectedColumn, "Nulls", "Are nulls allowed?", null));
             out.writeln(getTH(selectedColumn, "Default", "Default value", null));
             out.writeln(getTH(selectedColumn, "Children", "Columns in tables that reference this column", null));
