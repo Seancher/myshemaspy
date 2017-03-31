@@ -24,26 +24,21 @@ import java.util.Collection;
 import java.util.HashSet;
 import java.util.List;
 
-import net.sourceforge.schemaspy.DbAnalyzer;
 import net.sourceforge.schemaspy.model.Database;
-import net.sourceforge.schemaspy.model.ForeignKeyConstraint;
-import net.sourceforge.schemaspy.model.Table;
-import net.sourceforge.schemaspy.model.TableColumn;
 import net.sourceforge.schemaspy.util.LineWriter;
 
 /**
- * This page lists all of the 'things that might not be quite right'
- * about the schema.
+ * This page loads data from a file and show the data on a table
  *
- * @author John Currier
+ * @author Sergey Chernov
  */
-public class HtmlTmsCodesPage extends HtmlFormatter {
-    private static HtmlTmsCodesPage instance = new HtmlTmsCodesPage();
+public class HtmlTableFromFilePage extends HtmlFormatter {
+    private static HtmlTableFromFilePage instance = new HtmlTableFromFilePage();
 
     /**
      * Singleton: Don't allow instantiation
      */
-    private HtmlTmsCodesPage() {
+    private HtmlTableFromFilePage() {
     }
 
     /**
@@ -51,13 +46,13 @@ public class HtmlTmsCodesPage extends HtmlFormatter {
      *
      * @return the singleton instance
      */
-    public static HtmlTmsCodesPage getInstance() {
+    public static HtmlTableFromFilePage getInstance() {
         return instance;
     }
 
-    public void write(Database database, Collection<Table> tables, List<? extends ForeignKeyConstraint> impliedConstraints, LineWriter out) throws IOException {
+    public void write(Database database, String fileName, LineWriter out) throws IOException {
         writeHeader(database, out);
-        writeImpliedConstraints(impliedConstraints, out);
+        writeMenuTree(fileName, out);
         writeFooter(out);
     }
 
@@ -71,17 +66,10 @@ public class HtmlTmsCodesPage extends HtmlFormatter {
         html.writeln("<ul>");
     }
 
-    private void writeImpliedConstraints(List<? extends ForeignKeyConstraint> impliedConstraints, LineWriter out) throws IOException {
+    private void writeMenuTree(String fileName, LineWriter out) throws IOException {
         out.writeln("<li>");
         out.writeln("<b>Columns whose name and type imply a relationship to another table's primary key:</b>");
         int numDetected = 0;
-
-        for (ForeignKeyConstraint impliedConstraint : impliedConstraints) {
-            Table childTable = impliedConstraint.getChildTable();
-            if (!childTable.isView()) {
-                ++numDetected;
-            }
-        }
 
         if (numDetected > 0) {
             out.writeln("<table class='dataTable' border='1' rules='groups'>");
@@ -95,53 +83,39 @@ public class HtmlTmsCodesPage extends HtmlFormatter {
             out.writeln("</thead>");
             out.writeln("<tbody>");
 
-            for (ForeignKeyConstraint impliedConstraint : impliedConstraints) {
-                Table childTable = impliedConstraint.getChildTable();
-                if (!childTable.isView()) {
-                    out.writeln(" <tr>");
-
-                    out.write("  <td class='detail'>");
-                    String tableName = childTable.getName();
-                    out.write("<a href='tables/");
-                    out.write(urlEncode(tableName));
-                    out.write(".html'>");
-                    out.write(tableName);
-                    out.write("</a>.");
-                    out.write(ForeignKeyConstraint.toString(impliedConstraint.getChildColumns()));
-                    out.writeln("</td>");
-
-                    out.write("  <td class='detail'>");
-                    tableName = impliedConstraint.getParentTable().getName();
-                    out.write("<a href='tables/");
-                    out.write(urlEncode(tableName));
-                    out.write(".html'>");
-                    out.write(tableName);
-                    out.write("</a>.");
-                    out.write(ForeignKeyConstraint.toString(impliedConstraint.getParentColumns()));
-                    out.writeln("</td>");
-
-                    out.writeln(" </tr>");
-                }
-            }
+//            for (ForeignKeyConstraint impliedConstraint : impliedConstraints) {
+//                Table childTable = impliedConstraint.getChildTable();
+//                if (!childTable.isView()) {
+//                    out.writeln(" <tr>");
+//
+//                    out.write("  <td class='detail'>");
+//                    String tableName = childTable.getName();
+//                    out.write("<a href='tables/");
+//                    out.write(urlEncode(tableName));
+//                    out.write(".html'>");
+//                    out.write(tableName);
+//                    out.write("</a>.");
+//                    out.write(ForeignKeyConstraint.toString(impliedConstraint.getChildColumns()));
+//                    out.writeln("</td>");
+//
+//                    out.write("  <td class='detail'>");
+//                    tableName = impliedConstraint.getParentTable().getName();
+//                    out.write("<a href='tables/");
+//                    out.write(urlEncode(tableName));
+//                    out.write(".html'>");
+//                    out.write(tableName);
+//                    out.write("</a>.");
+//                    out.write(ForeignKeyConstraint.toString(impliedConstraint.getParentColumns()));
+//                    out.writeln("</td>");
+//
+//                    out.writeln(" </tr>");
+//                }
+//            }
 
             out.writeln("</tbody>");
             out.writeln("</table>");
         }
-        writeSummary(numDetected, out);
         out.writeln("<p></li>");
-    }
-
-    private void writeSummary(int numAnomalies, LineWriter out) throws IOException {
-        switch (numAnomalies) {
-            case 0:
-                out.write("<br>Anomaly not detected");
-                break;
-            case 1:
-                out.write("1 instance of anomaly detected");
-                break;
-            default:
-                out.write(numAnomalies + " instances of anomaly detected");
-        }
     }
 
     @Override
@@ -151,7 +125,7 @@ public class HtmlTmsCodesPage extends HtmlFormatter {
     }
 
     @Override
-    protected boolean isTmsCodesPage() {
+    protected boolean isTableFromFilePage() {
         return true;
     }
 }

@@ -58,15 +58,11 @@ public class HtmlTmsParamsPage extends HtmlFormatter {
     public void write(Database database, Collection<Table> tables, List<? extends ForeignKeyConstraint> impliedConstraints, LineWriter out) throws IOException {
         writeHeader(database, out);
         writeImpliedConstraints(impliedConstraints, out);
-        writeTablesWithoutIndexes(DbAnalyzer.getTablesWithoutIndexes(new HashSet<Table>(tables)), out);
-        writeTablesWithOneColumn(DbAnalyzer.getTablesWithOneColumn(tables), out);
-        writeTablesWithIncrementingColumnNames(DbAnalyzer.getTablesWithIncrementingColumnNames(tables), out);
-        writeDefaultNullStrings(DbAnalyzer.getDefaultNullStringColumns(new HashSet<Table>(tables)), out);
         writeFooter(out);
     }
 
     private void writeHeader(Database database, LineWriter html) throws IOException {
-        writeHeader(database, null, "TMS Params", html);
+        writeHeader(database, null, "Menu Tree", html);
         html.writeln("<table width='100%'>");
         if (sourceForgeLogoEnabled())
             html.writeln("  <tr><td class='container' align='right' valign='top' colspan='2'><a href='http://sourceforge.net' target='_blank'><img src='http://sourceforge.net/sflogo.php?group_id=137197&amp;type=1' alt='SourceForge.net' border='0' height='31' width='88'></a></td></tr>");
@@ -133,153 +129,6 @@ public class HtmlTmsParamsPage extends HtmlFormatter {
         }
         writeSummary(numDetected, out);
         out.writeln("<p></li>");
-    }
-
-    private void writeTablesWithoutIndexes(List<Table> unindexedTables, LineWriter out) throws IOException {
-        out.writeln("<li>");
-        out.writeln("<b>Tables without indexes:</b>");
-        if (!unindexedTables.isEmpty()) {
-            out.writeln("<table class='dataTable' border='1' rules='groups'>");
-            out.writeln("<colgroup>");
-            if (displayNumRows)
-                out.writeln("<colgroup>");
-            out.writeln("<thead align='left'>");
-            out.writeln("<tr>");
-            out.write("  <th>Table</th>");
-            if (displayNumRows)
-                out.write("<th>Rows</th>");
-            out.writeln();
-            out.writeln("</tr>");
-            out.writeln("</thead>");
-            out.writeln("<tbody>");
-
-            for (Table table : unindexedTables) {
-                out.writeln(" <tr>");
-                out.write("  <td class='detail'>");
-                out.write("<a href='tables/");
-                out.write(urlEncode(table.getName()));
-                out.write(".html'>");
-                out.write(table.getName());
-                out.write("</a>");
-                out.writeln("</td>");
-                if (displayNumRows) {
-                    out.write("  <td class='detail' align='right'>");
-                    if (table.getNumRows() >= 0)
-                        out.write(String.valueOf(NumberFormat.getIntegerInstance().format(table.getNumRows())));
-                    else
-                        out.write("&nbsp;");
-                    out.writeln("</td>");
-                }
-                out.writeln(" </tr>");
-            }
-
-            out.writeln("</tbody>");
-            out.writeln("</table>");
-        }
-        writeSummary(unindexedTables.size(), out);
-        out.writeln("<p></li>");
-    }
-
-    private void writeTablesWithIncrementingColumnNames(List<Table> tables, LineWriter out) throws IOException {
-        out.writeln("<li>");
-        out.writeln("<b>Tables with incrementing column names, potentially indicating denormalization:</b>");
-        if (!tables.isEmpty()) {
-            out.writeln("<table class='dataTable' border='1' rules='groups'>");
-            out.writeln("<thead align='left'>");
-            out.writeln("<tr>");
-            out.writeln("  <th>Table</th>");
-            out.writeln("</tr>");
-            out.writeln("</thead>");
-            out.writeln("<tbody>");
-
-            for (Table table : tables) {
-                out.writeln(" <tr>");
-                out.write("  <td class='detail'>");
-                out.write("<a href='tables/");
-                out.write(urlEncode(table.getName()));
-                out.write(".html'>");
-                out.write(table.getName());
-                out.write("</a>");
-                out.writeln("</td>");
-                out.writeln(" </tr>");
-            }
-
-            out.writeln("</tbody>");
-            out.writeln("</table>");
-        }
-        writeSummary(tables.size(), out);
-        out.writeln("<p></li>");
-    }
-
-    private void writeTablesWithOneColumn(List<Table> tables, LineWriter out) throws IOException {
-        out.writeln("<li>");
-        out.write("<b>Tables that contain a single column:</b>");
-        if (!tables.isEmpty()) {
-            out.writeln("<table class='dataTable' border='1' rules='groups'>");
-            out.writeln("<colgroup>");
-            out.writeln("<colgroup>");
-            out.writeln("<thead align='left'>");
-            out.writeln("<tr>");
-            out.writeln("  <th>Table</th>");
-            out.writeln("  <th>Column</th>");
-            out.writeln("</tr>");
-            out.writeln("</thead>");
-            out.writeln("<tbody>");
-
-            for (Table table : tables) {
-                out.writeln(" <tr>");
-                out.write("  <td class='detail'>");
-                out.write("<a href='tables/");
-                out.write(urlEncode(table.getName()));
-                out.write(".html'>");
-                out.write(table.getName());
-                out.write("</a></td><td class='detail'>");
-                out.write(table.getColumns().get(0).toString());
-                out.writeln("</td>");
-                out.writeln(" </tr>");
-            }
-
-            out.writeln("</tbody>");
-            out.writeln("</table>");
-        }
-        writeSummary(tables.size(), out);
-        out.writeln("<p></li>");
-    }
-
-    private void writeDefaultNullStrings(List<TableColumn> uniqueNullables, LineWriter out) throws IOException {
-        out.writeln("<li>");
-        out.writeln("<b>Columns whose default value is the word 'NULL' or 'null', but the SQL NULL value may have been intended:</b>");
-        writeColumnBasedAnomaly(uniqueNullables, out);
-        out.writeln("<p></li>");
-    }
-
-    private void writeColumnBasedAnomaly(List<TableColumn> columns, LineWriter out) throws IOException {
-        if (!columns.isEmpty()) {
-            out.writeln("<table class='dataTable' border='1' rules='groups'>");
-            out.writeln("<thead align='left'>");
-            out.writeln("<tr>");
-            out.writeln("  <th>Column</th>");
-            out.writeln("</tr>");
-            out.writeln("</thead>");
-            out.writeln("<tbody>");
-            for (TableColumn column : columns) {
-                out.writeln(" <tr>");
-                out.write("  <td class='detail'>");
-                String tableName = column.getTable().getName();
-                out.write("<a href='tables/");
-                out.write(urlEncode(tableName));
-                out.write(".html'>");
-                out.write(tableName);
-                out.write("</a>.");
-                out.write(column.getName());
-                out.writeln("</td>");
-                out.writeln(" </tr>");
-            }
-
-            out.writeln("</tbody>");
-            out.writeln("</table>");
-        }
-        writeSummary(columns.size(), out);
     }
 
     private void writeSummary(int numAnomalies, LineWriter out) throws IOException {

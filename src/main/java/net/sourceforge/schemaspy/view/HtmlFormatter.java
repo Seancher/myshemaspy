@@ -133,7 +133,7 @@ public class HtmlFormatter {
         if (config.hasRoutines())
             html.writeln("  <li" + (isRoutinesPage() ? " id='current'" : "") + "><a href='" + path + "routines.html' title='Stored Procedures / Functions'>Routines</a></li>");
 //        html.writeln("  <li><a href='http://sourceforge.net/donate/index.php?group_id=137197' title='Please help keep SchemaSpy alive' target='_blank'>Donate</a></li>");
-        html.writeln("  <li" + (isMenuTreePage() ? " id='current'" : "") + "><a href='" + path + "menutree.html' title='Menu Tree'>Menu Tree</a></li>");
+        html.writeln("  <li" + (isTableFromFilePage() ? " id='current'" : "") + "><a href='" + path + "menutree.html' title='Menu Tree'>Menu Tree</a></li>");
         html.writeln("  <li" + (isTmsCodesPage() ? " id='current'" : "") + "><a href='" + path + "tmscodes.html' title='TMS Codes'>TMS Codes</a></li>");
         html.writeln("  <li" + (isTmsParamsPage() ? " id='current'" : "") + "><a href='" + path + "tmsparams.html' title='TMS Parameters'>TMS Params</a></li>");
         html.writeln(" </ul>");
@@ -343,11 +343,11 @@ public class HtmlFormatter {
     }
 
     /**
-     * Override and return true if you're the menu tree page
+     * Override and return true if you're the table from file page
      *
      * @return boolean
      */
-    protected boolean isMenuTreePage() {
+    protected boolean isTableFromFilePage() {
         return false;
     }
 
