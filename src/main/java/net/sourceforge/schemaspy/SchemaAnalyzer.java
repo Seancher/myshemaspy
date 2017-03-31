@@ -64,6 +64,9 @@ import net.sourceforge.schemaspy.util.LogFormatter;
 import net.sourceforge.schemaspy.util.ResourceWriter;
 import net.sourceforge.schemaspy.view.DotFormatter;
 import net.sourceforge.schemaspy.view.HtmlAnomaliesPage;
+import net.sourceforge.schemaspy.view.HtmlMenuTreePage;
+import net.sourceforge.schemaspy.view.HtmlTmsCodesPage;
+import net.sourceforge.schemaspy.view.HtmlTmsParamsPage;
 import net.sourceforge.schemaspy.view.HtmlColumnsPage;
 import net.sourceforge.schemaspy.view.HtmlConstraintsPage;
 import net.sourceforge.schemaspy.view.HtmlMainIndexPage;
@@ -357,6 +360,24 @@ public class SchemaAnalyzer {
 
                 progressListener.graphingSummaryProgressed();
 
+                out = new LineWriter(new File(outputDir, "menutree.html"), 16 * 1024, config.getCharset());
+                HtmlMenuTreePage.getInstance().write(db, tables, impliedConstraints, out);
+                out.close();
+
+                progressListener.graphingSummaryProgressed();
+
+                out = new LineWriter(new File(outputDir, "tmscodes.html"), 16 * 1024, config.getCharset());
+                HtmlTmsCodesPage.getInstance().write(db, tables, impliedConstraints, out);
+                out.close();
+
+                progressListener.graphingSummaryProgressed();
+
+                out = new LineWriter(new File(outputDir, "tmsparams.html"), 16 * 1024, config.getCharset());
+                HtmlTmsParamsPage.getInstance().write(db, tables, impliedConstraints, out);
+                out.close();
+
+                progressListener.graphingSummaryProgressed();
+
                 for (HtmlColumnsPage.ColumnInfo columnInfo : HtmlColumnsPage.getInstance().getColumnInfos().values()) {
                     out = new LineWriter(new File(outputDir, columnInfo.getLocation()), 16 * 1024, config.getCharset());
                     HtmlColumnsPage.getInstance().write(db, tables, columnInfo, out);
@@ -637,7 +658,7 @@ public class SchemaAnalyzer {
 
         // if a classpath has been specified then use it to find the driver,
         // otherwise use whatever was used to load this class.
-        // thanks to Bruno Leonardo Gonçalves for this implementation that he
+        // thanks to Bruno Leonardo Gonï¿½alves for this implementation that he
         // used to resolve issues when running under Maven
         if (classpath.size() > 0) {
             loader = new URLClassLoader(classpath.toArray(new URL[classpath.size()]));
