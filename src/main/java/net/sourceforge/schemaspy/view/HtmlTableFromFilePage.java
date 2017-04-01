@@ -23,6 +23,9 @@ import java.text.NumberFormat;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.List;
+import java.io.File;
+import java.io.BufferedReader;
+import java.io.FileReader;
 
 import net.sourceforge.schemaspy.model.Database;
 import net.sourceforge.schemaspy.util.LineWriter;
@@ -61,61 +64,87 @@ public class HtmlTableFromFilePage extends HtmlFormatter {
         html.writeln("<table width='100%'>");
         if (sourceForgeLogoEnabled())
             html.writeln("  <tr><td class='container' align='right' valign='top' colspan='2'><a href='http://sourceforge.net' target='_blank'><img src='http://sourceforge.net/sflogo.php?group_id=137197&amp;type=1' alt='SourceForge.net' border='0' height='31' width='88'></a></td></tr>");
-        html.writeln("  <tr><td class='container'><b>Things that might not be 'quite right' about your schema:</b></td></tr>");
+        html.writeln("  <tr><td class='container'><b>Things :</b></td></tr>");
         html.writeln("</table>");
         html.writeln("<ul>");
     }
 
     private void writeMenuTree(String fileName, LineWriter out) throws IOException {
+        int columnCounter = 0;
+        boolean even;
+        String line;
+        File flTable = new File("/Users/schernov/Dropbox/_Study&Work/YEAR 2016-.../Qvantel/projects/schemaspy/" + fileName);
+        FileReader frd = new FileReader(flTable);
+        BufferedReader brd = new BufferedReader(frd);
+
         out.writeln("<li>");
-        out.writeln("<b>Columns whose name and type imply a relationship to another table's primary key:</b>");
-        int numDetected = 0;
+        out.writeln("<b>" + fileName + "</b>");
 
-        if (numDetected > 0) {
-            out.writeln("<table class='dataTable' border='1' rules='groups'>");
-            out.writeln("<colgroup>");
-            out.writeln("<colgroup>");
-            out.writeln("<thead align='left'>");
-            out.writeln("<tr>");
-            out.writeln("  <th>Child Column</th>");
-            out.writeln("  <th>Implied Parent Column</th>");
-            out.writeln("</tr>");
-            out.writeln("</thead>");
-            out.writeln("<tbody>");
+        out.writeln("<table class='dataTable' border='1' rules='groups'>");
+        out.writeln("<colgroup>");
+        out.writeln("<colgroup>");
+        out.writeln("<colgroup>");
+        out.writeln("<colgroup>");
+        out.writeln("<colgroup>");
+        out.writeln("<colgroup>");
+        out.writeln("<colgroup>");
+        out.writeln("<colgroup>");
+        out.writeln("<colgroup>");
+        out.writeln("<colgroup>");
+        out.writeln("<colgroup>");
+        out.writeln("<colgroup>");
+        out.writeln("<colgroup>");
+        out.writeln("<thead align='left'>");
+        out.writeln("<tr>");
+        out.writeln("  <th>Menu Level</th>"); // help  "Level 1 ... 8 and 0: functions outside MenuText " */
+        out.writeln("  <th>Menu place</th>"); // help  "Place 1 ... 8 or  0 if Level is 0" */
+        out.writeln("  <th>MENU- number</th>");
+        out.writeln("  <th>Key-</th>");
+        out.writeln("  <th>Function type</th>");
+        out.writeln("  <th>Label</th>");
+        out.writeln("  <th>Module</th>"); // help "The name of the module Called if function = 3, otherwise empty" */
+        out.writeln("  <th>Function code</th>");
+        out.writeln("  <th>Function name</th>"); // help "Func. name (lowercase) or MenuText HEADER (uppercase)" */
+        out.writeln("  <th>Program Class</th>");
+        out.writeln("  <th>Menu Class Name</th>");
+        out.writeln("  <th>Deny usage</th>"); // help "If YES the this MenuText can't be used !" SKIP */
+        out.writeln("  <th>Token code</th>"); // help "Token code for this menu item" */
+        out.writeln("</tr>");
+        out.writeln("</thead>");
+        out.writeln("<tbody>");
 
-//            for (ForeignKeyConstraint impliedConstraint : impliedConstraints) {
-//                Table childTable = impliedConstraint.getChildTable();
-//                if (!childTable.isView()) {
-//                    out.writeln(" <tr>");
-//
-//                    out.write("  <td class='detail'>");
-//                    String tableName = childTable.getName();
-//                    out.write("<a href='tables/");
-//                    out.write(urlEncode(tableName));
-//                    out.write(".html'>");
-//                    out.write(tableName);
-//                    out.write("</a>.");
-//                    out.write(ForeignKeyConstraint.toString(impliedConstraint.getChildColumns()));
-//                    out.writeln("</td>");
-//
-//                    out.write("  <td class='detail'>");
-//                    tableName = impliedConstraint.getParentTable().getName();
-//                    out.write("<a href='tables/");
-//                    out.write(urlEncode(tableName));
-//                    out.write(".html'>");
-//                    out.write(tableName);
-//                    out.write("</a>.");
-//                    out.write(ForeignKeyConstraint.toString(impliedConstraint.getParentColumns()));
-//                    out.writeln("</td>");
-//
-//                    out.writeln(" </tr>");
-//                }
-//            }
+        while ((line=brd.readLine())!=null) {
+            if (columnCounter++ % 2 == 0)
+                out.write("  <tr class='even'>");
+            else
+                out.write("  <tr class='odd'>");
 
-            out.writeln("</tbody>");
-            out.writeln("</table>");
+            int idxCurFrom = 0;
+            int idxCurTo = 0;
+            for (int i = 0; i < 13; i++) {
+                idxCurTo = line.indexOf('|', idxCurFrom) == -1 ? line.length(): line.indexOf('|', idxCurFrom);
+                writeTableLine(line, idxCurFrom, idxCurTo, out);
+                idxCurFrom = idxCurTo + 1;
+            }
+
+            out.writeln(" </tr>");
         }
+        brd.close();
+        frd.close();
+
+        out.writeln("</tbody>");
+        out.writeln("</table>");
+
         out.writeln("<p></li>");
+    }
+
+    private void writeTableLine(String line, int idxFrom, int idxTo, LineWriter out) throws IOException {
+        out.write(" <td class='detail'>");
+        if (line != null) {
+            for (int i = idxFrom; i < idxTo; ++i)
+                out.write(line.charAt(i));
+        }
+        out.writeln("</td>");
     }
 
     @Override

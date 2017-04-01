@@ -361,7 +361,7 @@ public class SchemaAnalyzer {
                 progressListener.graphingSummaryProgressed();
 
                 out = new LineWriter(new File(outputDir, "menutree.html"), 16 * 1024, config.getCharset());
-                HtmlTableFromFilePage.getInstance().write(db, "fileName", out);
+                HtmlTableFromFilePage.getInstance().write(db, "input/menutree_dump_142017.txt", out);
                 out.close();
 
                 progressListener.graphingSummaryProgressed();
