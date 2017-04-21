@@ -143,8 +143,8 @@ public class HtmlMainIndexPage extends HtmlFormatter {
         writeGeneratedOn(db.getConnectTime(), html);
         html.writeln(" </td></tr>");
         html.writeln(" <tr>");
-        html.write("  <td class='container'>Database Type: ");
-        html.write(db.getDatabaseProduct());
+        html.write("  <td class='container'>");
+//        html.write(db.getDatabaseProduct());
         html.writeln("  </td>");
         html.writeln("  <td class='container' align='right' valign='top' rowspan='3'>");
         if (sourceForgeLogoEnabled())
