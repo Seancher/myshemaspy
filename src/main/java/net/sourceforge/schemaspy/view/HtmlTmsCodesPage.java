@@ -56,17 +56,22 @@ public class HtmlTmsCodesPage extends HtmlFormatter {
     public void write(Database database, String fileName, LineWriter out) throws IOException {
         writeHeader(database, out);
         writeTmsCodes(fileName, out);
-        writeFooter(out);
     }
 
     private void writeHeader(Database database, LineWriter html) throws IOException {
         writeHeader(database, null, "TMS Codes", html);
+
+        html.writeln("<table width='100%'>");
+        html.writeln("<tr><td class='container'>");
+        writeGeneratedOn(database.getConnectTime(), html);
+        html.writeln("</tr>");
+        html.writeln("</table>");
+
         html.writeln("<table width='100%'>");
         if (sourceForgeLogoEnabled())
             html.writeln("  <tr><td class='container' align='right' valign='top' colspan='2'><a href='http://sourceforge.net' target='_blank'><img src='http://sourceforge.net/sflogo.php?group_id=137197&amp;type=1' alt='SourceForge.net' border='0' height='31' width='88'></a></td></tr>");
 //        html.writeln("  <tr><td class='container'><b>Things :</b></td></tr>");
         html.writeln("</table>");
-        html.writeln("<ul>");
     }
 
     private void writeTmsCodes(String fileName, LineWriter out) throws IOException {
@@ -142,12 +147,6 @@ public class HtmlTmsCodesPage extends HtmlFormatter {
                 out.write(line.charAt(i));
         }
         out.writeln("</td>");
-    }
-
-    @Override
-    protected void writeFooter(LineWriter out) throws IOException {
-        out.writeln("</ul>");
-        super.writeFooter(out);
     }
 
     @Override
