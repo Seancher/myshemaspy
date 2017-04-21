@@ -64,7 +64,7 @@ import net.sourceforge.schemaspy.util.LogFormatter;
 import net.sourceforge.schemaspy.util.ResourceWriter;
 import net.sourceforge.schemaspy.view.DotFormatter;
 import net.sourceforge.schemaspy.view.HtmlAnomaliesPage;
-import net.sourceforge.schemaspy.view.HtmlTableFromFilePage;
+import net.sourceforge.schemaspy.view.HtmlMenuTreePage;
 import net.sourceforge.schemaspy.view.HtmlTmsCodesPage;
 import net.sourceforge.schemaspy.view.HtmlTmsParamsPage;
 import net.sourceforge.schemaspy.view.HtmlColumnsPage;
@@ -361,19 +361,19 @@ public class SchemaAnalyzer {
                 progressListener.graphingSummaryProgressed();
 
                 out = new LineWriter(new File(outputDir, "menutree.html"), 16 * 1024, config.getCharset());
-                HtmlTableFromFilePage.getInstance().write(db, "input/menutree_dump_142017.txt", out);
+                HtmlMenuTreePage.getInstance().write(db, "input/menutree_dump.txt", out);
                 out.close();
 
                 progressListener.graphingSummaryProgressed();
 
                 out = new LineWriter(new File(outputDir, "tmscodes.html"), 16 * 1024, config.getCharset());
-                HtmlTmsCodesPage.getInstance().write(db, tables, impliedConstraints, out);
+                HtmlTmsCodesPage.getInstance().write(db, "input/tmscodes_dump.txt", out);
                 out.close();
 
                 progressListener.graphingSummaryProgressed();
 
                 out = new LineWriter(new File(outputDir, "tmsparams.html"), 16 * 1024, config.getCharset());
-                HtmlTmsParamsPage.getInstance().write(db, tables, impliedConstraints, out);
+                HtmlTmsParamsPage.getInstance().write(db, "input/tmsparams_dump.txt", out);
                 out.close();
 
                 progressListener.graphingSummaryProgressed();

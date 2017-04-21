@@ -23,19 +23,17 @@ import java.text.NumberFormat;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.List;
+import java.io.File;
+import java.io.BufferedReader;
+import java.io.FileReader;
 
-import net.sourceforge.schemaspy.DbAnalyzer;
 import net.sourceforge.schemaspy.model.Database;
-import net.sourceforge.schemaspy.model.ForeignKeyConstraint;
-import net.sourceforge.schemaspy.model.Table;
-import net.sourceforge.schemaspy.model.TableColumn;
 import net.sourceforge.schemaspy.util.LineWriter;
 
 /**
- * This page lists all of the 'things that might not be quite right'
- * about the schema.
+ * This page loads data from a file and show the data on a table
  *
- * @author John Currier
+ * @author Sergey Chernov
  */
 public class HtmlTmsCodesPage extends HtmlFormatter {
     private static HtmlTmsCodesPage instance = new HtmlTmsCodesPage();
@@ -55,93 +53,95 @@ public class HtmlTmsCodesPage extends HtmlFormatter {
         return instance;
     }
 
-    public void write(Database database, Collection<Table> tables, List<? extends ForeignKeyConstraint> impliedConstraints, LineWriter out) throws IOException {
+    public void write(Database database, String fileName, LineWriter out) throws IOException {
         writeHeader(database, out);
-        writeImpliedConstraints(impliedConstraints, out);
+        writeTmsCodes(fileName, out);
         writeFooter(out);
     }
 
     private void writeHeader(Database database, LineWriter html) throws IOException {
-        writeHeader(database, null, "Menu Tree", html);
+        writeHeader(database, null, "TMS Codes", html);
         html.writeln("<table width='100%'>");
         if (sourceForgeLogoEnabled())
             html.writeln("  <tr><td class='container' align='right' valign='top' colspan='2'><a href='http://sourceforge.net' target='_blank'><img src='http://sourceforge.net/sflogo.php?group_id=137197&amp;type=1' alt='SourceForge.net' border='0' height='31' width='88'></a></td></tr>");
-        html.writeln("  <tr><td class='container'><b>Things that might not be 'quite right' about your schema:</b></td></tr>");
+//        html.writeln("  <tr><td class='container'><b>Things :</b></td></tr>");
         html.writeln("</table>");
         html.writeln("<ul>");
     }
 
-    private void writeImpliedConstraints(List<? extends ForeignKeyConstraint> impliedConstraints, LineWriter out) throws IOException {
-        out.writeln("<li>");
-        out.writeln("<b>Columns whose name and type imply a relationship to another table's primary key:</b>");
-        int numDetected = 0;
+    private void writeTmsCodes(String fileName, LineWriter out) throws IOException {
+        int columnCounter = 0;
+        int idxCurFrom = 0;
+        int idxCurTo = 0;
+        int numCols = 1;
+        boolean even;
+        String line;
+        File flTable = new File("/Users/schernov/Dropbox/_Study&Work/YEAR 2016-.../Qvantel/projects/schemaspy/" + fileName);
+        FileReader frd = new FileReader(flTable);
+        BufferedReader brd = new BufferedReader(frd);
 
-        for (ForeignKeyConstraint impliedConstraint : impliedConstraints) {
-            Table childTable = impliedConstraint.getChildTable();
-            if (!childTable.isView()) {
-                ++numDetected;
+        out.writeln("<table class='dataTable' border='1' rules='groups'>");
+
+        line = brd.readLine();
+        for (int i = 0; i < line.length(); i++) {
+            if (line.charAt(i) == '|') {
+                numCols = numCols + 1;
+                out.writeln("<colgroup>");
             }
         }
+        out.writeln("<colgroup>");
 
-        if (numDetected > 0) {
-            out.writeln("<table class='dataTable' border='1' rules='groups'>");
-            out.writeln("<colgroup>");
-            out.writeln("<colgroup>");
-            out.writeln("<thead align='left'>");
-            out.writeln("<tr>");
-            out.writeln("  <th>Child Column</th>");
-            out.writeln("  <th>Implied Parent Column</th>");
-            out.writeln("</tr>");
-            out.writeln("</thead>");
-            out.writeln("<tbody>");
+        // write header
+        out.writeln("<thead align='left'>");
+        out.writeln("<tr>");
+        for (int i = 0; i < numCols; i++) {
+            idxCurTo = line.indexOf('|', idxCurFrom) == -1 ? line.length(): line.indexOf('|', idxCurFrom);
+            writeTableHeader(line, idxCurFrom, idxCurTo, out);
+            idxCurFrom = idxCurTo + 1;
+        }
+        out.writeln("</tr>");
+        out.writeln("</thead>");
+        out.writeln("<tbody>");
 
-            for (ForeignKeyConstraint impliedConstraint : impliedConstraints) {
-                Table childTable = impliedConstraint.getChildTable();
-                if (!childTable.isView()) {
-                    out.writeln(" <tr>");
+        while ((line = brd.readLine()) != null) {
+            if (columnCounter++ % 2 == 0)
+                out.write("  <tr class='even'>");
+            else
+                out.write("  <tr class='odd'>");
 
-                    out.write("  <td class='detail'>");
-                    String tableName = childTable.getName();
-                    out.write("<a href='tables/");
-                    out.write(urlEncode(tableName));
-                    out.write(".html'>");
-                    out.write(tableName);
-                    out.write("</a>.");
-                    out.write(ForeignKeyConstraint.toString(impliedConstraint.getChildColumns()));
-                    out.writeln("</td>");
-
-                    out.write("  <td class='detail'>");
-                    tableName = impliedConstraint.getParentTable().getName();
-                    out.write("<a href='tables/");
-                    out.write(urlEncode(tableName));
-                    out.write(".html'>");
-                    out.write(tableName);
-                    out.write("</a>.");
-                    out.write(ForeignKeyConstraint.toString(impliedConstraint.getParentColumns()));
-                    out.writeln("</td>");
-
-                    out.writeln(" </tr>");
-                }
+            idxCurFrom = 0;
+            idxCurTo = 0;
+            for (int i = 0; i < numCols; i++) {
+                idxCurTo = line.indexOf('|', idxCurFrom) == -1 ? line.length(): line.indexOf('|', idxCurFrom);
+                writeTableLine(line, idxCurFrom, idxCurTo, out);
+                idxCurFrom = idxCurTo + 1;
             }
 
-            out.writeln("</tbody>");
-            out.writeln("</table>");
+            out.writeln(" </tr>");
         }
-        writeSummary(numDetected, out);
-        out.writeln("<p></li>");
+        brd.close();
+        frd.close();
+
+        out.writeln("</tbody>");
+        out.writeln("</table>");
     }
 
-    private void writeSummary(int numAnomalies, LineWriter out) throws IOException {
-        switch (numAnomalies) {
-            case 0:
-                out.write("<br>Anomaly not detected");
-                break;
-            case 1:
-                out.write("1 instance of anomaly detected");
-                break;
-            default:
-                out.write(numAnomalies + " instances of anomaly detected");
+    private void writeTableHeader(String line, int idxFrom, int idxTo, LineWriter out) throws IOException {
+        out.writeln("  <th>");
+        if (line != null) {
+            for (int i = idxFrom; i < idxTo; ++i)
+                out.write(line.charAt(i));
         }
+        out.writeln("  </th>");
+    }
+
+    private void writeTableLine(String line, int idxFrom, int idxTo, LineWriter out) throws IOException {
+        out.write(" <td class='detail'>");
+        if (line != null) {
+            for (int i = idxFrom; i < idxTo; ++i)
+                out.write(line.charAt(i));
+        }
+        out.writeln("</td>");
     }
 
     @Override
