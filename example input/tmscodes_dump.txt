@@ -1,0 +1,1117 @@
+Table Name|Field Name|Group|Value|Description|Used|Configuration Value|Memo
+account|AccType|Accounts|1|Account Receivable|Yes||
+account|AccType|Accounts|10|Reminder Fee|No ||
+account|AccType|Accounts|11|Collection Fee|No ||
+account|AccType|Accounts|12|Revenue (Common)|Yes||
+account|AccType|Accounts|13|Sales Cost|No ||
+account|AccType|Accounts|14|Interest|Yes||
+account|AccType|Accounts|15|Clearing|No ||
+account|AccType|Accounts|16|Direct Cost Account|No ||
+account|AccType|Accounts|17|Report Account|No ||
+account|AccType|Accounts|18|Doubtful A/R|Yes||
+account|AccType|Accounts|19|Advance Payment|Yes||
+account|AccType|Accounts|2|Investigation Account|No ||
+account|AccType|Accounts|20|Top up balance|No ||
+account|AccType|Accounts|21|Compensation|No ||
+account|AccType|Accounts|22|Refund balance|No ||
+account|AccType|Accounts|23|Customer relationship Costs|No ||
+account|AccType|Accounts|24|Own usage costs|Yes||
+account|AccType|Accounts|3|Unregistered Accounts receivable|No ||
+account|AccType|Accounts|30|Accounts payable|Yes||
+account|AccType|Accounts|32|Sales expenses|Yes||
+account|AccType|Accounts|4|Payment|Yes||
+account|AccType|Accounts|5|TAX|Yes||
+account|AccType|Accounts|6|Overpayment|Yes||
+account|AccType|Accounts|7|Deposit|No ||
+account|AccType|Accounts|8|Rounding|Yes||
+account|AccType|Accounts|9|Discounts|Yes||
+AckMessage|AckStatus|Request|0|Waiting for sending|Yes||
+AckMessage|AckStatus|Request|2|Sent|Yes||
+AckMessage|AckStatus|Request|3|Error occurred|Yes||
+ActionLog|ActionStatus|Log|0|Active|Yes||
+ActionLog|ActionStatus|Log|1|Ended on error|Yes||
+ActionLog|ActionStatus|Log|2|Ended succesfully|Yes||
+ActionLog|ActionStatus|Log|3|Logged|Yes||
+ActionLog|ActionStatus|Log|5|Cancelled|Yes||
+Address|AddressType|Address|DEF|Default address|Yes||
+BDest|BDestClass|Analysis|1|Normal|Yes||
+BDest|BDestClass|Analysis|2|Free|Yes||
+BDest|BDestClass|Analysis|3|Emergency|Yes||
+BDest|BDestClass|Analysis|4|PremRate (Pre-rated)|Yes||
+BDest|BDestClass|Analysis|5|PremRate with mpm|Yes||
+BDest|BDestClass|Analysis|6|Premrate without mpm|Yes||
+Bdest|BdestClass|Analysis|7|Tariff class -based rating|Yes||
+BDest|BDestClass|Analysis|99|TMS rating class|Yes||
+Bdest|BdestType|Analysis|0|National|Yes||
+Bdest|BdestType|Analysis|1|International|Yes||
+BDest|BdestType|Analysis|2|Freephone|Yes||
+Bdest|BdestType|Analysis|5|Mobile|Yes||
+Bdest|BdestType|Analysis|?|Not defined|Yes||
+BillItem|DebtType|AR|ADD|3rd party additional services|Yes||
+BillItem|DebtType|AR|COM|Commissions|Yes||
+BillItem|DebtType|AR|DEV|Device charges|Yes||
+BillItem|DebtType|AR|GEN|General charges|Yes||
+BillItem|DebtType|AR|SEC|Security services|Yes||
+BillItem|DebtType|AR|SER|Value added service charges|Yes||
+BillItem|DebtType|AR|SUB|Subventions|Yes||
+BillItem|DebtType|AR|TEL|Telecom service charges|Yes||
+BillItemRule|RuleType|Report|DataTotalUse|Include to data usage summary|Yes||
+BillItemRule|RuleType|Report|ETCIR|Event type charge as invoice row|Yes||
+BillItemRule|RuleType|Report|HideZeroIR|Hide zero amount invoice row in specifications|Yes||
+BillItemRule|RuleType|Report|PulsesOnIR|Pulses as unit on invoice row|Yes||
+BillItemRule|RuleType|Report|ServChargeIR|Service charge as invoice row|Yes||
+BillItemRule|RuleType|Report|StartChargeIR|Starting charge as invoice row|Yes||
+CallAlarm|CreditType|SMS|1|CreditLimit for customer|Yes||
+CallAlarm|CreditType|SMS|10|Periodical contract activation / termination|Yes||
+CallAlarm|CreditType|SMS|11|Service change|Yes||
+CallAlarm|CreditType|SMS|12|MNP|Yes||
+CallAlarm|CreditType|SMS|13|Service attribute change|Yes||
+CallAlarm|CreditType|SMS|14|Saldo payment|Yes||
+CallAlarm|CreditType|SMS|15|User / inv.customer change|Yes||
+CallAlarm|CreditType|SMS|16|User account change|Yes||
+CallAlarm|CreditType|SMS|17|Periodical contract PIN order|Yes||
+CallAlarm|CreditType|SMS|18|Periodical contract continuation|Yes||
+CallAlarm|CreditType|SMS|19|Periodical contract period end warning|Yes||
+CallAlarm|CreditType|SMS|2|Saldo reminder|Yes||
+CallAlarm|CreditType|SMS|20|Owner change|Yes||
+CallAlarm|CreditType|SMS|22|TOPUP|No ||
+CallAlarm|CreditType|SMS|23|Price Guarantee|No ||
+CallAlarm|CreditType|SMS|24|Barring|Yes|1|
+CallAlarm|CreditType|SMS|25|SMS Report|Yes||
+CallAlarm|CreditType|SMS|28|Additional data package|Yes||
+CallAlarm|CreditType|SMS|3|Saldo Agreement|Yes||
+CallAlarm|CreditType|SMS|40|Corporate Welcome SMS|Yes||
+CallAlarm|CreditType|SMS|41|After Sales Order|Yes||
+CallAlarm|CreditType|SMS|42|Prepaid MINCONS|Yes|8|
+CallAlarm|CreditType|SMS|43|Logistics|Yes||
+CallAlarm|CreditType|SMS|44|SMS invoice|Yes|3|
+CallAlarm|CreditType|SMS|5|SMS reminder|Yes||
+CallAlarm|CreditType|SMS|6|CLI type change|Yes||
+CallAlarm|CreditType|SMS|66|Debt lock|Yes||
+CallAlarm|CreditType|SMS|7|Invoice printed|Yes||
+CallAlarm|CreditType|SMS|71|Invoice due date reminder|Yes||
+CallAlarm|CreditType|SMS|8|Direct Debit|Yes||
+CallAlarm|CreditType|SMS|9|Info|Yes||
+CallAlarm|DeliStat|SMS|1|NEW|Yes||
+CallAlarm|DeliStat|SMS|2|FAIL|Yes||
+CallAlarm|DeliStat|SMS|3|Delivered OK|Yes||
+CallAlarm|DeliStat|SMS|4|Cancelled|Yes||
+CallAlarm|MessageCategory|SERVCHANGE|11|Service and Additional service|Yes||
+CallAlarm|MessageCategory|CREDCONTROL|2|Credit Control|Yes||
+CallAlarm|MessageCategory|DEBTCOLLECT|24|Debt ColDebt Collection|Yes||
+CallAlarm|MessageCategory|BILLING|71,7,5|Billing|Yes||
+CallAlarm|MessageCategory|INTERNAL|9|Internal messages|Yes||
+CallLimit|DeliType|DeliType|1|SMS|Yes||
+CallLimit|DeliType|DeliType|2|E-Mail|Yes||
+CallLimit|Delitype|delitype|3|EPL-letter|Yes||
+CallLimit|DeliType|DeliType|4|KKI|Yes||
+CallLimit|DeliType|DeliType|5|BIX|Yes||
+CampRow|CRowType|Campaign|1|PriceList|Yes||
+CampRow|CRowType|Campaign|2|DiscPlan|Yes||
+CampRow|CRowType|Campaign|3|Fatime|Yes||
+CampRow|CRowType|Campaign|4|FeeModel|Yes||
+CampRow|CRowType|Campaign|5|TopUp|Yes||
+CLIType|PayType|MobSub|0|Not defined|No ||
+CLIType|PayType|MobSub|1|Postpaid|Yes||
+CLIType|PayType|MobSub|2|Prepaid|No ||
+CliType|ServicePack|Profile|1|VOICE Postpaid|Yes||
+CliType|ServicePack|Profile|2|Prepaid|No ||
+CliType|ServicePack|Profile|3|Prepaid (no calls yet)|No ||
+CliType|ServicePack|Profile|4|DATA Postpaid|Yes||
+CliType|ServicePack|Profile|40|Profile 40|No ||
+Commission|CommCalcType|Commission|Rate|Rate based calculation|Yes||
+Commission|CommCalcType|Commission|Revenue|Revenue based calculation|Yes||
+CommissionLog|RejectReason|Commission|COMR1|No valid dealer class|Yes||
+CommissionLog|RejectReason|Commission|COMR10|Unpaid debt|Yes||
+CommissionLog|RejectReason|Commission|COMR11|Billed amount under limit|Yes||
+CommissionLog|RejectReason|Commission|COMR12|No active rate|Yes||
+CommissionLog|RejectReason|Commission|COMR2|No active contract|Yes||
+CommissionLog|RejectReason|Commission|COMR3|Ongoing experiment period|Yes||
+CommissionLog|RejectReason|Commission|COMR4|No active main contract|Yes||
+CommissionLog|RejectReason|Commission|COMR5|Main contract activity period|Yes||
+CommissionLog|RejectReason|Commission|COMR6|Suspended|Yes||
+CommissionLog|RejectReason|Commission|COMR7|No active rule|Yes||
+CommissionLog|RejectReason|Commission|COMR8|Basic commission rule not fulfilled|Yes||
+CommissionLog|RejectReason|Commission|COMR9|Control point in the future|Yes||
+CommissionRate|CommAction|Commission|CustTempBarrTerm|Deactivation of temporary suspension|Yes||
+CommissionRate|CommAction|Commission|SIMChange|SIM card change|Yes||
+CommissionRate|CommAction|Commission|STC|Subscription type change|Yes||
+CommissionRate|RateType|Commission|Fixed|Fixed amount|Yes||
+CommissionRate|SalesChannel|Commission|ExternalCM|External CM|Yes||
+CommissionRate|SalesChannel|Commission|POS|Point of sales|Yes||
+CommissionRate|SalesChannel|Commission|TeleSales|Telesales|Yes||
+CommissionRate|SalesChannel|Commission|WebShop|Web shop|Yes||
+CommissionRate|SalesType|Commission|Addition|Existing subscription|Yes||
+CommissionRate|SalesType|Commission|Migration|Current 'Pink' customer|Yes||
+CommissionRate|SalesType|Commission|New|New customer|Yes||
+CommissionRule|CommClass|Commission|ADealer|Class A|Yes|RATE|
+CommissionRule|CommClass|Commission|CDealer|Class C|Yes|RATE|
+CommissionRule|CommClass|Commission|FDealer|Class F|Yes|RATE|
+CommissionRule|CommClass|Commission|RDealer|Class R|Yes|REVENUE|
+CommissionRule|CommClass|Commission|SDealer|Class S|Yes|RATE|
+CommissionRule|CommType|Commission|AdditData|Data subscription additional|Yes||
+CommissionRule|CommType|Commission|AdditHybrid|Hybrid subscription additional|Yes||
+CommissionRule|CommType|Commission|AdditService|Additional service (security)|Yes||
+CommissionRule|CommType|Commission|AdditVoice|Voice subscription additional|Yes||
+CommissionRule|CommType|Commission|BasicData|Data subscription basic|Yes||
+CommissionRule|CommType|Commission|BasicHybrid|Hybrid subscription basic|Yes||
+CommissionRule|CommType|Commission|BasicVoice|Voice subscription basic|Yes||
+CommissionRule|CommType|Commission|ContractMgmt|Contract management|Yes||
+CommissionRule|CommType|Commission|FixedTermContr|Fixed term contract|Yes||
+CommissionRule|DeliveryType|Commission|Backorder|Backorder|Yes||
+CommissionRule|DeliveryType|Commission|Direct|Direct delivery|Yes||
+Contract|ContrType|Commission|1|Continuous|Yes||
+Contract|ContrType|Commission|2|Fixed-term|Yes||
+CoRule|BasisType|Commission|1|% from amount (value)|Yes||
+CoRule|BasisType|Commission|2|% from ARPU|Yes||% from average revenue per user
+CoRule|BasisType|Commission|3|Fixed amount per subscription|Yes||
+CoRule|CommPoint|Commission|0|Order (subscr. activation)|Yes||
+CoRule|CommPoint|Commission|1|Billing|Yes||
+CoRule|CommPoint|Commission|2|Payment|Yes||
+corule|coPrdType|Corule|A|All|Yes||
+corule|coPrdType|Corule|G|Product Group|Yes||
+corule|coPrdType|Corule|P|Product|Yes||
+CoRule|RuleType|Commission|1|Template|Yes||
+CoRule|RuleType|Commission|2|MGM Referee|Yes||
+CoRule|RuleType|Commission|3|MGM Promoted|Yes||
+corule|targType|Corule|C|Customer|Yes||
+CoRule|TargType|CoRule|M|Subscription|Yes||
+corule|targType|Corule|R|Reseller|Yes||
+corule|targType|Corule|S|Salesman|Yes||
+CoTarg|CommStatus|Commission|1|Pending|Yes||
+CoTarg|CommStatus|Commission|2|Activated|Yes||
+CoTarg|CommStatus|Commission|3|Rejected|Yes||
+CoTarg|CommStatus|Commission|4|Cancelled|Yes||
+CoTarg|StatusReason|Commission|1|Promoted subscr. not active long enough|Yes||
+CoTarg|StatusReason|Commission|10|Promoted payment type change|Yes||
+CoTarg|StatusReason|Commission|2|Not enough bills paid|Yes||
+CoTarg|StatusReason|Commission|3|Not enough topup paid|Yes||
+CoTarg|StatusReason|Commission|4|Promoted subscription terminated|Yes||
+CoTarg|StatusReason|Commission|5|Referee terminated|Yes||
+CoTarg|StatusReason|Commission|6|Pending time expired|Yes||
+CoTarg|StatusReason|Commission|7|Referee payment type has been changed|Yes||
+CoTarg|StatusReason|Commission|8|No valid commission event to be created|Yes||
+CoTarg|StatusReason|Commission|9|Commission created|Yes||
+Counter|CounterType|Counters|1|SMSBundle|Yes||
+Counter|CounterType|Counters|2|FAT COMPSMSFAT|Yes||
+Counter|CounterType|Counters|3|FAT COMP75|Yes||
+Country|FraudGroup|Fraud|A|Country Group A|Yes||
+Country|FraudGroup|Fraud|B|Country Group B|Yes||
+Country|FraudGroup|Fraud|C|Country Group C|Yes||
+CreditNote|Reason|Order|1010|Cancelled by customer|Yes||
+CreditNote|Reason|Order|1011|Cancelled by operator|Yes||
+CreditNote|Reason|Order|1012|Cancelled due failed MNP|Yes||
+CreditNote|Reason|Order|1013|Cancelled by Retailer|Yes||
+CreditNote|Reason|Correct|2010|Rating|Yes||
+CreditNote|Reason|Correct|2011|Erroneus Penalty application|Yes||
+CreditNote|Reason|Correct|2012|Incorrect call charge|Yes||
+CreditNote|Reason|Correct|2013|Erroneous invoice|Yes||
+CreditNote|Reason|Compens|3010|Collections|Yes||
+CreditNote|Reason|Compens|3011|Fraud|Yes||
+CreditNote|Reason|Compens|3012|Compensation|Yes||
+CreditNote|Reason|Correct|3013|Other reason|Yes||
+CreditNote|Reason|Legal|4011|Arbitrage|Yes||
+CreditNote|Reason|Legal|4012|Juridical|Yes||
+CreditNote|Reason|OwnUsage|5011|Own usage|Yes||
+CreditNote|ReasonGrp|AR|Compens|Negotiation|Yes|1|
+CreditNote|ReasonGrp|AR|Correct|Incorrect billing|Yes|1|
+CreditNote|ReasonGrp|AR|Legal|Legal|Yes|1|
+CreditNote|ReasonGrp|AR|Order|Order cancellation|Yes|6,7|
+CreditType|CreditType|CreditType|0|Not Active|Yes||
+CreditType|CreditType|CreditType|1|CreditLimit for Cust|Yes||
+CreditType|CreditType|CreditType|10|Service parameter change|Yes||
+CreditType|CreditType|CreditType|2|Saldo Reminder|Yes||
+CreditType|CreditType|CreditType|3|Saldo Agreement|Yes||
+CreditType|CreditType|CreditType|5|1. invoice reminder|Yes||
+CreditType|CreditType|CreditType|6|CLI type change|Yes||
+CreditType|CreditType|CreditType|7|Invoice printed|Yes||
+CreditType|CreditType|CreditType|8|Direct debiting|Yes||
+CreditType|CreditType|CreditType|9|Info|Yes||
+CTServPac|ServType|MobSub|1|Profile|Yes||
+CTServPac|ServType|MobSub|2|Profile extention|Yes||
+CTServPac|ServType|MobSub|3|Additional|Yes||
+CTServPac|ServType|MobSub|4|Internal|Yes||
+CTServPac|ServType|MobSub|8|Barring|Yes||
+CustBal|BalType|AccRec|AP|Advance Payment|Yes||
+CustBal|BalType|AccRec|CL|Credit Loss|Yes||
+CustBal|BalType|AccRec|DP|Deposit|Yes||
+CustBal|BalType|AccRec|INT|Interest|Yes||
+CustBal|BalType|AccRec|OP|OverPayment|Yes||
+CustBal|BalType|AccRec|REF|Refund|Yes||
+CustCat|CatType|Customer|B2B||Yes||
+CustCat|CatType|Customer|B2C||Yes||
+CustContact|CustType|Customer|1|Representative|Yes||
+CustContact|CustType|Customer|5|Contact person|Yes||
+Customer|CustIDType|CustCare|HETU|Henkil�tunnus|Yes||
+Customer|CustIDType|CustCare|N/A|Not available|Yes||
+Customer|CustIDType|CustCare|SN|Serial number|Yes||
+Customer|CustIDType|CustCare|Y-TUNNUS|Yritys- ja yhteis�tunnus|Yes||
+Customer|CustomerIDType|CustCare|N/A|Not defined|No ||
+Customer|InvoiceSMS|Billing|0|Not sent|Yes||
+Customer|InvoiceSMS|Billing|1|Delivery|Yes||
+Customer|InvoiceSMS|Billing|2|Due date|Yes||
+Customer|InvoiceTargetRule|Billing|1|Default group|Yes||
+Customer|InvoiceTargetRule|Billing|2|Separate group|Yes||
+Customer|LetterDelType|Customer|email_letter|Email letter|Yes||
+Customer|LetterDelType|Customer|printed_letter|Printed Letter|Yes||
+Customer|ReportCode|ReportCode|1|Customer's call specification|Yes||
+Customer|ReportCode|ReportCode|3|This must configure for TMSCODES|Yes||
+Customer|Title|CustCare|Mr|Title for males|Yes||
+Customer|Title|CustCare|Mrs|Title for females|Yes||
+DayCampaign|CalcMethod|DCCounter|0|Indeterminate calculation method|No ||Value used for Per.Contract without any calculation method
+Daycampaign|CalcMethod|DCCounter|1|Special charge before limit|Yes||
+Daycampaign|CalcMethod|DCCounter|2|Special charge after limit|Yes||
+Daycampaign|CalcMethod|DCCounter|3|Special charge before and after limit|Yes||
+Daycampaign|CalcMethod|DCCounter|4|Progressive charge|No ||
+DayCampaign|DCTarget|PerContr|1|Subscription|Yes||
+DayCampaign|DCTarget|PerContr|2|Customer|Yes||
+DayCampaign|DCType|PerContr|1|Service Package|Yes||
+DayCampaign|DCType|PerContr|10|Automatic additional package|Yes||
+DayCampaign|DCType|PerContr|2|Rating Limit|Yes||
+DayCampaign|DCType|PerContr|3|Discount|Yes||
+DayCampaign|DCType|PerContr|4|Progressive Rating|Yes||
+DayCampaign|DCType|PerContr|5|Installment|No ||
+DayCampaign|DCType|PerContr|6|Pool Rating|No ||
+Daycampaign|DCType|PerContr|7|Recurring charge|Yes||
+DayCampaign|DCType|PerContr|8|Part Payment|Yes||
+DayCampaign|DCType|PerContr|9|Fixed-term contract|Yes||
+Daycampaign|DurType|DCCounter|1|Continuous with counters|Yes||
+Daycampaign|DurType|DCCounter|2|Determinate with counters|Yes||
+DayCampaign|DurType|DCCounter|3|Determinate without counters|Yes||
+DayCampaign|DurType|DCCounter|4|Continuous without counters|Yes||
+DayCampaign|DurUnit|PerContr|0|N/A|Yes||
+DayCampaign|DurUnit|PerContr|1|Day|Yes||
+DayCampaign|DurUnit|PerContr|2|Month|Yes||
+DayCampaign|DurUnit|PerContr|3|Billing period|Yes||
+DayCampaign|Effective|PerContr|0|N/A|No ||
+DayCampaign|Effective|PerContr|1|Immediately|Yes||
+DayCampaign|Effective|PerContr|2|Next calendar month|Yes||
+DayCampaign|Effective|PerContr|3|Next billing period|Yes||
+DayCampaign|Effective|PerContr|4|Date of order|No ||
+Daycampaign|InclUnit|Unit|2|Second|Yes||
+Daycampaign|InclUnit|Unit|4|Megabyte|Yes||
+Daycampaign|InclUnit|Unit|6|Amount|Yes||
+Daycampaign|Renewal|Rrule|0|Not allowed|Yes||
+Daycampaign|Renewal|Rrule|1|Manual|Yes||
+Daycampaign|Renewal|Rrule|2|Automatic|Yes||
+Daycampaign|Renewal|Rrule|3|Conditional|Yes||
+DayCampaign|TermFeeCalc|PerContr|0|Not allowed|Yes||
+DayCampaign|TermFeeCalc|PerContr|1|Total amount|Yes||
+DayCampaign|TermFeeCalc|PerContr|2|Calculation|Yes||
+DBConfig|DBState|DBConfig|0|Active|Yes||
+DBConfig|DBState|DBConfig|1|Archived|Yes||
+DBConfig|DBState|DBConfig|2|Removed|No ||
+DCCategoryAction|ClaimAction|DebtCollect|Barr|Barr subscription|Yes||
+DCCategoryAction|ClaimAction|DebtCollect|SendTermMail|Send termination email|Yes||
+DCCategoryAction|ClaimAction|DebtCollect|Suspend|Suspend subscription|Yes||
+DCCategoryAction|ClaimAction|DebtCollect|Terminate|Terminate subscription|Yes||
+DCCategoryAction|ProductType|DebtCollect|PPContract|Part Payment contract collection|Yes||
+DCCategoryAction|ProductType|DebtCollect|Subscription|Subscription collection|Yes||
+DebtCollect|Action|DColl|List|List of what should be done|Yes||
+DebtCollect|Action|DColl|Update|Update levels|Yes||
+DiscountPlan|DiscountType|Discount|AdditionalRC|Recurring fees for additional services|Yes||
+DiscountPlan|DiscountType|Discount|Deezer|Discount for Deezer|Yes||
+DiscountPlan|DiscountType|Discount|Device|Device fees|Yes||
+DiscountPlan|DiscountType|Discount|DevInsurance|Discount for device insurance|Yes||
+DiscountPlan|DiscountType|Discount|MatkaTvRC|Recurring fees for MatkaTv services|Yes||
+DiscountPlan|DiscountType|Discount|SecurityRC|Recurring fees for security services|Yes||
+DiscountPlan|DiscountType|Discount|SubscriptionRC|Recurring fees for subscription|Yes||
+DiscountPlan|DiscountType|Discount|SubSpecSerRC|Recurring fees for subs.specific services|Yes||
+DiscountPlan|DiscountType|Discount|Usage|Subscription usage charges|Yes||
+DiscountPlan|DPUnit|Discount|Fixed|Fixed amount|Yes||
+DiscountPlan|DPUnit|Discount|Percentage|Discount percentage|Yes||
+DiscountPlan|Subject|Discount|Agreement|Agreement customer|Yes||
+DiscountPlan|Subject|Discount|Contract Target|Contract target|Yes||
+DiscountPlan|Subject|Discount|Invoice|Invoice customer|Yes||
+Discounts|TypeId|Discounts||Empty usage|Yes||
+Discounts|TypeId|Discounts|BILLCRED|Billing crediting element|Yes||
+Discounts|TypeId|Discounts|COMPENSATION|Customer care compensation element|Yes||
+Discounts|TypeId|Discounts|RESCUECAMP|Contract rescue element|Yes||
+Discounts|TypeId|Discounts|SALESCAMP|Campaign element|Yes||
+DPTarget|TargetTable|Discount|BillItem|Billing item|Yes||
+DPTarget|TargetTable|Discount|BItemGroup|Billing item group|Yes||
+DumpFile|DecimalPoint|DumpFile||As is|Yes||
+DumpFile|DecimalPoint|DumpFile|,|Comma|Yes||
+DumpFile|DecimalPoint|DumpFile|.|Period|Yes||
+DumpFile|DecimalPoint|DumpFile|Remove|Exclude decimal point|Yes||
+DumpFile|DumpFormat|DumpFile|ASCII|ASCII|Yes||
+DumpFile|DumpFormat|DumpFile|XML|XML|Yes||
+DumpFile|FileCategory|DumpFile|DWH|Data warehouse|Yes||Files including data and/or reports used in Data warehouse
+DumpFile|FileCategory|DumpFile|HIS|High Spender|Yes||High spender reports
+DumpFile|FileCategory|DumpFile|HPD|HPD|Yes||HPD file dumps
+DumpFile|FileCategory|DumpFile|IFS|IFS|Yes||
+DumpFile|FileCategory|DumpFile|INV|Billing|Yes||Files including data and/or reports considering billing
+DumpFile|FileCategory|DumpFile|LOG|Logistic|Yes||Files including data and/or reports to Logistic company
+DumpFile|FileCategory|DumpFile|MNP|MNP|Yes||Files including data and/or reports considering MNP process
+DumpFile|FileCategory|DumpFile|QDW|QDW|Yes||
+DumpFile|FileCategory|DumpFile|SAP|SAP|Yes||Files including data and/or reports considering SAP
+DumpFile|FileCategory|DumpFile|TAP|TAP|Yes||TAP files (Roaming in Yoigo's NW)
+DumpFile|FileCategory|DumpFile|TAX|Tax reports|Yes||Files including data and/or reports considering taxes
+EventLog|EventLogStatus|Timing|0||Yes||
+EventLog|EventLogStatus|Timing|1|Pending|Yes||
+EventLog|EventLogStatus|Timing|2|OK|Yes||
+EventLog|EventLogStatus|Report|3|Simple eventlog from Web|Yes||
+EventLog|EventLogStatus|Report|4|Report printing|Yes||
+EventLog|EventLogStatus|Report|5|View data|Yes||
+FATConfig|ConfRule1|3|Delete|Delete FAtime|Yes||
+FATConfig|ConfRule1|3|Leave|Leave unused FATime to old customer (refund)|Yes||
+FATConfig|ConfRule1|3|Transfer|Transfer FATime to new customer|Yes||
+FATConfig|ConfTarget|3|AgrChg|Agreement customer change|Yes||
+FATConfig|ConfTarget|1|BillItem|Billing item that is mutually exclusive|Yes||
+FATConfig|ConfTarget|4|CLIType|FAT cannot be used for this CLI type|Yes||
+FATConfig|ConfTarget|5|CLITypeA|FAT can be used for this clitype|Yes||
+FATConfig|ConfTarget|3|CTChange|CLI type change|Yes||
+FATConfig|ConfTarget|1|FATGroup|FATGroup that is mutually exclusive|Yes||
+FATConfig|ConfTarget|3|InvChg|Invoice customer change|Yes||
+FATConfig|ConfTarget|3|MSTerm|Subscription termination|Yes||
+FATConfig|ConfTarget|2|Transfer|Field for which default value is set|Yes||
+FATConfig|ConfTarget|3|UserChg|User customer change|Yes||
+FATConfig|ConfType|FATime|1|Mutually exclusive FATime group|Yes||
+FATConfig|ConfType|FATime|2|Special default value|Yes||
+FATConfig|ConfType|FATime|3|What to do for FAT in defined process|Yes||
+FATConfig|ConfType|FATime|4|CLIType that is not allowed for FATime|Yes||
+FATConfig|ConfType|FATime|5|CLIType that is allowed for this FAT|Yes||
+FatGroup|FatTarget|FATime|0|Subscription|Yes||
+FatGroup|FatTarget|FATime|1|Agreement customer|Yes||
+FatGroup|FatTarget|FATime|2|Invoice customer|Yes||
+FatGroup|FatTarget|FATime|3|User customer|Yes||
+FatGroup|FatTarget|FATime|4|CustPerContract|Yes||
+FatGroup|FatTarget|FATime|5|MainContract|Yes||
+FATGroup|FATType|FATime|0|Calls|Yes||
+FATGroup|FATType|FATime|1|Fixed Fees|Yes||
+FATGroup|FATType|FATime|2|All|Yes||
+FATGroup|FATType|FATime|3|Single Fees|Yes||
+FATGroup|QtyUnit|FATime|Amt|Amount|Yes||
+FATGroup|Qtyunit|FATime|Qty|Quantity|Yes||
+FATime|ReasonCode|FATime|R1COM|Customer care|Yes||
+FATime|ReasonCode|FATime|R2COM|Sales|Yes||
+FATime|ReasonCode|FATime|R3COM|Customer relationship mgmt|Yes||
+FATime|ReasonCode|FATime|R4COM|Pricing error|Yes||
+FATime|ReasonCode|FATime|R5COM|Current device compensation|Yes||
+FixCDR|ReasonCode|ReasonCode|1|TroubleShooting|Yes||
+FixCDR|ReasonCode|ReasonCode|2|Authority requests|Yes||
+FixCDR|ReasonCode|ReasonCode|3|Invoicing|Yes||
+FixCDR|ReasonCode|ReasonCode|4|Other reason|Yes||
+FixedFee|HostTable|Contract|Customer|Customer|Yes||
+FixedFee|HostTable|Contract|DataCLI|Data CLI|Yes||
+FixedFee|HostTable|Contract|MobSub|Mobile CLI|Yes||
+FMItem|BrokenRental|FeeModel|0|Broken rental|Yes||
+FMItem|BrokenRental|FeeModel|1|Full month|Yes||
+FMItem|BrokenRental|FeeModel|2|Bill remaining (last fee broken rental)|Yes||
+FMItem|BrokenRental|FeeModel|3|Bill remaining (last fee full month)|Yes||
+FuncRunParam|ParamType|FuncRun|Character|Character value|Yes||
+FuncRunParam|ParamType|FuncRun|Date|Date value|Yes||
+FuncRunParam|ParamType|FuncRun|Decimal|Decimal value|Yes||
+FuncRunParam|ParamType|FuncRun|Integer|Integer value|Yes||
+FuncRunParam|ParamType|FuncRun|Logical|Logical value|Yes||
+General|Config|DashBoard|1|Invoice Funcrun|Yes|DeleteTestInv,Delete test invoices,-1|
+General|Config|DashBoard|10|Invoice Funcrun|Yes|BillingQuality,Billing quality report,0|
+General|Config|DashBoard|11|Invoice Funcrun|Yes|CallItemSplit,Divide call itemization processes,6|
+General|Config|DashBoard|12|Invoice Funcrun|Yes|CallItemXMLPr,Create Call Itemization XMLs,7|
+General|Config|DashBoard|2|Invoice Funcrun|Yes|BillRunSplit,Divide invoicing processes,1|
+General|Config|DashBoard|3|Invoice Funcrun|Yes|BillRunNoWD,Invoice creation,2|
+General|Config|DashBoard|4|Invoice Funcrun|Yes|BillRunStatistic,Invoice run statistics,0|
+General|Config|DashBoard|5|Invoice Funcrun|Yes|InvoiceNumbering,Invoice numbering,3|
+General|Config|DashBoard|6|Invoice Funcrun|Yes|InvPrintSplit,Divide printing mass,0|
+General|Config|DashBoard|7|Invoice Funcrun|Yes|PrintPDFXML,Create Invoice PDF-XMLs,4|
+General|Config|DashBoard|8|Invoice Funcrun|Yes|PrintENFOXML,Create Invoice ENFO-XMLs,5|
+General|Config|DashBoard|9|Invoice Funcrun|Yes|CCReport,Call case reort,0|
+HighUsage|HiUSageStatus|HighUsage|0|NEW|Yes||
+HighUsage|HiUsageStatus|HighUsage|1|PROCESS|Yes||
+HighUsage|HiUsageStatus|HighUsage|2|CLOSED|Yes||
+Interest|IntType|AccRec|1|General B2C|Yes||
+Interest|IntType|AccRec|2|General B2B|Yes||
+Invoice|ChargeType|AccRec|0|N/A|No ||
+Invoice|ChargeType|AccRec|1|Cash|No ||
+Invoice|ChargeType|AccRec|2|Direct Debit|No ||
+Invoice|ChargeType|AccRec|3|Credit Card|No ||
+Invoice|ChargeType|AccRec|4|ePayment|No ||
+Invoice|ChargeType|AccRec|5|Bank Transfer|Yes||
+Invoice|ClaimCancel|AccRec|1|Cancelled by operator|Yes||
+Invoice|ClaimCancel|AccRec|2|Cancelled by collection agency|Yes||
+Invoice|ClaimCancel|AccRec|3|Not in use|Yes||
+Invoice|ClaimCancel|AccRec|4|Not in use|Yes||
+Invoice|ClaimCancel|AccRec|5|Not in use|Yes||
+Invoice|ClaimCancel|AccRec|6|Not in use|Yes||
+Invoice|ClaimCancel|AccRec|7|Not in use|Yes||
+Invoice|ClaimCancel|AccRec|8|Not in use|Yes||
+Invoice|ClaimCancel|AccRec|9|Not in use|Yes||
+Invoice|ClaimRestraint|DebtCollect|0|Allowed|Yes||
+Invoice|ClaimRestraint|DebtCollect|1|Denied|Yes||
+Invoice|ClaimRestraint|DebtCollect|2|Temporarily denied|Yes||
+Invoice|ClaimState|AccRec|0.0|Not claimed|Yes||
+Invoice|ClaimState|AccRec|1.0|1. SMS reminder|Yes||
+Invoice|ClaimState|AccRec|11.0|Barred|Yes||
+Invoice|ClaimState|AccRec|12.0|Suspended|Yes||
+Invoice|ClaimState|AccRec|12.1|Promise to pay|Yes||
+Invoice|ClaimState|AccRec|13.0|Termination email sent|Yes||
+Invoice|ClaimState|AccRec|14.0|Terminated|Yes||
+Invoice|ClaimState|AccRec|2.0|2. SMS reminder|Yes||
+Invoice|ClaimState|AccRec|3.0|3. SMS reminder|Yes||
+Invoice|ClaimState|AccRec|4.0|Listed to Debt collection|No ||
+Invoice|ClaimState|AccRec|5.0|Transferred to Debt collection|No ||
+Invoice|DCState|AccRec||Not claimed|Yes||
+Invoice|DCState|AccRec|I|Transferred to Debt collection|Yes||
+Invoice|DCState|AccRec|L|Listed to Debt collection|Yes||
+Invoice|DCState|AccRec|R1|1. Reminder sent|Yes||
+Invoice|DCState|AccRec|R2|1. Reminder copy sent|Yes||
+Invoice|DCState|AccRec|R3|2. Reminder sent|Yes||
+Invoice|DCState|AccRec|R4|2. Reminder copy sent|Yes||
+Invoice|DDState|Billing|0|Undelivered|No ||
+Invoice|DDState|Billing|1|Delivered|No ||
+Invoice|DDState|Billing|2|Cancelled|No ||
+Invoice|DelType|Billing|0|Not defined|No ||
+Invoice|DelType|Billing|1|Printed invoice|Yes|CUSTOMER:PRINTINV|1,5
+Invoice|DelType|Billing|10|Do not send invoice by post|No ||1,5
+Invoice|DelType|Billing|2|EMail|Yes||1,5
+Invoice|DelType|Billing|3|Direct Invoice|No ||1
+Invoice|DelType|Billing|4|EInvoice|Yes||1,5
+Invoice|DelType|Billing|5|SelfService|Yes||1,5
+Invoice|DelType|Billing|6|Finvoice|Yes||
+Invoice|Deltype|Billing|7|Direct Payment|Yes|CUSTOMER:DPAYMINVDEL|
+Invoice|DelType|Billing|8|Archive|Yes||
+Invoice|DelType|Billing|98|Not Defined|No ||
+Invoice|DelType|Billing|99|Test file|No ||
+Invoice|EndInvType|Billing|0|No closing invoice created|Yes||
+Invoice|EndInvType|Billing|1|Closing invoice due to termination (normal)|Yes||
+Invoice|EndInvType|Billing|2|Closing invoice creation failed, no events (norm)|Yes||
+Invoice|EndInvType|Billing|3|Closing invoice due to debt|Yes||
+Invoice|EndInvType|Billing|4|Closing invoice creation failed, no events (debt)|Yes||
+Invoice|ExtCrlState|Report|0|Not set|Yes||
+Invoice|ExtCrlState|Report|1|Sold|Yes||
+Invoice|ExtCrlState|Report|2|Outdated|Yes||
+Invoice|ExtCrlState|Report|3|Other|Yes||
+Invoice|ExtCrlState|Report|4|Debt adjustment|Yes||
+Invoice|ExtCrlState|Report|5|Fraud|Yes||
+Invoice|IgnoreMin|Billing|1|User gave permission|Yes||
+Invoice|IgnoreMin|Billing|2|Overpayment or advance payment used|Yes||
+Invoice|IgnoreMin|Billing|3|Credit loss posting|Yes||
+Invoice|IgnoreMin|Billing|4|Enough periods skipped already|Yes||
+Invoice|InvType|Report|1|Scheduled invoice|Yes||
+Invoice|InvType|Report|10|Credit for adv.payment invoice|No ||
+Invoice|InvType|Report|11|Credit for deposit inv.|No ||
+Invoice|InvType|Report|12|Prepaid invoice|No ||
+Invoice|InvType|Report|13|Credit for prepaid invoice|No ||
+Invoice|InvType|Report|15|Part payment invoice|Yes||
+Invoice|InvType|Report|16|Credit note to part payment invoice|Yes||
+Invoice|InvType|Report|2|Interest invoice|No ||
+Invoice|InvType|Report|20|Commission invoice|Yes||
+Invoice|InvType|Report|21|Subvention invoice|Yes||
+Invoice|InvType|Report|22|Credit note to Commission invoice|Yes||
+Invoice|InvType|Report|23|Credit not to Subvention invoice|Yes||
+Invoice|InvType|Report|3|Deposit invoice|No ||
+Invoice|InvType|Report|4|Advance payment invoice|No ||
+Invoice|InvType|Report|5|Credit note to scheduled invoice|Yes||
+Invoice|InvType|Report|6|Cash Invoice|No ||
+Invoice|InvType|Report|69|Migrated/dummy invoice|No ||
+Invoice|InvType|Report|7|Cash Receipt|No ||
+Invoice|InvType|Report|8|Credit for cash invoice|No ||
+Invoice|InvType|Report|9|Credit for cash receipt|No ||
+Invoice|InvType|Report|99|Test Invoice|Yes||
+Invoice|PaymState|AccRec|0|Unpaid|Yes||
+Invoice|PaymState|AccRec|1|Partly paid|Yes||
+Invoice|PaymState|AccRec|2|Paid|Yes||
+Invoice|PaymState|AccRec|3|Credit loss|Yes||
+Invoice|PaymState|AccRec|4|Payment plan|Yes||
+Invoice|PaymState|AccRec|5|EPayment|Yes||
+Invoice|PrintState|Report|0|Undelivered|Yes||
+Invoice|PrintState|Report|1|Delivered|Yes||
+Invoice|PrintState|Report|2|Printed locally|Yes||
+Invoice|PrintState|Report|3|Printed both to Printing house and locally|Yes||
+Invoice|PrintState|Report|4|XML-file formed|Yes||
+Invoice|PrintState|Report|5|PDF-file formed|Yes||
+Invoice|PrintState|Report|6|PDF sent to customer via eMail|Yes||
+Invoice|RemFee|Billing|B2C|Reminder fee|Yes|CUSTOMER:OTCREMFEEDC|
+Invoice|SpecDel|Billing|0|Not sent|Yes||
+Invoice|SpecDel|Billing|1|Send to print house|Yes||
+Invoice|SpecDel|Billing|2|Send via eMail (Not in Use)|Yes||
+Invoice|VATUsage|Billing|1|Domestic sales|Yes||
+Invoice|VATUsage|Billing|2|Intra-Community supply (consumer)|Yes||
+Invoice|VATUsage|Billing|3|VAT 0% Intra-Community supply (Reverse charge)|Yes||
+Invoice|VATUsage|Billing|4|VAT 0% Supply outside the Community|Yes||
+InvoiceTarget|HostTable|Billing|CustPerContract|Customer contract|Yes||
+InvoiceTarget|HostTable|Billing|MobSub|Subscription|Yes||
+InvRow|RowType|Invoice|1|CDR, starting charge|Yes||
+InvRow|RowType|Invoice|10|Commission|Yes||
+InvRow|RowType|Invoice|11|Subvention|Yes||
+InvRow|RowType|Invoice|12|Interest event|Yes||
+InvRow|RowType|Invoice|2|Mobile CDR|Yes||
+InvRow|RowType|Invoice|3|Fixed Fee|Yes||
+InvRow|RowType|Invoice|4|Single Fee|Yes||
+InvRow|RowType|Invoice|5|Minimum billing amount|Yes||
+InvRow|RowType|Invoice|6|CDR, event type charge e.g MCF|Yes||
+InvRow|RowType|Invoice|7|FATime|Yes||
+InvRow|RowType|Invoice|8|CDR, service charge|Yes||
+InvRow|RowType|Invoice|9|Discount|Yes||
+InvText|AddrTarget|Printing|1|Customer|Yes||
+InvText|AddrTarget|Printing|2|Invoice delivery (not in use)|Yes||
+InvText|AddrTarget|Printing|3|User|Yes||
+InvText|AddrTarget|Printing|4|Agreement customer|Yes||
+InvText|AddrTarget|Printing|5|Invoice customer|Yes||
+InvText|InfoType|CustCare|CS|Cover Sheet|Yes||
+InvText|InfoType|CustCare|I|Information|Yes||
+InvText|InfoType|CustCare|M|Marketing|Yes||
+InvText|InfoType|CustCare|SYS|System letter|Yes||
+InvText|KeyValue|EKIRJE|CLimit|EKIRJE|Yes||
+InvText|Keyvalue|EMAIL|DebtTermination|Subscription termination due to debt|Yes||
+InvText|KeyValue|EKIRJE|EKIRJE|EKIRJE|Yes||
+InvText|Keyvalue|EMAIL|PPTermination|Part payment termination due to debt|Yes||
+invtext|keyvalue|EMAIL|REMINDER|Reminder|Yes||
+InvText|KeyValue|EKIRJE|SMSC|SMSC Change|Yes||
+ITSendLog|RepType|Report|CallSpec|Call itemization|Yes||
+ITSendLog|RepType|Report|CallSpecBulk|Call itemization bulk print|Yes||
+ITSendLog|RepType|Report|EMail|Email|Yes||
+ITSendLog|RepType|Report|IntrumXML|XML to Intrum AR|Yes||
+ITSendLog|RepType|Report|InvSpec|Invoice's Call Specification|Yes||
+ITSendLog|RepType|Report|IT|Information Text|Yes||
+ITSendLog|RepType|Report|PrintHouse|Invoice to printhouse|Yes||
+ITSendLog|RepType|Report|SMS|SMS info|Yes||
+Limit|Billing Permission|Limit|0|Allowed|Yes||
+Limit|Billing Permission|Limit|1|Suspended|Yes||
+Limit|Billing Permission|Limit|2|Prohibited|Yes||
+Limit|LimitType|TMR|1|TMRLimit|Yes||
+Limit|LimitType|TMR|2|SubQty|Yes||
+Limit|LimitType|TMR|3|Billing Permission|Yes||
+MATRIX|MXName|MXName|ID|Customer ID|Yes||
+MAtrix|MXNAme|MXName|Module|Module Name|Yes||
+Matrix|MXName|MXName|PerContract||Yes||
+MATRIX|MXName|MXName|SubsTypeFrom|Current Subscription Type|Yes||
+MATRIX|MXName|MXName|SubsTypeGroupFrom|Subscription group from|Yes||
+MATRIX|MXName|MXNAME|SubsTypeGroupTo|Subscription group To|Yes||
+MATRIX|MXName|MXName|SubsTypeTo|New Subscription Type|Yes||
+MATRIX|MXRes|MXRes|0|DENIED|Yes||
+MATRIX|MXRes|MXRes|1|ALLOWED|Yes||
+Memotype|memotype|MemoType|*|All memos|Yes||
+Memotype|memotype|memotype|CreditC|.|Yes||
+Memotype|MEmotype|MemoType|Customer|Customer memos|Yes||
+Memotype|MemoType|Memotype|Invoice|Invoice memos|Yes||
+Memotype|MeMotype|MemoType|MobSub|Subscription memos|Yes||
+Memotype|memotype|Memotype|MSRequest|Request memos|Yes||
+MobCDR|OrigRecordType|MessageCategory|1|Yleishy�dylliset palvelut|Yes||
+MobCDR|OrigRecordType|MessageCategory|2|Asiointipalvelut|Yes||
+Mobcdr|OrigRecordType|MessageCategory|3|Ajanvietopalvelut|Yes||
+MobCDR|OrigRecordType|MessageCategory|4|Muut palvelut|Yes||
+Mobsub|MNPChannel|MNPChannel|0|NEW|Yes||
+Mobsub|MNPChannel|MNPChannel|1|WEB|Yes||
+Mobsub|MNPChannel|MNPChannel|2|M2M|Yes||
+mobsub|ms-status|MobileStatus|0|UNDEFINED|Yes||
+mobsub|ms-status|MobileStatus|1|ONLY MSISDN set (no IMSI/ICC)|Yes||
+mobsub|ms-status|MobileStatus|10|WAIT POST INFO|Yes||
+mobsub|ms-status|MobileStatus|11|MNP - NOT NPO|Yes||
+mobsub|ms-status|MobileStatus|12|MNP - NPO|Yes||
+mobsub|ms-status|MobileStatus|13|MNP - NPOC|Yes||
+mobsub|ms-status|MobileStatus|14|MNP - REJECTED|Yes||
+mobsub|ms-status|MobileStatus|2|ACTIVATION ONGOING|Yes||
+mobsub|ms-status|MobileStatus|3|ACTIVATION FAILED|Yes||
+mobsub|ms-status|MobileStatus|4|ACTIVATED IN HLR|Yes||
+mobsub|ms-status|MobileStatus|5||Yes||
+mobsub|ms-status|MobileStatus|6||Yes||
+mobsub|ms-status|MobileStatus|7|BARRED DUE TO SALDO|Yes||
+mobsub|ms-status|MobileStatus|8|BARRED TEMPORARILY|Yes||
+mobsub|ms-status|MobileStatus|9|BARRED DUE TO CONTROL|Yes||
+Mobsub|ParentCode|Parent|0|NOT Extra Sim Card|Yes||
+MobSub|ParentCode|Parent|1|Primary SIM|Yes||
+Mobsub|ParentCode|Parent|2|Slave Sim|Yes||
+Mobsub|RepCodes|Report|3|Itemized Invoice|Yes||
+Mobsub|RepCodes|Report|4|Itemized list of calls|Yes||
+MobSub|SegmentOffer|RenewalOffer|OFA|Renewal Segment Offer A|Yes||
+MobSub|SegmentOffer|RenewalOffer|OFB|Renewal Segment Offer B|Yes||
+MobSub|SegmentOffer|RenewalOffer|OFC|Renewal Segment Offer C|Yes||
+MobSub|SegmentOffer|RenewalOffer|OFD|Renewal Segment Offer D|Yes||
+MobSub|SegmentOffer|RenewalOffer|OFE|Renewal Segment Offer E|Yes||
+MobSub|SegmentOffer|RenewalOffer|OFF|Renewal Segment Offer F|Yes||
+MsReqStat|ReqFunc|MsRequest|0|No functions|Yes||
+MsReqStat|ReqFunc|MsRequest|1|Cancel request (set status to 4)|Yes||
+MsReqStat|ReqFunc|MsRequest|2|Reset request (set status to 0)|Yes||
+MsReqStat|ReqFunc|MsRequest|3|Handle request (set status to 9)|Yes||
+MsReqStat|ReqFunc|MsRequest|4|Reset request and bypass network(set status to 6)|Yes||
+MsReqStat|ReqFunc|MsRequest|5|Approve request (set status to 15)|Yes||
+MsRequest|Error|Request|8,1|No service limits created|Yes|Cancel|
+MsRequest|Error|Request|8,2|No active contract was found|Yes|Cancel|
+MsRequest|Error|Request|8,3|Periodical contract is not valid|Yes|Cancel|
+MsRequest|Error|Request|8,4|Per.contract is already active on subscription|Yes|Cancel|
+MsRequest|Error|Request|8,5|Per.contract instance with given ID already exists|Yes||
+MsRequest|ReqSource|Request|1|Subscription creation|Yes||
+MsRequest|ReqSource|Request|10|Prepaid life cycle cdr|Yes||
+MsRequest|ReqSource|Request|11|CC Tool|No ||
+MsRequest|ReqSource|Request|12|Preactivated Prepaid ACC|No ||
+MsRequest|ReqSource|Request|13|FRONT|No ||
+MsRequest|ReqSource|Request|14|Order Cancellation|Yes||
+MsRequest|ReqSource|Request|15|External API|Yes||
+MsRequest|ReqSource|Request|2|Subscription type change|Yes||
+MsRequest|ReqSource|Request|3|Subscription termination|Yes||
+MsRequest|ReqSource|Request|4|Manual event (CCBS)|Yes||
+MsRequest|ReqSource|Request|5|Automatic (cron/script)|Yes||
+MsRequest|ReqSource|Request|6|Debt collection|Yes||
+MsRequest|ReqSource|Request|7|Credit limit|Yes||
+Msrequest|ReqSource|Request|8|Activation/Deactivation|Yes||
+MsRequest|ReqSource|Request|9|ICC/UCC|Yes||
+MsRequest|ReqStatus|Request|0|New|Yes||
+MsRequest|ReqStatus|Request|1|Under work|Yes||
+MsRequest|ReqStatus|Request|15|Approved for handling|Yes||
+MsRequest|ReqStatus|Request|16|Pending file creation|Yes||
+MSrequest|ReqStatus|Request|17|File created|Yes||
+MSRequest|ReqStatus|Request|19|Waiting for confirmation|Yes||
+MsRequest|ReqStatus|Request|2|Done|Yes||
+MsRequest|ReqStatus|Request|3|Rejected (error occurred)|Yes||
+MsRequest|ReqStatus|Request|4|Cancelled|Yes||
+MSrequest|ReqStatus|Request|5|Pending external handling|Yes||
+MsRequest|ReqStatus|Request|6|External handling done|Yes||
+MsRequest|ReqStatus|Request|7|Pending Sub-request|Yes||
+MsRequest|Reqstatus|Request|8|Sub-request DONE|Yes||
+MsRequest|ReqStatus|Request|9|Handled|Yes||
+MsRequest|ReqStatus|Request|99|Process error (SNS maintenance required)|Yes||
+MsRequest|ReqStatusX|Request|11|Contract letter printed|Yes||
+MsRequest|ReqStatusX|Request|12|Confirmed/Contract letter returned|Yes||
+MsRequest|ReqStatusX|Request|13|VRK and/or SAT failed|Yes||
+MsRequest|ReqStatusX|Request|14|Advance payment invoice sent|Yes||
+MsRequest|ReqType|Request|0|Subscription type change|Yes|MsReq|
+MsRequest|ReqType|Request|1|Service Change|Yes|ScReq|
+MsRequest|ReqType|Request|10|Agreement Customer Change|Yes|OwReq|
+MsRequest|ReqType|Request|11|Payment Plan|Yes|PlReq|
+MsRequest|ReqType|Request|12|Marketing Values|Yes|MaReq|
+MsRequest|ReqType|Request|13|Subscription creation|Yes|CrReq|
+MsRequest|ReqType|Request|15|SIM Change|Yes|ICCReq|
+MsRequest|ReqType|Request|18|Terminate Subscription|Yes|DelReq|
+MsRequest|ReqType|Request|19|MSISDN Change|Yes|MSISDNReq|
+MsRequest|ReqType|Request|2|Saldo Payment|Yes|SpReq|
+MsRequest|ReqType|Request|20|On Demand Invoice|Yes|ODIReq|
+MsRequest|ReqType|Request|22|Credit Note|Yes||
+MsRequest|ReqType|Request|23|Refund|Yes||
+MsRequest|ReqType|Request|24|Bank Account number change|Yes||
+MsRequest|ReqType|Request|27|Feemodel price change|Yes|fmprice|
+MsRequest|ReqType|Request|28|Price guarantee|Yes|PGRequest|
+MsRequest|ReqType|Request|3|User Change|Yes|UcReq|
+MsRequest|ReqType|Request|31|Payment|Yes||
+MsRequest|ReqType|Request|32|Bank reference|Yes||
+MSrequest|ReqType|Request|33|Credit check|Yes||
+MSrequest|ReqType|Request|34|Manual payment|Yes||
+MsRequest|ReqType|Request|35|Barring and suspension request|Yes||
+MSRequest|ReqType|Request|37|SMS|Yes||
+MsRequest|ReqType|Request|4|Invoice Customer Change|Yes|IcReq|
+MsRequest|ReqType|Request|5|User Account|Yes|UaReq|
+MsRequest|ReqType|Request|52|Debt level|Yes||
+MsRequest|ReqType|Request|6|Address Change|Yes|AdReq|
+MsRequest|ReqType|Request|7|Per. Contract PIN|Yes|PpReq|
+MsRequest|ReqType|Request|8|Per. Contract Activation|Yes|PaReq|
+MsRequest|ReqType|Request|9|Per. Contract Termination|Yes|PtReq|
+MsRequest|TermReason|Request|1|Customer|Yes||
+MsRequest|TermReason|Request|10|Risk Fraud|Yes||
+MsRequest|TermReason|Orders|11|POS Orders Cancellation|Yes||
+MsRequest|TermReason|Request|13|Order cancellation, deactivate all|Yes||
+MsRequest|TermReason|Request|14|Order cancellation, deactivate all except device|Yes||
+MsRequest|TermReason|Request|15|Order terminated by CSP, deactivate all|Yes||
+MsRequest|TermReason|Request|16|Order terminated by CSP, deact. all except device|Yes||
+MsRequest|TermReason|Request|17|Device order cancellation|Yes||
+MsRequest|TermReason|Request|18|Accelerated termination of device contract|Yes||
+MsRequest|TermReason|Request|19|Device return based on agreement with CSP|Yes||
+MsRequest|TermReason|Request|2|MNP outporting|Yes||
+MsRequest|TermReason|Request|20|Device contract termination by CSP, deact. charges|Yes||
+MsRequest|TermReason|Request|21|Device contract termination by CSP with charges|Yes||
+MsRequest|TermReason|Request|22|Order terminated by CSP|Yes||
+MsRequest|TermReason|Request|23|Contract fully paid|Yes||
+MsRequest|TermReason|Request|24|Experiment period cancel, deact. all|Yes||
+MsRequest|TermReason|Request|25|Experiment period cancel, deact. device|Yes||
+MsRequest|TermReason|Request|26|SalesPerson cancelled device contract, deact. device|Yes||
+MsRequest|TermReason|Request|27|Deactivate device, not subscription|Yes||
+MsRequest|TermReason|Request|28|Device contract termination by OM|Yes||
+MsRequest|TermReason|Request|4|Debt collection|Yes||
+MsRequest|TermReason|Request|5|Other reason (ADMIN users)|Yes||
+MsRequest|TermReason|ReqCron|6|Prepaid life cycle deletion|Yes||
+MsRequest|TermReason|ReqCron|7|Subscription maintenance|Yes||
+MsRequest|TermReason|ReqCron|8|Bad customer deletion|Yes||
+MsRequest|TermReason|Request|9|Risk Collection|Yes||
+OfferCriteria|CriteriaType|Offer|CLIType|Subscription type|Yes||
+OfferCriteria|CriteriaType|Offer|NumberType|Type of subscription MSISDN|Yes||
+OfferCriteria|CriteriaType|Offer|OldPayType|Old payment type of subscription|Yes||
+OfferCriteria|CriteriaType|Offer|OrderChannel|Channel in which order was made|Yes||
+OfferCriteria|CriteriaType|Offer|PayType|Payment type of subscription|Yes||
+OfferCriteria|CriteriaType|Offer|RenewalSegment|Segmentation allowed in Renewal|Yes||
+OfferItem|ItemType|Offer|BillItem|Billing item|Yes||
+OfferItem|ItemType|Offer|BundleItem|Bundle Item|Yes||
+OfferItem|ItemType|Offer|FATime|FATime group|Yes||
+OfferItem|ItemType|Offer|OptionalBundleItem|Optional Bundle Item|Yes||
+OfferItem|ItemType|Offer|PerContract|Periodical contract|Yes||
+OfferItem|ItemType|Offer|ServicePackage|Service Package|Yes||
+OfferItem|ItemType|Offer|Topup|Topup scheme|Yes||
+OPLog|EventType|AR|1|Overpayment|Yes||
+OPLog|EventType|AR|10|Advance Payment|Yes||
+OPLog|EventType|AR|11|Deducted Adv.payment on a new invoice|Yes||
+OPLog|EventType|AR|12|Adv.payment used as payment into an invoice|Yes||
+OPLog|EventType|AR|13|Deposit|Yes||
+OPLog|EventType|AR|14|Deposit used as payment into an invoice|Yes||
+OPLog|EventType|AR|15|Deleted payment with advance payment|Yes||
+OPLog|EventType|AR|16|Deleted payment with deposit|Yes||
+OPLog|EventType|AR|17|Deposit transferred to subsc.customer|Yes||
+OPLog|EventType|AR|18|Return of deposit|Yes||
+OPLog|EventType|AR|19|Return of advance payment|Yes||
+OPLog|EventType|AR|2|Extra payment for an already paid invoice|Yes||
+OPLog|EventType|AR|20|Adv.payment transferred to subsc.customer|Yes||
+OPLog|EventType|AR|21|Add subscription balance limit|Yes||
+OPLog|EventType|AR|22|Adv.payment transferred from FAT|Yes||
+OPLog|EventType|AR|23|TopUp balance cancelled|Yes||
+OPLog|EventType|AR|24|MSISDN change: deposit move|Yes||
+OPLog|EventType|AR|25|MSISDN change: overpayment move|Yes||
+OPLog|EventType|AR|26|MSISDN change: adv.payment move|Yes||
+OPLog|EventType|AR|27|Refund balance|Yes||
+OPLog|EventType|AR|28|MSISDN change: refund balance move|Yes||
+OPLog|EventType|AR|29|Deducted OP through a credit note|Yes||
+OPLog|EventType|AR|3|Deducted OP on a new invoice|Yes||
+OPLog|EventType|AR|30|Converted from contract overpayment|Yes||
+OPLog|EventType|AR|31|Overpayment moved to another customer|Yes||
+OPLog|EventType|AR|32|Overpayment moved from another customer|Yes||
+OPLog|EventType|AR|33|Overpayment moved to another ITG|Yes||
+OPLog|EventType|AR|34|Overpayment moved from another ITG|Yes||
+OPLog|EventType|AR|4|Credit note (deduction also credited)|Yes||
+OPLog|EventType|AR|5|Overpayment used as payment into an invoice|Yes||
+OPLog|EventType|AR|6|Return of overpayment|Yes||
+OPLog|EventType|AR|61|Return of overpayment to customer|Yes||
+OPLog|EventType|AR|62|Return of overpayment to AR|Yes||
+OPLog|EventType|AR|63|Removal of erroneous overpayment|Yes||
+OPLog|EventType|AR|7|Fixing erroneous usage|Yes||
+OPLog|EventType|AR|8|Deleted payment with overpayment|Yes||
+OPLog|EventType|AR|9|Missing sum from a payment|Yes||
+Payment|DDError|AccRec|1|No funds or not current|Yes||
+Payment|DDError|AccRec|2|Cancelled account or no direct debit order|Yes||
+Payment|DDError|AccRec|3|Office of the direct debit order does not exist|Yes||
+Payment|DDError|AccRec|4|Application of the R.D.338/90 on the NIF|Yes||
+Payment|DDError|AccRec|5|On behalf of the client: error or cancellation|Yes||
+Payment|DDError|AccRec|6|On behalf of the client: discontent with amount|Yes||
+Payment|DDError|AccRec|7|Duplicated, wrong, mistaken or lack of data entry|Yes||
+Payment|DDError|AccRec|8|Not used|Yes||
+Payment|DDError|AccRec|9|Not used|Yes||
+Payment|PaymSrc|AccRec|AD|Adv.payment or Deposit|No ||
+Payment|PaymSrc|AccRec|AK|AKF|No ||
+Payment|PaymSrc|AccRec|APRF|Refund from advance payment|No ||
+Payment|PaymSrc|AccRec|ATM|TopUp payment|No ||
+Payment|PaymSrc|AccRec|BR|Billing run|Yes||
+Payment|PaymSrc|AccRec|CDC|Current Device Compensation|Yes||
+Payment|PaymSrc|AccRec|CHARGE|Prepaid charge|No ||
+Payment|PaymSrc|AccRec|CL|Credit loss|No ||
+Payment|PaymSrc|AccRec|COMM|Commission|No ||
+Payment|PaymSrc|AccRec|COMP|Prepaid Compensation|No ||
+Payment|PaymSrc|AccRec|CR|Credit note|Yes||
+Payment|PaymSrc|AccRec|CRRF|Refund from Credit note|No ||
+Payment|PaymSrc|AccRec|DD|Direct Debit|No ||
+Payment|PaymSrc|AccRec|DDRET|Direct Debit rejection|No ||
+Payment|PaymSrc|AccRec|FBTC|From file, Bank transfer|No ||
+Payment|PaymSrc|AccRec|FBTNC|From file, Bank transfer (NOT confirmed)|No ||
+Payment|PaymSrc|AccRec|FCCC|From file, Credit card (confirmed)|No ||
+Payment|PaymSrc|AccRec|FCCNC|From file, Credit card (NOT confirmed)|No ||
+Payment|PaymSrc|AccRec|IN|Intrum|Yes||
+Payment|PaymSrc|AccRec|IN50|Payment booking based on credit note|Yes||
+Payment|PaymSrc|AccRec|IN51|Payments to other account|Yes||
+Payment|PaymSrc|AccRec|IN54|Payment to DNA bank account|Yes||
+Payment|PaymSrc|AccRec|IN60|Payments received via debt collection|Yes||
+Payment|PaymSrc|AccRec|IN63|Credit loss|Yes||
+Payment|PaymSrc|AccRec|IN77|Payment based on debt collection payment file|Yes||
+Payment|PaymSrc|AccRec|IN98|Intrum payments to credit loss|Yes||
+Payment|PaymSrc|AccRec|IN99|Overpayment booking by Intrum|Yes||
+Payment|PaymSrc|AccRec|INJ|Intrum debt collection|Yes||
+Payment|PaymSrc|AccRec|IT|Intial TopUp|No ||
+Payment|PaymSrc|AccRec|MACAMP|Minus adjustment to Campaign Top Up|No ||
+Payment|PaymSrc|AccRec|MAMANFIX|Manual Minus Adjustment payment|No ||
+Payment|PaymSrc|AccRec|MANFIX|Manual payment event creation|No ||
+Payment|PaymSrc|AccRec|MAOU|Minus adjustment to own usage Top up|No ||
+Payment|PaymSrc|AccRec|MAPQ|Minus Adjustment to Price Quarantee balance|No ||
+Payment|PaymSrc|AccRec|MCAMFIX|Manual payment event creation to campaign|No ||
+Payment|PaymSrc|AccRec|MCNOC|Failed Minumum consumption charge|No ||
+Payment|PaymSrc|AccRec|MINCONS|Pre paid minimum consumption|No ||
+Payment|PaymSrc|AccRec|MP|Manual payment|Yes||
+Payment|PaymSrc|AccRec|MP50|Rejected payment - credit note|Yes||
+Payment|PaymSrc|AccRec|MP51|Rejected payment booking - other account|Yes||
+Payment|PaymSrc|AccRec|MP54|Rejected payment booking - DNA bank account|Yes||
+Payment|PaymSrc|AccRec|MP60|Rejected payment booking - Debt collection via AR|Yes||
+Payment|PaymSrc|AccRec|MP63|Rejected payment booking - Credit loss|Yes||
+Payment|PaymSrc|AccRec|MP77|Rejected payment booking - Payment to debt collect|Yes||
+Payment|PaymSrc|AccRec|MP98|Manual payments to credit loss|Yes||
+Payment|PaymSrc|AccRec|MP99|Rejected payment booking - Overpayment|Yes||
+Payment|PaymSrc|AccRec|MPDNA|Manual payment booking requested by DNA|Yes||
+Payment|PaymSrc|AccRec|MPFIX|Manual booking fix|Yes||
+Payment|PaymSrc|AccRec|MPIT|Manual Initial Top up|No ||
+Payment|PaymSrc|AccRec|MPOU|Manual Pre paid own usage Top up|No ||
+Payment|PaymSrc|AccRec|MPPQ|Manual Price quarantee recharge|No ||
+Payment|PaymSrc|AccRec|OPAR|Overpayment return to AR|Yes||
+Payment|PaymSrc|AccRec|OPFIX|Manual overpayment fix|Yes||
+Payment|PaymSrc|AccRec|OPINV|Overpayment booking to invoice in RBS|Yes||
+Payment|PaymSrc|AccRec|OPRF|Refund payment to customer from overpayment|Yes||
+Payment|PaymSrc|AccRec|PAMA|Prepaid Automatic Minus Adjustment|No ||
+Payment|PaymSrc|AccRec|PC|Periodical contract|Yes||
+Payment|PaymSrc|AccRec|PPC|Part payment contract|Yes||
+Payment|PaymSrc|AccRec|PQ|Price quarantee|No ||
+Payment|PaymSrc|AccRec|PRCAMP|Prepaid Campaign Top Up|No ||
+Payment|PaymSrc|AccRec|PROU|Pre paid own usage Top Up|No ||
+Payment|PaymSrc|AccRec|PUMA|Prepaid User interface Minus Adjustment|No ||
+Payment|PaymSrc|AccRec|QS|Qvantel script|Yes||
+Payment|PaymSrc|AccRec|RB|From unreg. to balance (RF)|No ||
+Payment|PaymSrc|AccRec|RF|Reference file|No ||
+Payment|PaymSrc|AccRec|RFUND|Refund payment|No ||
+Payment|PaymSrc|AccRec|RL|Ref. to payment plan|No ||
+Payment|PaymSrc|AccRec|RP|Refund|No ||
+Payment|PaymSrc|AccRec|TB|From unreg. to balance (TT)|No ||
+Payment|PaymSrc|AccRec|TT|Bank statement (TITO)|No ||
+Payment|PaymType|AccRec|0|Normal|Yes||
+Payment|PaymType|AccRec|1|Credit loss|Yes||
+Payment|PaymType|AccRec|10|Prepaid compensation|No ||
+Payment|PaymType|AccRec|11|Own usage|Yes||
+Payment|PaymType|AccRec|12|Pre paid minimum consumption|No ||
+Payment|PaymType|AccRec|13|Prepaid charge|No ||
+Payment|PaymType|AccRec|14|Test invoice payment|Yes||
+Payment|PaymType|AccRec|2|Payment to credit loss invoice|Yes||
+Payment|PaymType|AccRec|20|Upfront|Yes||
+Payment|PaymType|AccRec|3|Deposit|No ||
+Payment|PaymType|AccRec|4|Advance Payment|No ||
+Payment|PaymType|AccRec|5|Credit|Yes||
+Payment|PaymType|AccRec|6|Refund|No ||
+Payment|PaymType|AccRec|7|TopUp payment|No ||
+Payment|PaymType|AccRec|8|Direct Debit|No ||
+Payment|PaymType|AccRec|9|Initial TopUp|No ||
+Payment|VoucherType|AccRec|1|Normal|Yes||
+Payment|VoucherType|AccRec|2|TopUp|Yes||
+PaymJournal|BasePeriod|Report|Booking date|Booking date used as period base|Yes||
+PaymJournal|BasePeriod|Report|Creation date|Creation date used as period base|Yes||
+PaymJournal|BasePeriod|Report|Payment date|Payment date used as period base|Yes||
+PaymPlan|PPStatus|AccRec|1|Created|Yes||
+PaymPlan|PPStatus|AccRec|2|Sent to customer|Yes||
+PaymPlan|PPStatus|AccRec|3|Accepted|Yes||
+PaymPlan|PPStatus|AccRec|4|Cancelled|Yes||
+PaymPlan|PPStatus|AccRec|5|Paid (Closed)|Yes||
+PaymPlan|PPStatus|AccRec|6|Failed (not paid according to plan)|Yes||
+PaymPlan|PPStatus|AccRec|7|Credit control|Yes||
+PaymPlan|PPType|AccRec|1|Due date change|Yes||
+PaymPlan|PPType|AccRec|2|Part payment (one invoice)|Yes||
+PaymPlan|PPType|AccRec|3|Payment plan (multiple invoices)|Yes||
+PIndicator|IndicatorType|Indicators|1|Satisfaction Value|Yes||
+PNPGroup|GroupType|GroupType|0|F&F (NOT IN USE)|Yes||
+PNPGroup|GroupType|GroupType|1|Community (NOT IN USE)|Yes||
+PNPGroup|GroupType|GroupType|2|Mate|Yes||
+PPBatch|PBStatus|AccRec|0|Unpaid|Yes||
+PPBatch|PBStatus|AccRec|1|Partly paid|Yes||
+PPBatch|PBStatus|AccRec|2|Paid|Yes||
+PPBatch|PBStatus|AccRec|5|EPayment|Yes||
+Provisioning||UI_Maint|Left||Yes|Enable/Disable solog handling|
+Provisioning|provmaint|UI_Maint|Top|Turn on/off provisioning|Yes|Notify backend of this incident via e-mail|
+ReportConfRow|RowType|Reports|ErrorCode|Error codes|Yes||
+ReportConfRow|RowType|Reports|ReportItem|Item on the repor|Yes||
+RepText|TextType|Report|1|Billing Item|Yes||
+RepText|TextType|Report|10|TMS Codes|Yes||
+RepText|TextType|Report|11|Rating plan|Yes||
+RepText|TextType|Report|12|Service package|Yes||
+RepText|TextType|Report|13|Service component|Yes||
+RepText|TextType|Report|14|Periodical contract|Yes||
+RepText|TextType|Report|15|Servicelimit group|Yes||
+RepText|TextType|Report|16|TMRule|Yes||
+RepText|TextType|Report|2|Destination|Yes||
+RepText|TextType|Report|20|Logistic operator|Yes||
+RepText|TextType|Report|21|Logistic status|Yes||
+RepText|TextType|Report|22|Courier|Yes||
+RepText|TextType|Report|23|Delivery incident|Yes||
+RepText|TextType|Report|24|Delivery incident measure|Yes||
+RepText|TextType|Report|3|CCN|Yes||
+RepText|TextType|Report|31|Discount plan|Yes||
+RepText|TextType|Report|32|Language|Yes||
+RepText|TextType|Report|4|Nationality|Yes||
+RepText|TextType|Report|5|Country|Yes||
+RepText|TextType|Report|6|Billing item group|Yes||
+RepText|TextType|Report|61|BillItem on call extraction|Yes||
+RepText|TextType|Report|7|Tax zone|Yes||
+RepText|TextType|Report|8|Invoice section|Yes||
+RepText|TextType|Report|9|CLI Type|Yes||
+requem|0,0,1,2,3,4,5,6,7,9,8|SubsLMenu|1|Subscription type change|Yes||
+requem|1,0,1,2,3,5,6,7,8,9|SubsLMenu|1|HLR service change|Yes||
+requem|10,0,2,1,3,4,7,8,9|SubsLMenu|1|Agreement customer change|Yes||
+requem|12,1,2,3,4,9|SubsLMenu|0|Customer.s marketing value update|Yes||
+requem|13,0,1,2,3,4,5,6,9|SubsLMenu|1|Subscription creation|Yes||
+requem|15,0,1,2,3,4,5,6,9,15,19|SubsLMenu|1|ICC change|Yes||
+requem|18,0,1,2,3,4,5,6,8,9|SubsLMenu|1|Subscription termination|Yes||
+requem|19,0,1,2,3,4,5,6,9|SubsLMenu|1|MSISDN change|Yes||
+requem|20,0,1,2,3,4,9|SubsLMenu|1|On-demand invoice|Yes||
+requem|21,0,1,2,3,4,9|SubsLMenu|0|Normal invoice|Yes||
+requem|22,0,1,2,3,4,9|SubsLMenu|1|Credit note|Yes||
+requem|23,0,1,2,3,4,7,9,15,16,17,19|SubsLMenu|0|Refunds|Yes||
+requem|24,0,1,2,3,4,9,19,15|SubsLMenu|0|Bank account change|Yes||
+requem|25,0,1,2,3,4,7,8,9|SubsLMenu|1|Suspend subscription|Yes||
+requem|26,0,1,2,3,4,5,6,9|SubsLMenu|0|Release suspended subscription|Yes||
+requem|27,0,1,2,3,4,9|SubsLMenu|0|Billing event price update|Yes||
+requem|28,0,1,2,4|SubsLMenu|0|Price guarantee|Yes||
+requem|3,0,1,2,3,4,9|SubsLMenu|0|User change|Yes||
+requem|3,0,1,2,3,4,9|SubsLMenu|1|User customer change|Yes||
+requem|30,0,1,2,3,4|SubsLMenu|1|SMS creation|Yes||
+requem|31,0,1,2,3,4,9,15,19|SubsLMenu|0|Payment|Yes||
+requem|32,0,2,4,19|SubsLMenu|0|Bank reference|Yes||
+requem|33,0,1,2,3,4,9|SubsLMenu|0|Credit Check|Yes||
+requem|34,0,1,2,3,4,9|SubsLMenu|0|Manual Payment|Yes||
+requem|35,0,1,2,3,7,8,9|SubsLMenu|0|Barring and suspension|Yes||
+requem|35,0,1,2,3,7,8,9|SubsLMenu|1|Barring and suspension|Yes||
+requem|37,0,2,4,19|SubslMenu|0|SMS|Yes||
+requem|39,0,1,2,3,4,9,99|SubsLMenu|0|Contract maintenance request|Yes||
+requem|4,0,1,2,3,4,9|SubsLMenu|1|Invoice customer change|Yes||
+requem|40,0,1,2,3,4,9|SubsLMenu|1|Limit update or creation|Yes||
+requem|41,0,1,2,3,4,9|SubsLMenu|1|OP balance transfer|Yes||
+requem|46,0,1,2,3,4,9|SubsLMenu|0|After Sales Order|Yes||
+requem|5,0,1,2,3,4,9|SubsLMenu|0|Self service password update|Yes||
+requem|52,0,4,2|SubsLMenu|0|Debt Collection|Yes||
+requem|6,0,1,2,3,4,9|SubsLMenu|1|Customer�s address change|Yes||
+requem|65,0,1,2,3,4,9|SubsLMenu|1|Rerate|Yes||
+requem|70,0,1,2,3,4,9|SubsLMenu|1|Customer maintenance|Yes||
+requem|76,0,1,2,3,4,9|SubsLMenu|1|Charge or compensation|Yes||
+requem|77,0,1,2,3,4,9|SubsLMenu|0|Duplicate Invoice|No ||
+requem|77,0,1,2,3,4,9|SubsLMenu|1|FAT handler|Yes||
+requem|79,0,1,2,3,9|SubsLMenu|0|SMS invoice|Yes||
+requem|8,0,1,2,3,4,7,8,9|SubsLMenu|1|Periodical contract creation|Yes||
+requem|80,2|SubsLMenu|0|IMEI change|Yes||
+requem|82,0,1,2,3,4,7,8,9|SubsLMenu|1|Balance reminder SMS|Yes||
+requem|83,0,1,2,3,4,7,8,9|SubsLMenu|1|Contract penalty SMS|Yes||
+requem|84,0,1,2,3,4,9|SubsLMenu|1|Fee deactivation|Yes||
+requem|85,0,1,2,3,4,5,6,9|SubsLMenu|1|CM subscription termination|Yes||
+requem|86,0,1,2,3,4,5,6,9|SubsLMenu|1|CM contract termination|Yes||
+requem|87,0,1,2,3,4,9|SubsLMenu|1|Discount handler|Yes||
+requem|88,0,1,2,3,4,5,6,9|SubsLMenu|1|Termination reminder|Yes||
+requem|89,0,1,2,3,4|SubsLMenu|1|PDF file zipping|Yes||
+requem|9,0,1,2,3,4,7,8,9|SubsLMenu|1|Periodical contract termination|Yes||
+requem|90,0,1,2,3,4,9|SubsLMenu|1|Subscription update|Yes||
+requem|91,0,1,2,3,4,9|SubsLMenu|1|Billing agreement update|Yes||
+requem|95,0,1,2,3,4,9|SubsLMenu|1|Batch crediting|Yes||
+RequestAction|Action|Request|1|Create|Yes||
+RequestAction|Action|Request|12|Init-Terminate|Yes||
+RequestAction|Action|Request|2|Terminate|Yes||
+RequestAction|Action|Request|3|Recreate|Yes||
+RequestAction|Action|Request|4|Precheck|Yes||
+RequestAction|Action|Request|5|Leave as is|Yes||
+RequestAction|ActionType|Request|BarringsNotAllowed|Barrings that prevent action|Yes||
+RequestAction|ActionType|Request|CTServPac|Service package|Yes||
+RequestAction|ActionType|Request|DayCampaign|Periodical contract|Yes||
+RequestAction|ActionType|Request|DCType|Periodical contract type|Yes||
+RequestAction|ActionType|Request|RequestsNotAllowed|Requests that prevent action|Yes||
+RoamTariff|Ratetype|Roaming|1|Ad-Hoc Discount|Yes||
+RoamTariff|RateType|Roaming|10|MTC Pricing|Yes||
+RoamTariff|RateType|Roaming|2|Connection Charge|Yes||
+RoamTariff|RateType|Roaming|3|Voice Charging|Yes||
+RoamTariff|RateType|Roaming|4|SMS MO/MT|Yes||
+RoamTariff|RateType|Roaming|5|GPRS|Yes||
+RoamTariff|RateType|Roaming|7|Value Added Numbers|Yes||
+RoamTariff|RateType|Roaming|8|Zone Pricing|Yes||
+RoamTariff|RateType|Roaming|9|Country Code Pricing|Yes||
+RoamTariff|Service|Roaming|GPRS||Yes||
+RoamTariff|Service|Roaming|SMS||Yes||
+RoamTariff|Service|Roaming|VOICE||Yes||
+RZItem|RZIType|RoamGroup|B2B|B2B roaming group|Yes||
+RZItem|RZIType|RoamGroup|B2C|B2C roaming group|Yes||
+ServCom|ActType|Service|0|Activated in HLR|Yes||
+ServCom|ActType|Service|1|NOT Activated in HLR|Yes||
+ServCom|ActType|Service|2|Other activation|Yes||
+ServCom|ActType|Service|3|TMCounter activation|Yes||
+ServCom|Target|Service|0|Mobile Subscription|Yes||
+ServCom|Target|Service|1|CLIType|Yes||
+ServFee|EventSource|Service|B2B|B2B fees|Yes||
+ServFee|EventSource|Service|CC|Customer care|Yes||
+ServFee|EventSource|Service|ORDER|Order entry|Yes||
+ServFee|EventType|Service|1|Activation|Yes||
+ServFee|EventType|Service|2|Modification|Yes||
+ServFee|EventType|Service|3|Deactivation|Yes||
+ServFee|ServType|Service|CLISpec|Specification for one CLI|No ||
+ServFee|ServType|Service|CUSTOMER|Customer|Yes||
+ServFee|ServType|Service|FAX|FAX|No ||
+ServFee|ServType|Service|InvSpec|Invoice specification|No ||
+ServFee|ServType|Service|MOBSUB|MOBSUB|Yes||
+ServFee|ServType|Service|OPEN|OPEN|No ||
+ServFee|ServType|Service|OWNER|OWNER|No ||
+ServFee|ServType|Service|PaymPlan|PaymPlan|No ||
+ServFee|ServType|Service|PNP|PNP|No ||
+ServFee|ServType|Service|PRINTS|PRINTS|No ||
+ServFee|ServType|Service|REPORTS|REPORTS|No ||
+ServFee|ServType|Service|SERVICE|SERVICE|Yes||
+ServFee|ServType|Service|VOICEM|VOICEM|No ||
+Service|Service|CallBlock|1|Puheluestot 1 = Aikuisviihde|Yes||
+SLCDRRule|SLName|Rating|BillCode|Billcode TO CDR|Yes||
+SLCDRRule|SLName|Rating|CCN|CCN to CDR|Yes||
+SLCDRRule|SLName|Rating|Refprice|Reference price to CDR|Yes||
+SLGAanalyse|SLGAType|Servicelimit|1|Monthly servicelimit|Yes||
+SLGAanalyse|SLGAType|Servicelimit|2|Day campaign|Yes||
+SLGAanalyse|SLGAType|Servicelimit|3|Discount|Yes||
+SLGAanalyse|SLGAType|Servicelimit|4|Progressive rating|Yes||
+SLGAanalyse|SLGAType|ServiceLimit|5|Installment|Yes||
+SLGAanalyse|SLGAType|Servicelimit|6|Rating pool|Yes||
+SLGAnalyse|bdest|bdest|1|B-Destination|Yes||
+SLGAnalyse|bDest|bDest|2|B-Destination Class|Yes||
+SLGAnalyse|bdest|bdest|3|B-Destination Type|Yes||
+SPRule|Rule|Rule|0|Not Allowed|Yes||
+SPRule|Rule|Rule|1|Allowed|Yes||
+SPRule|Rule|Rule|2|Obligatory|Yes||
+SubventionLog|RejectReason|Subvention|SUBR1|No valid dealer class|Yes||
+SubventionLog|RejectReason|Subvention|SUBR2|Ongoing experiment period|Yes||
+SubventionLog|RejectReason|Subvention|SUBR4|Contract cancellation|Yes||
+SubventionLog|RejectReason|Subvention|SUBR5|Missing device group|Yes||
+SubventionLog|RejectReason|Subvention|SUBR6|No active rate|Yes||
+SubventionLog|RejectReason|Subvention|SUBR7|Backorder|Yes||
+SubventionRate|SubvGroup|Subvention|ADeviceContract|Device contract group A|Yes||
+SubventionRate|SubvGroup|Subvention|BDeviceContract|Device contract group B|Yes||
+SubventionRate|SubvGroup|Subvention|CDeviceContract|Device contract group C|Yes||
+SubventionRate|SubvGroup|Subvention|DDeviceContract|Device contract group D|Yes||
+SubventionRate|SubvGroup|Subvention|EDeviceContract|Device contract group E|Yes||
+SubventionRule|SubvClass|Subvention|ASubvClass|Subvention class A|Yes||
+SubventionRule|SubvClass|Subvention|CSubvClass|Subvention class C|Yes||
+SubventionRule|SubvType|Subvention|Device|Device subvention|Yes||
+Tariff|DataType|Tariff|1|Minute|Yes||
+Tariff|DataType|Tariff|2|Second|Yes||
+Tariff|DataType|Tariff|3|GigaByte|Yes||
+tariff|Datatype|tariff|4|MegaByte|Yes||
+Tariff|DataType|Tariff|5|Quantity|Yes||
+Tariff|DataType|Tariff|6|Amount(EUR)|Yes||
+Tariff|TZName|Maint|1|Off Peak|Yes||
+Tariff|TZName|Maint|2|Peak|Yes||
+Tariff|TZName|Maint|3|Off Peak|Yes||
+Tariff|ZoneName|Rating|A|Day|Yes||
+Tariff|ZoneName|Rating|B|Working day 07-17|Yes||
+Tariff|ZoneName|Rating|C|Working days 17-07 and weekends|Yes||
+Tariff|ZoneName|Rating|D|Weekend|Yes||
+Tariff|ZoneName|Rating|E|National Holiday|Yes||
+TCC|Pulses|Pulses|0|not effect|Yes||
+TCC|Pulses|Pulses|1|Add 3rd party charge|Yes||
+TCC|Pulses|Pulses|2|Add pulses|No ||
+TCC|TariffRule|Rule|1|Only Tariff|Yes||
+TCC|TariffRule|Rule|2|Only TariffClass|Yes||
+TCC|TariffRule|Rule|3|TariffClass and Tariff|Yes||
+TCC|TCCRule|Rule|0|NO RULES|Yes||
+TCC|TCCRule|Rule|1|DURATION RULES|Yes||
+TCC|TCCRule|Rule|2|Data Amount Rule(bytes)|Yes||
+TCC|TrafficType|Type|1|Terminating call|Yes||
+TCC|TrafficType|Type|2|Originating call|Yes||
+TMRLimit|ValueType|TMR|1|Amount|Yes||
+TMRLimit|ValueType|TMR|2|Percentage|Yes||
+TMRule|CounterAmount|TMR|1|Minute|Yes||
+TMRule|CounterAmount|TMR|2|Second|Yes||
+TMRule|CounterAmount|TMR|3|Gigabyte|Yes||
+TMRule|CounterAmount|TMR|4|Megabyte|Yes||
+TMRule|CounterAmount|TMR|5|Quantity|Yes||
+TMRule|CounterAmount|TMR|6|Amount|Yes||
+TMRule|CounterAmount|TMR|7|Reference Price|Yes||
+TMRule|CounterPeriod|TMR|1|Daily|Yes||
+TMRule|CounterPeriod|TMR|2|Calendar month|Yes||
+TMRule|CounterPeriod|TMR|3|Billing Period(invseq)|Yes||
+TMRule|CounterType|TMR|0|No counters|Yes||
+TMRule|CounterType|TMR|1|Counter for each period, delete after period|Yes||~
+TMRule|CounterType|TMR|2|Counter for each period, retain after period|Yes||~
+TMRule|CounterType|TMR|3|One counter over periods|Yes||
+TMRule|LimitCompare|TMR|1|Triggered when limit is exceeded|Yes||
+TMRule|LimitCompare|TMR|2|Triggered when value drops below limit|Yes||
+TMRule|LimitSource|TMR|0|Limit not used|Yes||
+TMRule|LimitSource|TMR|1|Customer based|Yes||
+TMRule|LimitSource|TMR|2|Subscription based|Yes||
+TMRule|LimitSource|TMR|3|Default limit from rule|Yes||
+TMRule|LimitSource|TMR|4|Customer based or default from rule|Yes||
+TMRule|LimitSource|TMR|5|Dynamic, based on package sizes|Yes||
+TMRule|TicketType|TMR|1|Mobile CDR|Yes||
+TMRule|TicketType|TMR|2|Fraud CDR|Yes||
+TriggerConf|EventRule|TriggerConfType|0|Not in use - do not create triggerevent|Yes||
+TriggerConf|EventRule|TriggerConfType|1|Trigger Generated - Not Analysed|Yes||
+TriggerConf|EventRule|TriggerConfType|4|Generate re-rate requests|Yes||
+UserLimit|LimitType||1|One time charge - Postpaid|Yes||
+UserLimit|LimitType||2|One time compensation - Postpaid|Yes||
+UserLimit|LimitType||3|One time charge - Prepaid|Yes||
+UserLimit|LimitType||4|One time compensation - Prepaid|Yes||
+UserLimit|LimitType||5|Monthly charge - Postpaid|Yes||
+UserLimit|LimitType||6|Monthly compensation - Postpaid|Yes||
+UserLimit|LimitType||7|Monthly charge - Prepaid|Yes||
+UserLimit|LimitType||8|Monthly compensation - Prepaid|Yes||
+UserLimit|LimitType||9|Credit Note|Yes||

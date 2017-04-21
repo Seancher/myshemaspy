@@ -1,0 +1,651 @@
+Group|Parameter|Type|Value|Description
+Reports|CustInvgCatUpdate|Char|/mnt/store/xfergw/Siirtokansio2/out/customer_changes_#RUNMODE_#DATAPERIODSTART_#DATAPERIODEND_#RUNDATE.csv|Output directory for Customer's InvGroup or Category Update report
+Accounts|AllowedOPSources|Char|OPRF,OPAR,MP99,OPFIX|Allowed sources in OP maint
+Accounts|DetUpfrontReportSpoolDir|Char|/apps/var/tmp/Remaining_Reilu_and_TOP_receivables_#DATE.csv|detailed upfront report tmp
+Accounts|DetUpfrontReportTransfer|Char|/mnt/store/xfergw/Siirtokansio2/out|
+Accounts|DetUpfrReportTransfDir|Char|/mnt/store/xfergw/Siirtokansio2/out|det upfront report trans dir
+Accounts|OPDelayedReportFile|Char|/apps/var/tmp/Delayed_overpayments_by_customers_#DATE.csv|delayed op report tmp dir
+Accounts|OPDelayedTransDir|Char|/mnt/store/xfergw/Siirtokansio2/out/|delayed op report trans dir
+Accounts|OPDetailedReportFile|Char|/apps/var/tmp/Overpayment_balance_report_by_customers_#DATE.csv|op detailed report tmp dir
+Accounts|OPDetailedTransDir|Char|/mnt/store/xfergw/Siirtokansio2/out/|detailed op report trans dir
+Accounts|OwnUseCategory|Char|OWN|Customer category for own use (accounting rules)
+Accounts|OwnUsePaymAcc|Int|90000050|Payment account for own use
+Accounts|PostCollectionAccNum|Int|90000077|Post collection payment (bank) account
+Accounts|RcldDevCompbalReportFile|Char|/apps/var/tmp/Recycle_device_compensation_remaining_balance_#DATE.csv|Recycled devices compensation report
+Accounts|RcldDevCompbaTransDir|Char|/mnt/store/xfergw/Siirtokansio2/out|Recycled devices compensation transfer directory
+Accounts|RoundPaymAcc|Int|90000099|Rounding account for INTRUM
+Accounts|UpfrontRecCC|Char|1722|Cost centre, upfront receivabl
+Accounts|UpfrontRecRID|Char||Reporting ID, upfront receivab
+Accounts|UpfrontRevenueCC|Char|1160|Cost centre, upfront revenue
+Accounts|UpfrontRevenueRID|Char|9475|Reporting ID, upfront revenue
+Accounts|VipUseCategory|Char|xxx|Category for vip usage
+Accounts|VipUsePaymAcc|Int|0|Payment account for vip usage
+AccRec|AbolishAcc|Int|62626262|Abolish account, Intrum paym.
+AccRec|AdvPaymAcc|Int|99999919|Adv.payment account
+AccRec|AdvPaymVat|Int|6|VatCode to be used for AP VAT
+AccRec|AdvPaymVatAcc|Int|99999955|Assisting account for AP VAT
+AccRec|ARReportExcluded|Char|3,4,20,21,22,23,99|Invoice types that are by default excluded from AR reports
+AccRec|AsterixCreatePaymIssue|Int|1|Create jira issue after run
+AccRec|AsterixDarDescr|Char|T�m�n tiketin liitteen� on automaattisesti luotu listaus sis��nluvussa hylk��ntyneist� maksuista. Ohjaisitteko liitteen selvitett�v�ksi Intrum Justitialle oman tarkastuksenne j�lkeen.  Mik�li tapauksista her�� kysytt�v�� tai toimenpiteit� Qvantelille, t�m�n tiketin voi Jirassa ohjata takaisin k�ytt�j�lle Billing management.|Text for payment error DAR issue
+AccRec|BankAcc|Int|90000054|Bank account
+Accrec|BankBIC|Char||BIC code
+Accrec|BankIBAN|Char|NDEAFIHH|IBAN code
+AccRec|CollectAcc|Int|90000060|Account for collection paym.
+AccRec|CreditLossAcc|Int|68900|DefAcct: Credit loss account
+AccRec|CreditLossCancel|Int|68900|Account for credit loss cancel
+AccRec|CreditNoteTempAcc|Int|90000035|Temporary payment based on credit note
+AccRec|CreditPassword|Char|TEST|PassWd for partial credit tool
+AccRec|CreditPaymAcc|Int|90000050|Account for credit payments
+AccRec|CreditRateFile|Char|/mnt/store/app/blacklist/spool/rbs_blacklist_#TODAY.csv|Location of credit rate file
+AccRec|CRFileTransDir|Char|/mnt/store/app/blacklist/in/|Dest. of blacklist file
+AccRec|DDCancelDays|Int|30|Cancel days after due date
+AccRec|DiscAcc|Int|90000099|Discount Account
+AccRec|DueDateTrans|Int|22|Max days for due date transfer
+AccRec|ExchRateMet|Int|1|Exchange rate usage (1=divide)
+AccRec|IntCalcMet|Int|1|Interest Calculation Method
+AccRec|IntDelayComp|Int|0|Delay days for company cust.
+AccRec|IntDelayPriv|Int|0|Delay days for private cust.
+AccRec|IntLogFile|Char|/apps/dna/var/tmp/rej_payms_#RUNDATE_#RUNTIME.csv|Log file name with tmp path to intrum related to err payments
+AccRec|IntLogFileTransDir|Char|/mnt/store/intrum/failures/|Log file name with tmp path to intrum related to err payments
+AccRec|IntLogSummaryFile|Char|/apps/dna/var/tmp/rej_payms_ALL_#RUNDATE_#RUNTIME.csv|Filename of Intlog summary
+AccRec|IntLogSummaryTransDir|Char|/mnt/store/intrum/failures|Transdir of Intlog summary
+AccRec|IntrumCrlLogFile|Char|/apps/dna/var/tmp/intrum_crl_upd_#DATE_#TIME.log|Log of failed CRL updates
+AccRec|IntrumCrlProcessedDir|Char|/mnt/store/rbs/intrum/in/processed|Intrum CRL processed status file
+AccRec|IntrumCrlStatusFile|Char|/mnt/store/rbs/intrum/in/in/debtloss*|Intrum CRL status file
+AccRec|IntrumPaymTransTypes|Char|50,51,54,60,63,98,99|Allowed payment trans. types from intrum
+AccRec|InvTypeDenied|Char|3,4|Deny showing of these types
+AccRec|LongTermUpfrontDir|Char|/mnt/store/xfergw/Siirtokansio2/out/|Longter upfront change report dir
+AccRec|LongTermUpfrontFile|Char|/apps/var/tmp/Upfront_device_receivables_monthly_changes_#PERIOD_#TODAY_#NOW.csv|Longterm upfront change report
+AccRec|LowValAcc|Int|68510|Senttierotili (low val round)
+AccRec|MinIntPay|Int|9999999|Minimum charged delay interest amount
+AccRec|OcrBackup|Char|/mnt/store/rbs/intrum/in/processed|Directory for ocr-file backup
+AccRec|OtherBankAcc|Int|90000051|Account for other banks
+Accrec|OTIntAcc|Int|7100|Overtime  int account
+Accrec|OverPayAcc|Int|27210|Overpayment account no.
+AccRec|OverPaymentAcc|Int|99000099|Account for Overpayment
+AccRec|OverTimeInt|Int|99000099|Over time int.
+AccRec|PaymentInfoFile|Char|/mnt/store/billingdata/paymentdata/paymentinfo_#TODAY_#NOW.csv|Output for paymentinfo for CM
+AccRec|PPBatchFailLimit|Char|/mnt/store/billingdata/paymentdata/paymentinfo_#TODAY_#NOW.csv|Limit to trigger paymplan inspection
+AccRec|PPBatchWarningLimit|Int|4|Days before duedate to send the SMS
+AccRec|PPDayInterVal|Int|30|Dayinterval for batches
+AccRec|PPlanTermDayLimit|Int|7|Days after duedate failure
+AccRec|ReceivAcc|Int|17200|Receive Acc
+AccRec|RefPostDir|Char||Directory for posting list
+AccRec|RefPostList|Char||File for posting list
+AccRec|RefPrintDir|Char|/mnt/store/intrum/log|Directory for booking list
+AccRec|RefPrintDirCust|Char|/mnt/store/xfergw/Siirtokansio8/out/|Booking list for customer
+AccRec|RefPrintOk|Int|1|Print OK-lines of RF-booking
+AccRec|ResDepositsAcc|Int|1600|Res.Dep.Account
+AccRec|RevVatIncl|Int|1|Vat included in postings on rr
+AccRec|RoundAcc|Int|68510|Rounding Account no
+AccRec|UnPaidToDeposit|Int|68510|Limit for depositing unpaid
+AccRec|UpfrontCOMPRevenueCC|Char|210000|Upfront paym COMPANY CostCentre
+AccRec|UpfrontCOMPRevenueRID|Char|9410|Upfront RevenueID for COMP
+AccRec|UpfrontCONSRevenueCC|Char|111600|Cost Centre for upfront paym CONSUMER
+AccRec|UpfrontCONSRevenueRID|Char|9410|Consumer Upfront Revenue RepID
+AccRec|UpfrontReportSpoolDir|Char|/apps/var/tmp/DWH_device_upfront_short_and_long_term_receivables_#ID_#DATE_#TIME.txt|Temp dir for Upfront Booking Report
+AccRec|UpfrontReportTransferDir|Char|/mnt/store/xfergw/Siirtokansio2/out|Delivery folder for Upfront Report
+ADL|AdditionalDataSMS|Char||SMS text for added data limit notification
+ADL|AdditionalDataTMRule|Int|8|TMT rule used with automatic data limit add
+API|ApiHowManyDecimal|Int|3|Rounding
+API|ApiHowManyHidden|Int|3|HowManyLatest number are hide
+API|APIServiceDest|Char|9|Service Dest(b-number not hidd
+API|DefDepositprod|Char|DEPOFEE|Default Deposit Product Code
+API|DefFixOverduedays|Int|16|Default Overdue days
+API|DefFixUnpdaiLimit|Int|0|Fixed Unpaid Limit
+API|DefMobOverduedays|Int|16|Default Mobile overdue days
+API|DefMobUnpaidLimit|Int|51|Default Mobile Unpaid Limit
+ArpuReport|ArpuRepDirectory|Char|/mnt/store/print/report|Default Arpureport directory
+Billing|AdvPaymCust|Int|1010|Customer for advance payment
+Billing|AdvPaymItem|Char|ADVPAYM|Product for adv.paym. invoices
+Billing|AdvPaymPayTerm|Int|14|Payment term for adv.payment
+Billing|AdvPaymTxtLEN|Char|AdvPaymAddt|Text for additional adv.paym
+Billing|BillDblVat|Int|0|Allow different vat methods
+Billing|BillInterest|Int|1|Bill collected interest events
+Billing|BillRunStatFile|Char|/mnt/store/print/billrun/billrun_statistic_#IDATE_#TIME.txt|Billrun statistic file
+Billing|CheckInvoicesFile|Char|/apps/dna/var/tmp/check_invoices_#DATE.txt|File name for log file
+Billing|CheckInvoicesInvGroup|Char|INV1|Invoice groups to be checked
+Billing|CheckInvoicesRecipient|Char|dnapro.billing@qvantel.com|Mail recipient for log file
+Billing|CheckInvoicesTransDir|Char|/mnt/store/print/log/invoicecheck|Transfer dir for log file
+Billing|CLossCustomer|Int|900|Credit loss customer
+Billing|CreditEmail|Char||Credit Limit EmailAddress
+Billing|CreditLimit:F|Int|1000|CreditLimitCompany
+Billing|CreditLimit:P|Int|350|CreditLimitPrivate
+Billing|CreditPaymTerm|Int|14|Credit Note Payment Term
+Billing|DebtLossAcc|Int|690600|Bad debt loss account
+Billing|DefaultPrintHouse|Char|Opuc Capita|Default printing house
+Billing|DefCreditLimitCust|Int|333|Def Credit Limit customer
+Billing|DefVatCode|Int|1|Default vat code
+Billing|DepositCust|Int|1010|Deposit customer
+Billing|DepositItem|Char|deposit|Product for deposit invoices
+Billing|DepositPayTerm|Int|30|Payment term for deposit inv.
+Billing|DiscPeriodMethod|Char|Days|Method for determining validity periods
+BILLING|DiscProd|Char|DirDisc|Direct discount product
+Billing|ExtInvIDPrefixLength|Int|3|Prefix length in ext.ID
+Billing|InterestItem|Char|INTEREST|Billing item for interests
+Billing|InvCCNColl|Int|0|Collect InvCCN from calls
+Billing|InvCreType|Int|4|Invoice type to be created
+Billing|InvCustCombine|Int|0|Combine fees into one invoice
+Billing|InvRunLastProcessed|Int|184609|Processed on last monitor round
+Billing|ODIBillDay|Int|3|ODI billrun weekday
+Billing|ODIBillTime|Int|37800|ODI Billrun time (secs after midnigth)
+Billing|ODIReqReportFile|Char|/apps/dna/var/tmp/ODIReq_error_report_#DATE.csv|ODI request error report file
+Billing|ODIReqReportTransDir|Char|/mnt/store/print/report/|ODI request error report transdir
+Billing|OTIntMargin|Char|/mnt/store/print/report/|Margin over reference rate
+Billing|PrefixBillItem|Char||Prefix is marked to inv.row
+Billing|PrintBoldFont|Char|\027(s3B,\027(s0B|Bold font
+Billing|PrintDir|Char|/apps/tms/printouts|General print directory
+Billing|PrintHouseZipPath|Char|/mnt/store/print/billrun/zipfilelist|Dir for filelists for zipping
+Billing|PrintMediumFont|Char|\027(s12H,\027(s10H|12 Chr/inch
+Billing|PrintSmallFont|Char|\027(s17H,\027(s10H|17 chr/inch
+Billing|ProdNoBill|Char|REMFEE|No bill if this is only fee
+Billing|RefNumForm|Int|5|Reference nbr format
+Billing|RefNumPrefix|Int|0|Prefix to reference number
+Billing|SaldoAgreementAccount|Char||FAT group for saldo agreement
+Billing|ServiceNumDoneDir|Char|/mnt/store/dna_nmp/processed/|Service number processed dir
+Billing|ServiceNumFile|Char|*_kaikki_maksunsaajatiedot.csv|Service Number file
+Billing|ServiceNumInDir|Char|/mnt/store/dna_nmp/in/|Service Number reading dir
+Billing|ServiceNumLog|Char|/apps/var/log/read_servicenum_batch_#DATE_#TIME.log|Service number reading log file
+Billing|ServiceNumTempFiles|Char|/apps/var/tmp/ServiceNumFile.tmp|Service number temp files list
+Billing|TotalUsageCounter|Int|2|Rule ID for total usage counter
+Billing|UnknownCustomer|Int|999|Number Of Unknown customer
+CM.Interface|CallAlarmLimit|Int|5000|CallAlarmLimit for single loop
+CM.Interface|CM.Ack.Poll.New|Int|5000|Interval for polling new responses
+CM.Interface|CM.Ack.Queue.Sleep|Int|5000|Sleep time in seconds
+CM.Interface|CM.Queue.ip|Char|mqueue|
+CM.Interface|CM.Queue.MsgLimit|Int|200|Max. messages/stomp session
+CM.Interface|CM.Queue.Name|Char|rbs|
+CM.Interface|CM.Queue.port|Int|61613|
+CM.Interface|CM.Queue.SessionLimit|Int|300|Listener session restart limit param in seconds
+CM.Interface|CM.Queue.timeout|Int|2|
+CM.Interface|CM.SMSQueue.IP|Char|mqueue|SMS msg queue ip
+CM.Interface|CM.SMSQueue.Name|Char|sms|SMS queue name
+CM.Interface|CM.SMSQueue.port|Int|61613|SMS msg queue port
+CM.Interface|CM.SMSQueue.timeout|Int|2|SMS Queue Timeout
+CM.Interface|CM.ToQueue.ip|Char|mqueue|
+CM.Interface|CM.ToQueue.Name|Char|rh|
+CM.Interface|CM.ToQueue.port|Int|61613|
+CM.Interface|CM.ToQueue.timeout|Int|2|
+CM.Interface|CM.webservice.url|Char|http://172.20.34.69:80/CMServiceProvider/CMRBSInterface?wsdl|
+CM.Interface|RbsToCm.ip|Char|mqueue|RBS to CM publishing i/f IP
+CM.Interface|RbsToCm.Name|Char|cm|RBS to CM publishing queue
+CM.Interface|RbsToCm.port|Int|61613|RBS to CM publishing i/f port
+CM.Interface|RbsToCm.timeout|Int|1000|RBS to CM publishing timeout
+CM.Interface|revolver.ip|Char|mqueue|MQ ip
+CM.Interface|revolver.name|Char|revolver|Revolver PDF Queue
+CM.Interface|revolver.port|Int|61613|
+CM.Interface|revolver.timeout|Int|100|
+CM.Interface|UTF8_to_Scandics|Char|\u0142,\u2013,\u011d|l,-,g|DO NOT UPDATE THIS !!!
+Commission|CommCalcLogFile|Char|/apps/dna/var/tmp/commission_calculation_#DATE_#TIME.txt|Log file for commission calculation
+Commission|CommCalcLogTrans|Char|/mnt/store/print/log/commission|Transfer dir for commission log
+Commission|CommCheckSuspension|Char|DebtSuspension|Service for suspension
+Commission|CommCompAddress|Char|PL 10|Company address for commission invoices
+Commission|CommCompCity|Char|01044 DNA|Company city for commission invoice
+Commission|CommCompEMail|Char|palkkiot@dna.fi|Company email for commission invoice
+Commission|CommCompPhone|Char|044 0440|Company phone for commission invoice
+Commission|RevenueCommLogFile|Char|/apps/var/tmp/REVENUE_COMMISSION_REPORT_#PERIOD_#DATE_#TIME.txt|Revenue based commission log file
+Commission|RevenueCommLogTrans|Char|/mnt/store/xfergw/Siirtokansio6/out/|Revenue based commission log trans dir
+Commission|RevenueValidBIGs|Char|BIG1,BIG3,BIG4,BIG5,BIG6,BIG8,BIG11,BIG16,BIG30,BIG31,BIG32|Valid BIGs for Revenue based commission
+Contact|B2BContactEmail|Char|yritysasiakaspalvelu@dna.fi|B2B contact email
+Contact|B2BContactPhone|Char|044 144 099|B2B contact phone nbr
+Credit|CustCredLimitExternalGrp|Char|CreditExtG|Default Credit Limit ExtCust g
+Credit|OwnUseCreditPaym|Int|11|Payment type for own usage creditings
+CreditNote|CreditNoteActTime|Int|11|Activation time for requests
+Cron|CronTmpDir|Char||Temporary files for cronjobs
+Cron|DefEmailPath|Char||Default mdaily email path
+CRONOUTGOING|highspendnew.p|Char|/mnt/store/print/report|DIRECTORY
+CRONSPOOL|highspendnew.p|Char|/mnt/store/print/report|DIRECTORY
+CustCare|DefCustB2B1|Int|310|Default customer for B2B1
+CustCare|DefCustB2B2|Int|310|Default customer for B2B2
+CustCare|DefCustB2B3|Int|310|Default customer for B2B3
+CustCare|DefCustB2B4|Int|310|Default customer for B2B4
+CustCare|DefCustINV1|Int|300|Default customer
+CustCare|DefCustOWNB2B|Int|310|Default customer for OWNB2B
+CustCare|DefCustSALES|Int|400|Default customer for sales
+CustCare|DefCustUNKNOWN|Int|304|Default customer
+CustNumbers|Mobile|Char|10001-999999|Customer Number Series
+DebtCollect|AdvPaymIntrumLedgerNo|Char|111111|Intrum's ledger no for adv payment
+DebtCollect|BarrSuspDaysLimit|Int|34|Max no of days for barr/susp
+DebtCollect|ClaimCostAcc|Int|3800|Account for claiming costs
+DebtCollect|ClaimRestrainOnHold|Int|7|Days that restrain is on hold
+DebtCollect|DebtBarrData|Char|DebtBarrData|Service for data barring
+DebtCollect|DebtBarrVoice|Char|DebtBarrVoice|Service for voice barring
+DebtCollect|DebtCollectBatchMode|Char|Update|Mode for batch run List/Update
+DebtCollect|DebtCollectLog|Char|/mnt/store/debtcollect/log/debtcollect_#DATE_#TIME.txt|Log file name
+DebtCollect|DebtCollectLogTemp|Char|/apps/var/tmp/temp_debtcollect_#DATE_#TIME_#INVGRP.txt|Temporary logs from parallelized debtcollection
+DebtCollect|DebtCollectTransDir|Char|/mnt/store/xfergw/Siirtokansio9/out|Transfer dir for log file
+DebtCollect|DebtSuspensionService|Char|DebtSuspension|Suspension service ID
+DebtCollect|DebtSuspOpenFeeModel|Char|AUTDEBTBARRTERM|Fee model for opening subscr.
+DebtCollect|DebtTermMailArc|Char|/mnt/store/debtcollect/termination|Archive dir for term. mails
+DebtCollect|DebtTermMailFile|Char|/apps/dna/var/tmp/debtterm_#LANGUAGE.txt|File for mail text
+DebtCollect|DebtTermMailSender|Char|noreply@dnapro.fi|Sender marked to term. mail
+DebtCollect|DebtTermMailText|Char|DebtTermination|Text ID for termination mail
+DebtCollect|IntrumCustNbr|Int|4278|Intrum's customer nbr for us
+DebtCollect|IntrumFileSeqNbr|Int|0|Claim File's Sequence Number
+DebtCollect|IntrumHubNo|Char|200866|Intrum's Hub number
+DebtCollect|IntrumLedgerNo|Char|427801|Intrum ledger nbr for normal invoices
+DebtCollect|IntrumPPLedgerNo|Char|427802|Intrum ledger nbr for part payment invoices
+DebtCollect|IntrumRemFee|Char|427802|Intrum reminder fee
+DebtCollect|IntrumStatusArc|Char|/mnt/store/rbs/intrum/in/processed|Archive for status file
+DebtCollect|IntrumStatusFile|Char|/mnt/store/rbs/intrum/in/in/status*|Status file from Intrum
+DebtCollect|IntrumStatusLog|Char|/apps/dna/var/tmp/INTRUM_STATUS_#DATE_#TIME.txt|Log file from status reading
+DebtCollect|IntrumStatusLogArc|Char|/mnt/store/intrum/log|Archive for log file
+DebtCollect|MailSentBeforeTerm|Int|15|Termination letter delivery days before actual term
+DebtCollect|PPDebtTermMailFile|Char|/apps/dna/var/tmp/ppdebtterm_#LANGUAGE.txt|File name for PP termination message
+DebtCollect|PPDebtTermMailText|Char|PPTermination|Termination mail text for part payment
+DebtCollect|PPDueDaysBeforeMail|Int|34|Days passed from due day before termination mail is sent
+DebtCollect|PPMailSentBeforeTerm|Int|15|Days from termination mail before termination
+DebtCollect|PPMinDueDays|Int|17|Min PP invoice due days
+DebtCollect|PPUnpaidMinPortion|Int|17|Min portion % of unpaid debt
+DebtCollect|ServiceDebtLimit|Int|17|Min limit for service debt
+DebtCollect|ServiceDebtType|Char|SER|Service debt types
+DebtCollect|SMSRem1LateDays|Int|7|Days from due date
+DebtCollect|SMSRem1MinDue|Int|7|Min amount for 1. reminder
+DebtCollect|SMSRem2LateDays|Int|22|Days from due date
+DebtCollect|SMSRem2MinDue|Int|22|Min amount for 2. reminder
+DebtCollect|SMSRem3LateDays|Int|31|Days from due date
+DebtCollect|SMSRem3MinDue|Int|31|Min. amount for 3. reminder
+DebtCollect|SuspendedBeforeMail|Int|20|Suspended days before mail
+DebtCollect|SuspendedBeforeTerm|Int|30|Suspended days before termin.
+DebtCollect|TeleDebtLimit|Int|30|Min limit for tele debt
+DebtCollect|TeleDebtType|Char|TEL|Debt types for tele debt
+DEBUG|class_cdrhandler.cls|Char|#4GLMessages,4GLTrace:4,4GLTrans,DB.Connects:4,QryInfo:4|Use LOG-MANAGER in InvRun
+DEBUG|tcpgwy.p|Char|0|Are logfiles active?
+Device|Available|Int|1|Device Status
+Device|Not Available|Int|0|Device Status
+DeviceTerm|cancel_returned|Char|17|Device order cancellation
+DeviceTerm|debt_retain|Char|4|Debt termination
+DeviceTerm|expuser_returned|Char|25|Experiment period cancel, deact. device
+DeviceTerm|om_retain|Char|28|Device contract termination by OM
+DeviceTerm|operator_retain|Char|21|Device contract term by CSP, apply charges
+DeviceTerm|operator_returned|Char|20|Device contract term by CSP, deact charges
+DeviceTerm|paid_retain|Char|23|Paid in advance
+DeviceTerm|salesperson_returned|Char|26|SalesPerson cancelled device contract, deact. device
+DeviceTerm|user_retain|Char|18|Accelerated termination of device contract
+DeviceTerm|user_returned|Char|19|Device return based on agreement with CSP
+DirDebit|DDArchive|Char||Archive directory for DD files
+DirDebit|DDebitAuthFile|Char||Direct debit authorizat. file
+DirDebit|DDebitBankAccount|Char||Direct debits to bank account
+DirDebit|DDebitBankGroupCode|Char||Direct debit bank group code
+DirDebit|DDebitBatchFile|Char||File for batch runs
+DirDebit|DDebitErrorFile|Char||Error log file
+DirDebit|DDebitFileName|Char||Direct debit file name
+DirDebit|DDebitResponse|Char||Response file name
+DirDebit|DDebitServiceCode|Char||Direct debit service code
+DirDebit|DDInErrorFile|Char||File for error log
+DirDebit|DDPaymSubj|Int|0|Payment Subject for DD
+DirDebit|DDTransDir|Char||Transfer directory for files
+Discount|PaperInvCamp|Char|CAMPRINTINVPERC|Special discount for printing
+Discount|Payercampaigns|Char|CAMPRINTINVPERC|Disc plans for migration
+DNATest|LogDirReadWebServiceXMLs|Char|CAMPRINTINVPERC|
+Dump|DeviceDebtFile|Char|/apps/dna/var/tmp/device_debt_#DATE.txt|File name for device debts
+Dump|DeviceDebtTransDir|Char|/mnt/store/device/out|Transfer dir for device debts
+Dump|InvEventMonthFileName|Char|/apps/dna/var/tmp/dump_invoices_#DATE.csv|File for event month dump
+Dump|InvEventMonthTransDir|Char|/mnt/store/xfergw/Siirtokansio2/gledger|Transfer dir for eventm. dump
+DUMPOUTGOING|callscannerrep.p|Char||DIRECTORY
+DUMPOUTGOING|killerrcalls.p|Char||DIRECTORY
+DUMPOUTGOING|memodump.p|Char||DIRECTORY
+DUMPOUTGOING|stclog.p|Char||DIRECTORY
+DUMPSPOOL|callscannerrep.p|Char||DIRECTORY
+DUMPSPOOL|memodump.p|Char||DIRECTORY
+DUMPSPOOL|stclog.p|Char||DIRECTORY
+EBill|eGiftPayment|Char|EGIFT|eGiftPayment FAT group
+EBill|EPaymValid|Int|7|Valid days for ePayment
+EInvoice|EInvoiceAuthArcDir|Char|/mnt/store/rbs/invoices/ri_processed|Archive dir for authorizations
+EInvoice|EInvoiceAuthFile|Char|/mnt/store/rbs/invoices/ri_messages/DNA*.xml|Authorization file name
+EInvoice|EInvoiceAuthLogFile|Char|/apps/dna/var/tmp/auth_log_#DATE_#SEQ.txt|Authorization error log file
+EInvoice|EInvoiceAuthLogTrans|Char|/mnt/store/xfergw/Siirtokansio3/out|Transfer dir for authorization error log
+EInvoice|EInvoiceReportFileName|Char|/apps/var/tmp/auth_handling_#DATE.txt|EInvoice activations report file
+EInvoice|EInvoiceReportTransDir|Char|/mnt/store/xfergw/Siirtokansio9/out/|EInvoice activations report delivery folder
+EInvoice|EInvoiceSentToMQLog|Char|/apps/var/log/einvoice_update_to_mq.log|EInvoice update sent to MQ log
+eMail|ITMailErrDir|Char|/apps/tms/mail/|Directory for error files
+FileSeq|eInvoiceLog|Int|1810|Daily sequence for eInvoice log file
+FileSequence|IntrumUpdateSeq|Date|21/09/11|Intrum update file sequence
+FileSequence|IntrumXMLSeq|Date|20/09/11|Intrum XML File Sequence
+FOM.Interface|RbsToFOM.IP|Char|mqueue|RBS to FOM publishing IP
+FOM.Interface|RbsToFOM.Name|Char|test.q.FOMSouthboundRBSDNAB2B.RBS.adapter.Request|RBS to FOM publishing queue
+FOM.Interface|RbsToFOM.Port|Int|61613|RBS to FOM publishing port
+FOM.Interface|RbsToFOM.Timeout|Int|1000|RBS to FOM publishing timeout
+Fonecta|FonectaDir|Char|/mnt/store/rbs/directory/out|Transfer directory
+Fonecta|FonectaFile|Char|/apps/dna/var/tmp/DNA_FONECTA_#NBR.TXT|Transfer file name (changes)
+Fonecta|FonectaFullFile|Char|/apps/dna/var/tmp/DNA_FONECTA.TXT|Transfer file name (all data)
+Fonecta|FonectaReportBase|Char|/mnt/store/rbs/directory/reportbase|Archive for sent files
+Fonecta|FonectaSent|Date|15/02/17|Date when last sent
+Fonecta|FonectaSeq|Int|7|File number sequence
+Fonecta|SelectionTS|Char|05:00:00|Report should include mobsubs created on previous day before mentioned time
+FuncRun|FRCallItemReceiver|Char|User|FuncRun call item target cust
+FuncRun|FRDaemonInterval|Int|60|Interval (sec) for funcrun dae
+FuncRun|FRTestRunDir|Char|/mnt/store/print/testrun|Dir for test run files
+GL|AccountingExtSource|Char|GL|External source id
+GL|BilledRevenueFileName|Char|/apps/dna/var/tmp/dnapro_billed_revenue_#DATE.dat|File name for billed revenue
+GL|BilledRevenueTransDir|Char|/mnt/store/xfergw/Siirtokansio2/gledger|Transfer dir for billed revenu
+GL|UnbilledRevenueFileName|Char|/apps/dna/var/tmp/dnapro_unbilled_revenue_#DATE.dat|File name for unbilled revenue
+GL|UnbilledRevenueTransDir|Char|/mnt/store/xfergw/Siirtokansio2/gledger|Transfer dir for unbilled reve
+GL|VirtUnbRevExcelTransDir|Char|/mnt/store/test/ubr|Trans dir for new unbilled revenue Excel ver
+GL|VirtUnbRevFileName|Char|/apps/dna/var/tmp/dnapro_unbilled_revenue_virt_#DATE.dat|Filename for new unbilled revenue
+GL|VirtUnbRevTransDir|Char|/mnt/store/xfergw/Siirtokansio2/gledger|Trans dir for new unbilled revenue
+HighSpender|HighSpenderDirectory|Char|/mnt/store/print/report|Default highspender directory
+HPD.Interface|HPD.Dump.LogFile|Char|/apps/var/log/Hpd.DumpToMQ.log|RBS to Cassandra dump log file
+HPD.Interface|HPD.Queue.IP|Char|hpd-mqueue|RBS to Cassandra publishing i/f IP
+HPD.Interface|HPD.Queue.Name|Char|rbs-bssapi|RBS to Cassandra publishing queue
+HPD.Interface|HPD.Queue.Port|Int|61613|RBS to Cassandra publishing i/f port
+HPD.Interface|HPD.Queue.SessionLimit|Int|1200|HPD publisher session limit
+HPD.Interface|HPD.Queue.TimeOut|Int|2|RBS to Cassandra publishing timeout
+HPD.Interface|HPD.Queue.TransSize|Int|10000|Transaction size of each query
+IIR|CounterCheckID|Int|11|ID FuncRun counter check
+IIR|IRCounterProcDir|Char|/mnt/store/print/log/countercheck/processing/|IRCounter runtime file dir
+IIR|IRCounterTransDir|Char|/mnt/store/print/log/countercheck/|Unbilled counters transdir
+IIR|OldUnbilledEventLimit|Int|13|How many months backward
+IIR|RejectedIRCounters|Char|/mnt/store/print/report/rejected_iir_invoices_#DATE.log|File for rejected IR invoices
+IIR|RerateALLDays|Char|3|Days from month end to rerate
+IIR|ReRateCheckFrom|Int|3|Days from month end
+Interest|CollStatesNoInterest|Char|I|Interest is not calculated when invoice is in these statuses
+Invoice|BillingInfoFile|Char|/mnt/store/billingdata/spool/billinginfo_#TODAY_#NOW.csv|Output for billinginfo for CM
+Invoice|ClaimCharge|Char|/mnt/store/billingdata/spool/billinginfo_#TODAY_#NOW.csv|Claiming charge
+Invoice|DefCurrency|Char|EUR|DefaultCurrency
+Invoice|DefVATCode|Int|1|Default VAT code
+Invoice|IntrumUpdateFile|Char|/apps/dna/var/tmp/updates.#DATE#TIME|Intrum update file name
+Invoice|IntrumXMLDir|Char|/mnt/store/rbs/intrum/out/out|Intrum XML Directory
+Invoice|IntrumXMLFileName|Char|/apps/dna/var/tmp/xinvoices.#DATE#TIME|Intrum XML File Name
+Invoice|IntrumXMLLog|Char|/apps/dna/var/tmp/INVXML_#DATE.log|XML LOG FILE
+Invoice|IntrumXMLLogTrans|Char|/mnt/store/intrum/log|XML LOG TRANSFER DIR
+Invoice|IntrumXMLMaxQty|Int|10000|Max quantity of invoices per file
+Invoice|InvCustExtSource|Char|CM|Source for customer ext.ID
+Invoice|InvRangeRepExclGroups1|Char|SALES|Comma separated list of excluded invgroups
+Invoice|InvRangeRepExclGroups2|Char|SALES|Comma separated list of excluded invgroups
+Invoice|InvRangeReportDetailFile|Char|/apps/var/tmp/InvRange_#ID_#DATE_#TIME_Detail_#TYPE.csv|path and filename for detail file
+Invoice|InvRangeReportSpoolDir|Char|/apps/var/tmp/InvRange_#ID_#DATE_#TIME.csv|Invoice numbers range report spool dir
+Invoice|InvRangeReportTransDir|Char|/mnt/store/xfergw/Siirtokansio2/out/|Invoice numbers range report transfer directory
+Invoice|NoticeTime|Int|7|
+Invoice|RemFeeDaysAfterR1|Int|3|Days after R1 status to remfee
+Invoice|RemFeeLimitDate|Date|21/04/16|Reminder fee from Qvantel System
+Invoice|RemFeeLogDir|Char|/mnt/store/xfergw/Siirtokansio9/out/|Reminder fee log transfer dir
+Invoice|RemFeeLogFile|Char|/apps/var/tmp/reminder_fee_#DATE.csv|Reminder fee creation log file
+InvPrint|DataRowItems|Char||Billcodes for data rows
+InvPrint|InvoiceToRevolverLog|Char|/apps/var/log/invoice_to_revolver.log|File path of invoice xml sending to revolver for PDF print
+InvPrint|InvPrintErrorFile|Char||Error log
+InvPrint|InvPrintFile|Char|INVOICE.#YYYYMMDD.#SEQ.XML|File name
+InvPrint|InvPrintTransDir|Char|/apps/filetransfer/put/itellabill/|Transfer dir for doc1 invoices
+InvPrint|InvShowPeakAmount|Char|BIG6,BIG8,BIG106,BIG108|Billing item groups for which on/off peak amounts are shown
+InvPrint|InvUsageSection|Char|IC13|Invoice section for usage
+InvPrint|NoPrintCust|Char||Customers that crash C.R.PDF
+InvPrint|XML2MQ.SendPause|Int|5|Pause X seconds before sending next batch of XML to MQ[Revolver]
+InvRowCounter|ChkBilledIRCounterDir|Char|/mnt/store/print/log/countercheck/billed|Dir for log files
+InvRowCounter|ChkUnbilledIRCounterDir|Char|/mnt/store/print/log/countercheck/processing|Dir for log files
+InvRun|SplitInvRunArc|Char|/data/tms/log/invrun/processed|Acrhive for inv.run sp
+Invrun|SplitInvRunDir|Char|/data/tms/log/invrun|Directory for split fi
+InvRun|SplitNoCallCust|Int|1000|Max. qty of customers / file
+MobBilling|DefBillStatDir|Char||Default Billing Statreport dir
+MobBilling|DefMSISDNPr|Char|041|Default MSISDN Number Prefix
+MobRating|DefCCode|Char|34|Default Country Code
+MobRating|ErrCDouble|Int|8001|'Error' code for double mcdr
+MobReport|HideBNumber|Int|3|
+MobSub|DCFPrefix|Char|042|Prefix for DCF
+MobSub|MSAddressChg|Char|admin|Password for address change
+MobSub|MSTimeLabelChg|Char|admin|Password for time label change
+Monitor|StatFileDir|Char|/opt/tools/monitoring/rbs|StatFileDir
+Monitoring|DashboardDir|Char|/opt/tools/monitoring/billing|Directory for zip monitor dashboard
+Monitoring|MonitorDir|Char|/apps/var/run|Dir for monitoring file for nagios
+Nagios|MonitorMethod|Char|File|Monitoring method for nagios
+Nagios|NagiosURL|Char|-H 145.247.16.93 -S 5501|URL FOR NAGIOS
+NAGIOS|Operator|Char|DNA|Nagios Operator
+NAGIOS|TimeOffSet|Int|0|Nagios time offset
+NAGIOS|URL|Char|-H 145.247.16.93 -S 5501|URL for Nagios FTP
+NCDevices|NCFeeModel|Char|NCDATADEVOTC,NCMOBDEVOTC|Device FeeModel w/o contract
+nnohti|oh-tuasno|Char|999|Unknown c.
+OM.Interface|OM.webservice.url|Char|http://172.20.34.69:80/OMServiceProvider/OMService?wsdl|
+OwnUse|OwnUseInvGroup|Char|OWNB2B,OWNB2C,TESTI|List of own usage invoice groups
+OwnUse|OwnUsePaymType|Char|11|List of own usage payment types
+Payment|PaymFileArc|Char|/mnt/store/rbs/intrum/in/processed|Archive dir for payment files
+Payment|PaymFileLog|Char|payment_file_#DATE_#TIME.txt|Log file for payment read
+Payment|PaymFileLogDir|Char|/mnt/store/print/|Directory for log file
+Payment|PaymFileLogTrans|Char||Transfer dir for log files
+Payment|PaymFiles|Char||Payment files
+Payment|UpfJournalDir|Char|/mnt/store/xfergw/Siirtokansio2/out/|Upfront journal transdir
+Payment|UpfJournalFile|Char|/apps/var/tmp/upfront_payment_journal_#PERIOD_#TODAY.csv|Upfront Journal File
+PaymPlan|PPaymBatch1Amt|Char|/apps/var/tmp/upfront_payment_journal_#PERIOD_#TODAY.csv|Amount for batch 1
+PaymPlan|PPaymBatch2Due|Int|29|Due date for part payment
+PaymPlan|PPBankDays|Int|3|Bank days after due date
+PaymPlan|PPBatchAmt|Char||Min amounts for batch dividing
+PaymPlan|PPBatchFee|Char||Fees for batches
+PaymPlan|PPBFAccNum|Int|99999|Account for batch fee
+PaymPlan|PPDueDateChg|Int|22|Due date transfer (days)
+PaymPlan|PPDueDateLimit|Int|13|Max. days after orig. due date
+PaymPlan|PPlanServKey|Char|PAYMPACTCM|Paymentplan servicefee key
+PaymPlan|PPPaymTerm|Char||Payment terms for batches
+PerContract|DATAOTC0|Char|NCDATADEVOTC|Data device OTC for 0 months
+PerContract|DATAOTC12|Char|DATADEVOTC12|Data device OTC for 12 months
+PerContract|DATAOTC24|Char|DATADEVOTC24|Data device OTC for 24 months
+PerContract|DATARC12|Char|DATADEVRC12|Data device RC for 12 months
+PerContract|DATARC24|Char|DATADEVRC24|Data device RC for 24 months
+PerContract|DATATPRC12|Char|TERMPAYM12DATA|Term paym data RC 12 months
+PerContract|DATATPRC18|Char|TERMPAYM18DATA|Term paym data RC 18 months
+PerContract|DATATPRC24|Char|TERMPAYM24DATA|Term paym data RC 24 months
+PerContract|DATATPRC36|Char|TERMPAYM36DATA|Term paym data RC 36 months
+PerContract|DATATPRC6|Char|TERMPAYM6DATA|Term paym data RC 6 months
+PerContract|DeviceContract12|Char|DEVICEOTC12|12 months with one time charge
+PerContract|DeviceContract24|Char|DEVICEOTC24|24 months with one time charge
+PerContract|DeviceContractRC12|Char|DEVICERC12|12 months with recurring fees
+PerContract|DeviceContractRC24|Char|DEVICERC24|24 months with recurring fees
+PerContract|MOBILEOTC0|Char|NCMOBDEVOTC|Mobile device OTC for 0 months
+PerContract|MOBILEOTC12|Char|DEVICEOTC12|Mobile device OTC for 12months
+PerContract|MOBILEOTC24|Char|DEVICEOTC24|Mobile device OTC for 24months
+PerContract|MOBILERC12|Char|DEVICERC12|Mobile device RC for 12 months
+PerContract|MOBILERC24|Char|DEVICERC24|Mobile device RC for 24 months
+PerContract|MOBILETPRC12|Char|TERMPAYM12VOICE|Term paym mobile RC 12 months
+PerContract|MOBILETPRC18|Char|TERMPAYM18VOICE|Term paym mobile RC 18 months
+PerContract|MOBILETPRC24|Char|TERMPAYM24VOICE|Term paym mobile RC 24 months
+PerContract|MOBILETPRC36|Char|TERMPAYM36VOICE|Term paym mobile RC 36 months
+PerContract|MOBILETPRC6|Char|TERMPAYM6VOICE|Term paym mobile RC 6 months
+PerContract|ServiceContracts|Char|DATASER,VOICESMS|Custom service contracts list
+PerContract|SubsMonthlyFee|Char|SUBSRECURCHARGE,RCDATASER*,RCVOICESMS*|Fee model used for subscription's monthly fees (list)
+Printing|MailArcDir|Char||Archive dir for mail prints
+Printing|MailPrintFile|Char||File for email print
+Rating|BotTriggerLimit|Int|1000|Limit for SMS bursts
+Rating|CDRstreamCounter|Char|/opt/tools/monitoring/cdr/cdrstream_counter.txt|CDR stream counter output dir
+Rating|CommonB2BPriceList|Char|1COMMON|Common pricelist for B2B
+Rating|CommonFeePriceList|Char|COMMON|Common pricelist for fees
+Rating|ExclusionList|Char|0449772859,0442374259,0442399120,0449813276,0445134915,0449781156|Clis left out from alerts
+Rating|KPICDRFileName|Char|/opt/tools/monitoring/cdr/kpi_counter.txt|KPI-report file
+Rating|KPICDRHandleTime|Int|900|Acceptable duration for Rating
+Rating|KPIErrorFileName|Char|/opt/tools/monitoring/cdr/kpirate_errorcounter.txt|KPI Errorfile name
+Rating|KPIYesterdayFileName|Char|/opt/tools/monitoring/cdr/kpirate_#YESTERDAY.txt|KPI rating capacity
+Rating|RoamCDRAlert|Char|/opt/tools/monitoring/cdr/kpirate_#YESTERDAY.txt|Price of CDR to trigger alert
+Rating|TMqueueFileName|Char|/opt/tools/monitoring/cdr/tmqueue.txt|TMQueue monitoring file
+Rating|WeekEndBegin|Char|7:00|weekend starts (wd:hour)
+Rating|WeekendEnd|Char|1:24|weekend ends   (wd:hour)
+Refund|RefundApprovalLimit|Char|1:24|Limit for manual approval
+Refund|RefundBalAcc|Int|13131313|Refund balance account
+Refund|RefundDir|Char|/apps/filetransfer/rsync/|Refund directory
+Refund|RefundErrorFile|Char|/apps/filetransfer/rsync/|Refund error log
+Refund|RefundFile|Char|/apps/filetransfer/rsync/REFUND_|File for refund payments
+Refund|RefundFileDays|Char|5,20|File creation days
+Refund|RefundTransDir|Char||Transfer directory for refunds
+REPORT|ActSubsReportDir|Char|/mnt/store/rbs/reports/|Active subscription count dir
+Report|BillItemTrendTestDir|Char|/mnt/store/print/report|Billing trend from test bills
+Report|BillQualityFileName|Char|/apps/dna/var/tmp/billing_report_#INVDATE_#MODE.txt|File name for quality report
+Report|BillQualityTransDir|Char|/mnt/store/print/report|Trans dir for quality report
+Report|BillRepFileName|Char|/apps/dna/var/tmp/billing_report_#INVDATE.txt|File name for billing report
+Report|BillRepTransDir|Char|/mnt/store/print/report|Transfer dir for billing repor
+Report|CCNReportFile|Char|/apps/dna/var/tmp/billing_item_totals_#DATE.txt|File name for CCN report
+Report|CCNReportTrans|Char|/mnt/store/print/report|Transfer dir for CCN report
+Report|CustSearchFileName|Char|/apps/dna/var/tmp/customer_search_#DATE_#TIME.csv|File name for customer search report
+Report|CustSearchTransDir|Char|/mnt/store/rbs/billing|Transfer dir for customer search report
+Report|CustSumRepFileName|Char|/apps/var/tmp/customer_#CUSTID_report_summary#MAIN.csv|File name for customer/contract summary
+Report|CustSumRepTransDir|Char|/mnt/store/print/report|Transfer dir for customer/contract summary
+Report|SaldoListTestTrans|Char|/mnt/store/test/saldolist/|TransferDir for saldo list test and verify runs
+Report|SaldoListVerifyFile|Char|/apps/dna/var/tmp/saldo_dump_#INVGROUP_#DATE_#RUNDATE_#RUNTIME.txt|TransferDir for saldo list test and verify runs
+Reports|AgeAnalFileName|Char|/apps/var/tmp/ageanal_#MODE_#DATE_#TIME.csv|Age analysis report file name
+Reports|AgeAnalTransDir|Char|/mnt/store/xfergw/Siirtokansio8/out|Transfer dir for age analysis
+Reports|BIGroupSalesFileName|Char|/apps/dna/var/tmp/dnapro_bigroup_sales_#RUN_#DATE_#TODAY.dat|File name for bi.group sales
+Reports|BIGroupSalesTransDir|Char|/mnt/store/xfergw/Siirtokansio2/gledger|Transfer dir for bi.group sls
+Reports|BilledBillItemsFileName|Char|/apps/dna/var/tmp/dnapro_billed#RUN_#MONTH_#DATE_#TIME.dat|File name for billed bill item
+Reports|BilledBillItemsTransDir|Char|/mnt/store/xfergw/Siirtokansio2/gledger|Trans dir for billed bill item
+Reports|BilledRevRounding|Char|/mnt/store/xfergw/Siirtokansio2/gledger|Rounding limit per invoice
+Reports|BillItemTrendFileName|Char|/apps/dna/var/tmp/dna_billed_trend_#DATE_#TIME.txt|File name for billing item trend report
+Reports|BillItemTrendTransDir|Char|/mnt/store/xfergw/Siirtokansio3/out|Transfer dir for billing item trend report
+Reports|CustInvgCatUpdateA|Char|/mnt/store/xfergw/Siirtokansio3/out/customer_changes_#RUNMODE_#DATAPERIODSTART_#DATAPERIODEND_#RUNDATE.csv|Output directory for Customer's InvGroup or Category Update report. Automated run.
+Reports|CustInvgCatUpdateM|Char|/mnt/store/print/report/customer_changes_#RUNMODE_#DATAPERIODSTART_#DATAPERIODEND_#RUNDATE.csv|Output directory for Customer's InvGroup or Category Update report. Manual run.
+Reports|CustInvgCatUpdateT|Char|/mnt/store/rbs/billing/testing/customer_changes_#RUNMODE_#DATAPERIODSTART_#DATAPERIODEND_#RUNDATE.csv|Output directory for Customer's InvGroup or Category Update report. Test run.
+Reports|ErrorLogMonitorActions|Char|INVEXTID,BILLREVENUE,UNBILLEDREV|List of actions to be monitored
+Reports|ErrorLogMonitorFile|Char|/apps/dna/var/tmp/errorlog_monitor.txt|File name for error log monitoring
+Reports|ErrorLogMonitorTime|Char|17-02-2017 14:40:01|Latest reporting time
+Reports|ErrorLogMonitorTrans|Char|/mnt/store/control/errorlog|Transfer dir for error log monitor file
+Reports|ErrorLogRepActions|Char|TEAPPSXML,INVEXTID,CALLITEM,BILLREVENUE,CALLSPECBULK,INVOICEXML,UNBILLEDREV,INVOICESMS|Action IDs to be reported
+Reports|ErrorLogRepFile|Char|/apps/dna/var/tmp/errorlog_#ACTION_#DATE.txt|File name for errorlog report
+Reports|ErrorLogRepRecipient|Char|dnapro.billing@qvantel.com|Mail recipient for errorlog re
+Reports|ErrorLogRepTransDir|Char|/mnt/store/print/log/errorlog|Transfer dir for errorlog repo
+Reports|FonectaControlFileName|Char|/apps/dna/var/tmp/directory_services_modifications_#TODAY_#TIME.txt|File name for fonecta control
+Reports|FonectaControlTransDir|Char|/mnt/store/xfergw/Siirtokansio1/out|Transfer dir for fonecta ctrl
+Reports|FSecureContract|Char|SEC*|FSecure contract IDs
+Reports|FSecureQtyFileName|Char|dnapro_fsecure_contracts_#YYYYMMDD.dat|File name for fsecure report
+Reports|FSecureQtyTransDir|Char|/mnt/store/xfergw/Siirtokansio4/out|Transfer dir for fsecure repor
+Reports|InvJourCtrlTransDir|Char|/mnt/store/print/report|Transfer dir for control repor
+Reports|InvJourFile|Char|/apps/dna/var/tmp/#INVTYPEIDdnapro_invjour_#METHOD_#DATE.dat|File name for inv.journal
+Reports|InvJourTransDir|Char|/mnt/store/xfergw/Siirtokansio2/gledger|Transfer dir for inv.journal
+Reports|OverPaymBalFile|Char|/apps/dna/var/tmp/Overpayment_balance_#DATE_#TIME.txt|Overpayment balance report filename
+Reports|OverPaymBalTrans|Char|/mnt/store/xfergw/Siirtokansio2/out/|Trans dir for Overpayment balance report
+Reports|OverPaymReportFile|Char|/apps/dna/var/tmp/dnapro_overpayment_#DATE.dat|File name for overpaym report
+Reports|OverPaymReportTrans|Char|/mnt/store/xfergw/Siirtokansio2/gledger|Transfer dir for overpaym repo
+Reports|PaymJournalCopyDir|Char|/mnt/store/xfergw/Siirtokansio8/out/|Copy dir for (mothly paymjournal)
+Reports|PaymJournalCtrlTrans|Char|/mnt/store/print/report|Transfer dir for control repor
+Reports|PaymJournalDailyTrans|Char|/mnt/store/xfergw/Siirtokansio8/out/|Daily paymjournal transdir
+Reports|PaymJournalFile|Char|/apps/dna/var/tmp/dnapro_paymjour_#PERIOD_#METHOD_#DATE.dat|Filename for Paym Journal
+Reports|PaymJournalTrans|Char|/mnt/store/xfergw/Siirtokansio2/gledger|transfer dir of paym journal
+Reports|RatingKPIReport|Char|/apps/var/tmp/rating_kpi_#PERIOD.csv|Rating KPI Report file
+Reports|RatingKPITransDir|Char|/mnt/store/kpi_reports/|Rating KPI Report transferdir
+Reports|RevenueJournalFileName|Char|/apps/dna/var/tmp/revenue_journal_#MODE_#INVGROUP_#PERIOD.csv|File name for revenue invoice journal
+Reports|RevenueJournalTransDir|Char|/mnt/store/xfergw/Siirtokansio2/out|Transfer dir for revenue invoice journal
+Reports|SaldoListCredPaymSrcs|Char|IN50,MP50,CR|Comma separated list of credit related payment sources
+Reports|SaldoListDiffFile|Char|/apps/dna/var/tmp/saldo_diff_#INVGROUP_#DATE_#RUNDATE_#RUNTIME.txt|File stores records with different saldo evaluations: balance report and saldo dump
+Reports|SaldoListExclOwnUse|Int|1|1=exclude own use, 0=include own use
+Reports|SaldoListFile|Char|/apps/dna/var/tmp/balance_report_detail_#INVGROUP_#DATE_#RUNDATE_#RUNTIME.txt|Filename for balance list report
+Reports|SaldoListSummaryFile|Char|/apps/dna/var/tmp/balance_report_summary_#INVGROUP_#DATE_#RUNDATE_#RUNTIME.txt|Filename for balance list summary report
+Reports|SaldoListTrans|Char|/mnt/store/xfergw/Siirtokansio8/out/|Trans dir for saldo balance list report
+Reports|SpecSkipProd|Char|MNF|Products skipped on specific.
+Reports|TempInvJournalFile|Char|/apps/dna/var/tmp/tempinvjournal.txt|Temporary File for Invoice Journals
+Reports|TempJournalFile|Char|/mnt/store/print/report/tempjournal.txt|Temporary File for Journals
+Reports|TempPaymJournalFile|Char|/apps/dna/var/tmp/temppaymjournal.txt|Temporary File for Payment Journals
+Reports|UnbilledSubsFileName|Char|/apps/dna/var/tmp/unbilled_subs_#PERIOD_#INVGRP.txt|File name for unbilled subs
+Reports|UnbilledSubsTransDir|Char|/mnt/store/print/report|Transfer dir for unbilled subs
+RequestRunner|MoveToHandledDays|Int|32|Nbr of days to keep reqs in state 0 after actdate
+Revolver.Interface|RevToRBS.IP|Char|mqueue|ActiveMQ server IP for i/f with Revolver
+Revolver.Interface|RevToRBS.Port|Int|61613|I/F port for receiving messages from queue rev_rbs
+Revolver.Interface|RevToRBS.QName|Char|rev_rbs|Queue name for reading revolver messages
+Revolver.Interface|RevToRBS.SessionLimit|Int|100|Listener session restart limit in seconds
+Revolver.Interface|RevToRBS.Timeout|Int|2|Timeout value for queue rev_rbs
+ServiceBreak|Activation|Char|0|ServiceBreak for activation
+SIMCHANGE|RestrictedPrefix|Char|633|Restricted MSISDN prefixes
+SMS|ContractPenaltyText|Char|ContractPenalty|Text for device penalty sms
+SMS|IRACharFile|Char|/apps/tms/Gwy/irachar.txt|IRA characters
+SMS|ScheduledCallAlarm|Char|5,7,71|Scheduled call alarm credit types list
+SMS|SMSMaxLength|Int|640|Maximum SMS text length
+SOG|LogDirectory|Char||Directory for log files
+subser|DataNumber|Int|0|
+Subser|DCF-Number|Char|0|Default call forwarding no
+SubsTerm|cancel_nocharge|Char|13|Order cancel deact all
+SubsTerm|cancel_retain_nocharge|Char|14|Order cancel deact all not dev
+SubsTerm|cancel_returned_nocharge|Char|13|Order cancel deact all
+SubsTerm|debt_charge|Char|4|Debt Termination
+SubsTerm|debt_retain_charge|Char|4|Debt Termination
+SubsTerm|expuser_nocharge|Char|24|Experiment period cancel, deact. all
+SubsTerm|expuser_returned_nocharge|Char|24|Experiment period cancel, deact. all
+SubsTerm|mnp_charge|Char|2|Term due to MNP outporting
+SubsTerm|mnp_retain_charge|Char|2|Term due to MNP outporting
+SubsTerm|operator_charge|Char|22|Order terminated by CSP
+SubsTerm|operator_nocharge|Char|15|OrderTerm CSP deact all
+SubsTerm|operator_retain_charge|Char|22|Order terminated by CSP
+SubsTerm|operator_retain_nocharge|Char|16|OrderTerm CSP deac all not dev
+SubsTerm|operator_returned_charge|Char|27|Deactivate device, not subscription
+SubsTerm|operator_returned_nocharge|Char|15|OrderTerm CSP deact all
+SubsTerm|salesperson_nocharge|Char|26|SalesPerson cancelled device contract, deact. device
+SubsTerm|salesperson_returned_nocharge|Char|26|SalesPerson cancelled device contract, deact. device
+SubsTerm|user_charge|Char|1|Termination by customer
+SubsTerm|user_retain_charge|Char|1|Termination by customer
+Subvention|SubvCalcLogFile|Char|/apps/dna/var/tmp/subvention_calculation_#DATE_#TIME.txt|Log file for subvention calculation
+Subvention|SubvCalcLogTrans|Char|/mnt/store/print/log/subvention|Transfer dir for subvention log
+System|AdminUser|Char|admin|Password for admin user
+System|AsterixDarProject|Char|10803|Asterix project for AR issues
+System|AsterixDarResponsible|Char|customer_dna_myyntireskontra|Asterix responsible for Ar issues
+System|AsterixPass|Char|R8Spa55wd|Password for asterix
+System|AsterixTestProject|Char|10700|Asterix project for AR issues
+System|AsterixTestResponsible|Char|seppokol|Asterix responsible for Ar issues
+System|AsterixUser|Char|RBS_patch|Userid for asterix
+System|CountryCodeDef|Char|FI|Default Country Code
+SYSTEM|DBHostName|Char||HostName of DB server
+SYSTEM|DefClStamp|Char|20521231.86399|Default closing timestamp
+System|DeletePwd|Char|delete|Password for serious delete
+System|EMailMethod|Char|SMTP|Method to send eMail
+system|EventlogDir|Char|/apps/dna/var/log/|Eventlog directroy
+System|PaymPlanCreditControl|Char|creditpw|Password for pplan credit cont
+System|RepConfDir|Char|/apps/dna/tms/mail|Configuration directory
+System|SystemTempDir|Char|/apps/var/tmp/|Path for system temp directory
+System|TestUser|Char|trel2testi|Password for testing
+Temp|DNR471_FirstRun|Char|FALSE|DNR471_FirstRun
+TMSPASS|PassWdExpireNotify|Int|5|Notify in days password expiry
+TMSPASS|PassWdHistory|Int|4|Password history length
+TMSPASS|PassWdValidDays|Int|120|Password expirates in days
+TMT|TMQueueInterval|Int|20|Interval for TMQueue analysis
+XML|BigPdfsCount|Int|15|Biggest PDFs count
+XML|BigPdfsDir|Char|/mnt/store/xfergw/Siirtokansio9/out/|Biggest pdfs dir
+XML|CallItemFile|Char|/mnt/store/print/callitemization/spool/call_itemization_#INVNUM_#MSISDN_#USER.xml|File name for call itemization
+XML|CallItemFormatted|Int|1|1=formatted, 0=not formatted
+XML|CallItemPDFScript|Char|/opt/qvantel/cr/runDNAitemization.sh -s #SOURCE -o #TARGET|Script for PDF creation
+XML|CallItemPDFTestTransDir|Char|/mnt/store/print/callitemization/test/cache/|Transfer dir for PDF files
+XML|CallItemPDFTransDir|Char|/mnt/store/print/callitemization/cache/|Transfer dir for PDF files
+XML|CallItemTestTransDir|Char|/mnt/store/print/callitemization/test/#BILLMONTH/#FF/#SS|Transfer dir for test itemiz.
+XML|CallItemTransDir|Char|/mnt/store/print/callitemization/#BILLMONTH/#FF/#SS|Transfer dir for itemization
+XML|CallItemVersion|Char|3.4|Version for itemization
+XML|CommissionInvXMLFile|Char|/mnt/store/print/xmlspool/DNA_#HEADER_#SALESCHAINID_#INVNUM_#IDATE.xml|Commission invoice XML file
+XML|CommissionXMLTransDir|Char|/mnt/store/print/commission/xmlstore/#BILLRUN|Commission XML transfer dir
+XML|CommItemPDFTestTransDir|Char||Commission item test PDF dir
+XML|CommItemPDFTransDir|Char||Commission item PDF trans dir
+XML|CommItemXMLFile|Char||Commission itemization XML file
+XML|CommItemXMLTestTransDir|Char||Commission item test XML dir
+XML|CommItemXMLTransDir|Char||Commission item XML trans dir
+XML|CommPDFTestTransDir|Char|/mnt/store/print/commission/pdfstore/test/#BILLRUN|Commission test PDF trans dir
+XML|CommPDFTransDir|Char|/mnt/store/print/commission/pdfstore/#BILLRUN|Commission PDF trans dir
+XML|CommXMLTestTransDir|Char|/mnt/store/print/commission/xmlstore/test/#BILLRUN|Commission XML test trans dir
+XML|FullBNumCallItemFile|Char|/mnt/store/print/callitemization/spool/full_call_itemization_#INVNUM_#MSISDN_#USER.xml|File name for full b-number call itemization
+XML|FullBNumCallItemTransDir|Char|/mnt/store/print/callitemization/temp|Trans dir for full b-number call itemization
+XML|InvoicePDFBatchQty|Int|1000|PDF printing batch
+XML|InvoicePDFScript|Char|/opt/qvantel/cr/runDNAinvoice.sh -s #SOURCE -o #TARGET|command to convert xmls to pdf
+XML|InvPDFTestTransDir|Char|/mnt/store/print/xmlstore/cache/test/#BATCHID/|Transfer dir for test pdfs
+XML|InvPDFTransDir|Char|/mnt/store/print/xmlstore/cache/#BATCHID/|Transfer dir for pdf invoices
+XML|INVTEAPPSXMLFile|Char|/mnt/store/print/teappsxmlstore/spool/DNA_PRO_#INVNUM.xml|File name
+XML|INVTEAPPSXMLFormatted|Int|1|1=formatted, 0=not formatted
+XML|InvTEAPPSXMLNetServiceID|Char|00370592509640|Net service ID
+XML|InvTEAPPSXMLPrintHouse|Char|Opuc Capita|Printhouse name
+XML|INVTEAPPSXMLTestTransDir|Char|/mnt/store/print/teappsxmlstore/test/#BILLRUN|Dir for test invoices
+XML|INVTEAPPSXMLTransDir|Char|/mnt/store/print/teappsxmlstore/#BILLRUN|Transfer dir for xml invoices
+XML|INVTEAPPSXMLVersion|Char|2.7.2|Version for XML
+XML|InvXMLFile|Char|/mnt/store/print/xmlspool/DNA_PRO_#INVNUM.xml|File name
+XML|InvXMLFormatted|Int|1|1=formatted, 0=not formatted
+XML|InvXMLHideBSub|Int|1|Hide b-numbers in invoice XML
+XML|InvXMLPrintCDRs|Int|0|Print CDRs to invoice XML
+XML|InvXMLScreenCommand|Char|screen #NAME -T xterm xfear -screen Inv/print_invoice_batch.p tms.pf -param #PARAM|Screen start command
+XML|InvXMLTestInvDir|Char|/mnt/store/print/xmlstore/test|Dir for test invoices
+XML|InvXMLTestTransDir|Char|/mnt/store/print/xmlstore/test/#BILLMONTH/#FF/#SS|Dir for test invoices
+XML|InvXMLTransDir|Char|/mnt/store/print/xmlstore/#BILLMONTH/#FF/#SS|Transfer dir for xml invoices
+XML|InvXMLVersion|Char|3.5|Version for XML
+XML|InvZipDelay|Int|10|Wait seconds zip creation
+XML|InvZIPFile|Char|/apps/dna/var/tmp/DNA_PRO_#TODAY_#NOW.zip|File for zipped pdf invoices
+XML|InvZipMaxQty|Int|1000|Max qty of invoices in one zip
+XML|InvZipTestFile|Char|/mnt/store/rbs/printhouse/test/DNA_PRO_#TODAY_#NOW.zip|Transfer dir for test zip file
+XML|InvZipTrans|Char|/mnt/store/rbs/invoices/out|Transfer dir for zip file
+XML|ReminderFeeCodes|Char|OTCREMFEE,OTCREMFEE2|Reminder fee billcodes
+XML|ResellerInvPDFScript|Char|��/opt/qvantel/cr/runDNAinvReseller.sh -s #SOURCE -o #TARGET                    │|Command to make pdf from xml
+XML|RevolverInvListFile|Char|/mnt/store/print/tmp/pdf_list_#DATE_#NOW.txt|
+XML|RSInvPDFTestTransDir|Char|/mnt/store/print/xmlstore/test/#BILLRUN/|Reseller test invoice PDF directory
+XML|RSInvPDFTransDir|Char|/mnt/store/print/xmlstore/#BILLRUN/|Reseller Invoice PDF Directory
+XML|SubventionInvXMLFile|Char|/mnt/store/print/xmlspool/DNA_#HEADER_#SALESCHAINID_#INVNUM_#IDATE.xml|Subvention invoice XML file
+XML|SubventionXMLTransDir|Char|/mnt/store/print/subvention/xmlstore/#BILLRUN|Subvention XML transfer dir
+XML|SubvItemPDFTestTransDir|Char||Subvention item test PDF dir
+XML|SubvItemTestTransDir|Char||Subvention item test XML dir
+XML|SubvItemTransDir|Char||Subvention item XML trans dir
+XML|SubvItemXMLFile|Char||Subvention item XML file
+XML|SubvItemXMLTestTransDir|Char||Subvention item test XML dir
+XML|SubvItemXMLTransDir|Char||Subvention item XML trans dir
+XML|SubvPDFTestTransDir|Char|/mnt/store/print/subvention/pdfstore/test/#BILLRUN|Subvention test PDF trans dir
+XML|SubvPDFTransDir|Char|/mnt/store/print/subvention/pdfstore/#BILLRUN|Subvention PDF trans dir
+XML|SubvXMLTestTransDir|Char|/mnt/store/print/subvention/xmlstore/test/#BILLRUN|Subvention XML test trans dir
