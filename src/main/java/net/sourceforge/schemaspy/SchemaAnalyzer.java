@@ -346,14 +346,6 @@ public class SchemaAnalyzer {
 
                 progressListener.graphingSummaryProgressed();
 
-                List<ForeignKeyConstraint> constraints = DbAnalyzer.getForeignKeyConstraints(tables);
-                out = new LineWriter(new File(outputDir, "constraints.html"), 256 * 1024, config.getCharset());
-                HtmlConstraintsPage constraintIndexFormatter = HtmlConstraintsPage.getInstance();
-                constraintIndexFormatter.write(db, constraints, tables, out);
-                out.close();
-
-                progressListener.graphingSummaryProgressed();
-
                 out = new LineWriter(new File(outputDir, "anomalies.html"), 16 * 1024, config.getCharset());
                 HtmlAnomaliesPage.getInstance().write(db, tables, impliedConstraints, out);
                 out.close();
