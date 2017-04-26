@@ -178,14 +178,14 @@ public class HtmlMainIndexPage extends HtmlFormatter {
             html.write(" <label for='showViews'><input type='checkbox' id='showViews' checked>Views</label>");
         }
 
-        html.writeln(" <label for='showComments'><input type=checkbox " + (hasComments  ? "checked " : "") + "id='showComments'>Comments</label>");
+//        html.writeln(" <label for='showComments'><input type=checkbox " + (hasComments  ? "checked " : "") + "id='showComments'>Comments</label>");
         html.writeln("</b>");
 
         html.writeln("<table class='dataTable' border='1' rules='groups'>");
         int numGroups = 4 + (showIds ? 1 : 0) + (displayNumRows ? 1 : 0);
         for (int i = 0; i < numGroups; ++i)
             html.writeln("<colgroup>");
-        html.writeln("<colgroup class='comment'>");
+        html.writeln("<colgroup>");
         html.writeln("<thead align='left'>");
         html.writeln("<tr>");
         String tableHeading;
@@ -203,7 +203,7 @@ public class HtmlMainIndexPage extends HtmlFormatter {
         html.writeln("  <th align='right' valign='bottom'>Columns</th>");
         if (displayNumRows)
             html.writeln("  <th align='right' valign='bottom'>Rows</th>");
-        html.writeln("  <th class='comment' align='left' valign='bottom'>Comments</th>");
+        html.writeln("  <th align='left' valign='bottom'>Comments</th>");
         html.writeln("</tr>");
         html.writeln("</thead>");
         html.writeln("<tbody>");
@@ -299,7 +299,7 @@ public class HtmlMainIndexPage extends HtmlFormatter {
             }
         }
 
-        html.write("  <td class='comment detail'>");
+        html.write("  <td>");
         String comments = table.getComments();
         if (comments != null) {
             if (encodeComments)
@@ -320,7 +320,7 @@ public class HtmlMainIndexPage extends HtmlFormatter {
         html.writeln("    <td class='detail'>&nbsp;</td>");
         if (displayNumRows)
             html.writeln("    <td class='detail'>&nbsp;</td>");
-        html.writeln("    <td class='comment detail'>&nbsp;</td>");
+        html.writeln("    <td>&nbsp;</td>");
         html.writeln("  </tr>");
         String name = numTables == 1 ? " Table" : " Tables";
         html.writeln("  <tr class='tbl'>");
@@ -330,7 +330,7 @@ public class HtmlMainIndexPage extends HtmlFormatter {
         html.writeln("    <td class='detail' align='right'><b>" + integerFormatter.format(numTableCols) + "</b></td>");
         if (displayNumRows)
             html.writeln("    <td class='detail' align='right'><b>" + integerFormatter.format(numRows) + "</b></td>");
-        html.writeln("    <td class='comment detail'>&nbsp;</td>");
+        html.writeln("    <td>&nbsp;</td>");
         html.writeln("  </tr>");
         name = numViews == 1 ? " View" : " Views";
         html.writeln("  <tr class='view'>");
@@ -340,7 +340,7 @@ public class HtmlMainIndexPage extends HtmlFormatter {
         html.writeln("    <td class='detail' align='right'><b>" + integerFormatter.format(numViewCols) + "</b></td>");
         if (displayNumRows)
             html.writeln("    <td class='detail'>&nbsp;</td>");
-        html.writeln("    <td class='comment detail'>&nbsp;</td>");
+        html.writeln("    <td>&nbsp;</td>");
         html.writeln("  </tr>");
         html.writeln("</tbody>");
         html.writeln("</table>");

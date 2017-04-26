@@ -167,8 +167,8 @@ public class HtmlColumnsPage extends HtmlFormatter {
         html.writeln("<tr valign='top'><td class='container' align='left' valign='top'>");
         html.writeln("<p>");
         html.writeln("<form name='options' action=''>");
-        if (Config.getInstance().getColumnDetails().contains("comments"))
-            html.writeln(" <label for='showComments'><input type=checkbox checked id='showComments'>Comments</label>");
+//        if (Config.getInstance().getColumnDetails().contains("comments"))
+//            html.writeln(" <label for='showComments'><input type=checkbox checked id='showComments'>Comments</label>");
         html.writeln(" <label for='showLegend'><input type=checkbox checked id='showLegend'>Legend</label>");
         html.writeln("</form>");
         html.writeln("</table>");
@@ -204,20 +204,22 @@ public class HtmlColumnsPage extends HtmlFormatter {
                 details.remove("id");   // simplify subsequent logic by yanking it now
 
             for (String detail : details) {
-                if (detail.equals("comments"))
-                    out.writeln("<colgroup class='comment'>");
-                else
-                    out.writeln("<colgroup>");
+                out.writeln("<colgroup>");
+//                if (detail.equals("comments"))
+//                    out.writeln("<colgroup class='comment'>");
+//                else
+//                    out.writeln("<colgroup>");
             }
             // Add borders for the comment's columns (Label, Help, Col.Label, Description)
             for (int i = 0; i < 6; i++)
-                out.writeln("<colgroup class='comment'>");
+                out.writeln("<colgroup>");
+//                out.writeln("<colgroup class='comment'>");
         } else {
             int numCols = hasTableIds ? 12 : 11;
             for (int i = 0; i < numCols; ++i) {
                 out.writeln("<colgroup>");
             }
-            out.writeln("<colgroup class='comment'>");
+            out.writeln("<colgroup>");
         }
 
         out.writeln("<thead align='left'>");
@@ -234,39 +236,39 @@ public class HtmlColumnsPage extends HtmlFormatter {
             headings.put("default", getTH(selectedColumn, "Default", "Default value", null));
             headings.put("children", getTH(selectedColumn, "Children", "Columns in tables that reference this column", null));
             headings.put("parents", getTH(selectedColumn, "Parents", "Columns in tables that are referenced by this column", null));
-            headings.put("comments", "<th title='Label' class='comment'><span class='notSortedByColumn'>Label</span></th>");
+            headings.put("comments", "<th title='Label' ><span class='notSortedByColumn'>Label</span></th>");
 
             // output the headings in the order specified
             if (details != null) {  // redundant, but keeps compiler happy
                 for (String detail : details) {
                     out.writeln(headings.get(detail));
                     if (detail.equals("column")) {
-                        out.writeln("  <th title='Type' class='comment'><span class='notSortedByColumn'>Type</span></th>");
-                        out.writeln("  <th title='Format' class='comment'><span class='notSortedByColumn'>Format</span></th>");
-                        out.writeln("  <th title='# of Uniques' class='comment'><span class='notSortedByColumn'># of Uniques</span></th>");
+                        out.writeln("  <th title='Type' ><span class='notSortedByColumn'>Type</span></th>");
+                        out.writeln("  <th title='Format' ><span class='notSortedByColumn'>Format</span></th>");
+                        out.writeln("  <th title='# of Uniques' ><span class='notSortedByColumn'># of Uniques</span></th>");
                     }
                 }
             }
             // Comments: Label (LABEL) (*label is set separately see 8 lines above),
             //           Help (HELP), Column label (COL-LABEL), Description (DESC)
-            out.writeln("  <th title='Column Label' class='comment'><span class='notSortedByColumn'>Col.Label</span></th>");
-            out.writeln("  <th title='Help' class='comment'><span class='notSortedByColumn'>Help</span></th>");
-            out.writeln("  <th title='Description' class='comment'><span class='notSortedByColumn'>Description</span></th>");
+            out.writeln("  <th title='Column Label' ><span class='notSortedByColumn'>Col.Label</span></th>");
+            out.writeln("  <th title='Help' ><span class='notSortedByColumn'>Help</span></th>");
+            out.writeln("  <th title='Description' ><span class='notSortedByColumn'>Description</span></th>");
         } else {
             if (hasTableIds)
                 out.writeln(getTH(selectedColumn, "ID", null, "right"));
             out.writeln(getTH(selectedColumn, "Column", null, null));
-            out.writeln("  <th title='Type' class='comment'><span class='notSortedByColumn'>Type</span></th>");
-            out.writeln("  <th title='Format' class='comment'><span class='notSortedByColumn'>Format</span></th>");
-            out.writeln("  <th title='# of Uniques' class='comment'><span class='notSortedByColumn'># of Uniques</span></th>");
+            out.writeln("  <th title='Type' ><span class='notSortedByColumn'>Type</span></th>");
+            out.writeln("  <th title='Format' ><span class='notSortedByColumn'>Format</span></th>");
+            out.writeln("  <th title='# of Uniques' ><span class='notSortedByColumn'># of Uniques</span></th>");
             out.writeln(getTH(selectedColumn, "Nulls", "Are nulls allowed?", null));
             out.writeln(getTH(selectedColumn, "Default", "Default value", null));
             out.writeln(getTH(selectedColumn, "Children", "Columns in tables that reference this column", null));
             out.writeln(getTH(selectedColumn, "Parents", "Columns in tables that are referenced by this column", null));
-            out.writeln("  <th title='Label' class='comment'><span class='notSortedByColumn'>Label</span></th>");
-            out.writeln("  <th title='Column Label' class='comment'><span class='notSortedByColumn'>Col.Label</span></th>");
-            out.writeln("  <th title='Help' class='comment'><span class='notSortedByColumn'>Help</span></th>");
-            out.writeln("  <th title='Description' class='comment'><span class='notSortedByColumn'>Description</span></th>");
+            out.writeln("  <th title='Label' ><span class='notSortedByColumn'>Label</span></th>");
+            out.writeln("  <th title='Column Label' ><span class='notSortedByColumn'>Col.Label</span></th>");
+            out.writeln("  <th title='Help' ><span class='notSortedByColumn'>Help</span></th>");
+            out.writeln("  <th title='Description' ><span class='notSortedByColumn'>Description</span></th>");
         }
 
         out.writeln("</tr>");

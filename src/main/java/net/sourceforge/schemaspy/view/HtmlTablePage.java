@@ -116,7 +116,7 @@ public class HtmlTablePage extends HtmlFormatter {
 
         html.writeln(" <label for='showRelatedCols'><input type=checkbox id='showRelatedCols'>Related columns</label>");
         html.writeln(" <label for='showConstNames'><input type=checkbox id='showConstNames'>Constraints</label>");
-        html.writeln(" <label for='showComments'><input type=checkbox " + (showCommentsInitially  ? "checked " : "") + "id='showComments'>Comments</label>");
+//        html.writeln(" <label for='showComments'><input type=checkbox " + (showCommentsInitially  ? "checked " : "") + "id='showComments'>Comments</label>");
         html.writeln(" <label for='showLegend'><input type=checkbox checked id='showLegend'>Legend</label>");
         html.writeln("</form>");
     }
@@ -250,7 +250,8 @@ public class HtmlTablePage extends HtmlFormatter {
      * @throws IOException
      */
     private void writeCommentColumns(String comments, int idxFrom, int idxTo, LineWriter out) throws IOException {
-        out.write(" <td class='comment detail'>");
+//        out.write(" <td class='comment detail'>");
+        out.write(" <td>");
         if (comments != null) {
             if (encodeComments)
                 for (int i = idxFrom; i < idxTo; ++i)
