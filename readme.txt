@@ -9,4 +9,4 @@ mysql.server start
 java -jar bin/schemaSpy.jar -t mysql -dp bin/mysql-connector-java-5.1.23-bin.jar -host localhost -db rbsall -o output/html_rbs_main/ -gv "/usr/local" -u root -X "(common_BRAND.Brand)" -norows -nologo -meta input/schemaspy.meta.xml
 
 OPTIONS:
--gv pathToGraphviz: by default SchemaSpy expects the dot executable to be in the PATH environment variable. Use this option to explicitly specify where Graphviz is installed.
+-gv pathToGraphviz: by default SchemaSpy expects the dot executable to be in the PATH environment variable. Use this option to explicitly specify where Graphviz is installed. http://www.graphviz.org/
