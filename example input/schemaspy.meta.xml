@@ -3,7 +3,7 @@
 	<!--
 	Set relation between two columns
 	ChildTable.ChildCol -> ParentTable.ParentCol
-	
+	-->
 	<table  name="ChildTable">
 	<column name="ChildCol">
 	<foreignKey table="ParentTable"
@@ -11,7 +11,12 @@
 	</foreignKey>
 	</column>
 	</table>
+
+	<!--
+	Set table description
 	-->
+	<table name="TableName" comments="Table description">
+	</table>
 
 </tables>
 </schemaMeta>
