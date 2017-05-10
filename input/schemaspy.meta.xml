@@ -1,0 +1,188 @@
+<schemaMeta>
+<tables>
+
+	<table  name="common_MenuTree">
+	<column name="MenuClass">
+	<foreignKey table="common_MenuClass"
+				column="MenuClass"> </foreignKey></column></table>
+
+	<table  name="common_MenuTree">
+	<column name="MenuNum">
+	<foreignKey table="common_MenuText"
+				column="MenuNum"> </foreignKey></column></table>
+
+
+
+	<table  name="common_DFField">
+	<column name="DumpID">
+	<foreignKey table="common_DumpFile"
+				column="DumpID"> </foreignKey></column></table>
+
+	<table  name="common_DFTimeTable">
+	<column name="DumpID">
+	<foreignKey table="common_DumpFile"
+				column="DumpID"> </foreignKey></column></table>
+
+
+
+	<table  name="common_BillTimeTable">
+	<column name="FRQueueID">
+	<foreignKey table="common_FuncRunQueue"
+				column="FRQueueID"> </foreignKey></column></table>
+
+	<table  name="common_FuncRunQTTParam">
+	<column name="FRQueueID">
+	<foreignKey table="common_FuncRunQueue"
+				column="FRQueueID"> </foreignKey></column></table>
+
+	<table  name="common_FuncRunQRow">
+	<column name="FRQueueID">
+	<foreignKey table="common_FuncRunQueue"
+				column="FRQueueID"> </foreignKey></column></table>
+
+	<table  name="common_FuncRunQSParam">
+	<column name="FRQueueID">
+	<foreignKey table="common_FuncRunQueue"
+				column="FRQueueID"> </foreignKey></column></table>
+
+	<table  name="common_FuncRunExec">
+	<column name="FRQueueID">
+	<foreignKey table="common_FuncRunQueue"
+				column="FRQueueID"> </foreignKey></column></table>
+
+	<table  name="common_FuncRunQSchedule">
+	<column name="FRQueueID">
+	<foreignKey table="common_FuncRunQueue"
+				column="FRQueueID"> </foreignKey></column></table>
+
+	<table  name="common_FuncRunQTimeTable">
+	<column name="FRQueueID">
+	<foreignKey table="common_FuncRunQueue"
+				column="FRQueueID"> </foreignKey></column></table>
+
+
+
+	<table  name="common_FuncRunQTTParam">
+	<column name="FRConfigID">
+	<foreignKey table="common_FuncRunConfig"
+				column="FRConfigID"> </foreignKey></column></table>
+
+	<table  name="common_FuncRunProcess">
+	<column name="FRConfigID">
+	<foreignKey table="common_FuncRunConfig"
+				column="FRConfigID"> </foreignKey></column></table>
+
+	<table  name="common_FuncRunParam">
+	<column name="FRConfigID">
+	<foreignKey table="common_FuncRunConfig"
+				column="FRConfigID"> </foreignKey></column></table>
+
+	<table  name="common_FuncRunQRow">
+	<column name="FRConfigID">
+	<foreignKey table="common_FuncRunConfig"
+				column="FRConfigID"> </foreignKey></column></table>
+
+	<table  name="common_FuncRunExec">
+	<column name="FRConfigID">
+	<foreignKey table="common_FuncRunConfig"
+				column="FRConfigID"> </foreignKey></column></table>
+
+	<table  name="common_FuncRunQSParam">
+	<column name="FRConfigID">
+	<foreignKey table="common_FuncRunConfig"
+				column="FRConfigID"> </foreignKey></column></table>
+
+
+
+	<table  name="common_FuncRunExec">
+	<column name="FRQScheduleID">
+	<foreignKey table="common_FuncRunQSchedule"
+				column="FRQScheduleID"> </foreignKey></column></table>
+
+	<table  name="common_FuncRunQSParam">
+	<column name="FRQScheduleID">
+	<foreignKey table="common_FuncRunQSchedule"
+				column="FRQScheduleID"> </foreignKey></column></table>
+
+
+
+	<table  name="common_MsRequest">
+	<column name="MsSeq">
+	<foreignKey table="rbs_MobSub"
+				column="MsSeq"> </foreignKey></column></table>
+
+	<table  name="rbs_CommissionEvent">
+	<column name="SalesEventId">
+	<foreignKey table="common_SalesEvent"
+				column="SalesEventId"> </foreignKey></column></table>
+
+
+
+	<table  name="common_SalesEvent">
+	<column name="KeyValue">
+	<foreignKey table="rbs_MobSub"
+				column="MsSeq"> </foreignKey></column></table>
+
+	<table  name="common_SalesEvent">
+	<column name="KeyValue">
+	<foreignKey table="common_MsRequest"
+				column="MsRequest"> </foreignKey></column></table>
+
+	<table  name="common_SalesEvent">
+	<column name="KeyValue">
+	<foreignKey table="rbs_DCCli"
+				column="PerContractId"> </foreignKey></column></table>
+
+	<table  name="common_SalesEvent">
+	<column name="KeyValue">
+	<foreignKey table="rbs_CustPerContract"
+				column="PerContractId"> </foreignKey></column></table>
+
+	<table  name="common_SalesEvent">
+	<column name="KeyValue">
+	<foreignKey table="rbs_SubsTerminal"
+				column="PerContractId"> </foreignKey></column></table>
+
+	<table  name="rbs_SubventionRate">
+	<column name="SubvRuleID">
+	<foreignKey table="rbs_SubventionRule"
+				column="SubvRuleID"> </foreignKey></column></table>
+
+	<table  name="common_SubventionEvent">
+	<column name="SubvRuleID">
+	<foreignKey table="rbs_SubventionRule"
+				column="SubvRuleID"> </foreignKey></column></table>
+
+	<table  name="common_SubventionEvent">
+	<column name="SubvRateID">
+	<foreignKey table="rbs_SubventionRate"
+				column="SubvRateID"> </foreignKey></column></table>
+
+	<table  name="common_FuncRunQTTParam">
+	<column name="FRQTimetableID">
+	<foreignKey table="common_FuncRunQTimetable"
+				column="FRQTimetableID"> </foreignKey></column></table>
+
+	<table  name="common_FuncRunQSchedule">
+	<column name="FRQTimetableID">
+	<foreignKey table="common_FuncRunQTTParam"
+				column="FRQTimetableID"> </foreignKey></column></table>
+
+
+	<table  name="common_FuncRunExec">
+	<column name="FRQRowSeq">
+	<foreignKey table="common_FuncRunQRow"
+				column="FRQRowSeq"> </foreignKey></column></table>
+
+	<table  name="common_FuncRunQSParam">
+	<column name="FRQRowSeq">
+	<foreignKey table="common_FuncRunQRow"
+				column="FRQRowSeq"> </foreignKey></column></table>
+
+	<table  name="common_FuncRunResult">
+	<column name="FRProcessID">
+	<foreignKey table="common_FuncRunProcess"
+				column="FRProcessID"> </foreignKey></column></table>
+
+</tables>
+</schemaMeta>
