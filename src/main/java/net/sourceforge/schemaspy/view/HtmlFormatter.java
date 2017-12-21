@@ -77,7 +77,7 @@ public class HtmlFormatter {
         out.write("  <td class='heading' valign='middle'>");
         out.write("<span class='header'>");
         if (table == null)
-            out.write("Analysis of OpenEdge RBS database");
+            out.write("OpenEdge RBS database");
         out.write(getDescription(db, table, text, true));
         out.write("</span>");
         if (table == null && db.getDescription() != null)
@@ -128,7 +128,7 @@ public class HtmlFormatter {
         if (config.hasOrphans())
             html.writeln("  <li" + (isOrphansPage() ? " id='current'" : "") + "><a href='" + path + "utilities.html' title='View of tables with neither parents nor children'>Utility&nbsp;Tables</a></li>");
 //        html.writeln("  <li" + (isConstraintsPage() ? " id='current'" : "") + "><a href='" + path + "constraints.html' title='Useful for diagnosing error messages that just give constraint name or number'>Constraints</a></li>");
-        html.writeln("  <li" + (isAnomaliesPage() ? " id='current'" : "") + "><a href='" + path + "anomalies.html' title=\"Things that might not be quite right\">Anomalies</a></li>");
+//        html.writeln("  <li" + (isAnomaliesPage() ? " id='current'" : "") + "><a href='" + path + "anomalies.html' title=\"Things that might not be quite right\">Anomalies</a></li>");
         html.writeln("  <li" + (isColumnsPage() ? " id='current'" : "") + "><a href='" + path + HtmlColumnsPage.getInstance().getColumnInfos().get("column") + "' title=\"All of the columns in the schema\">Columns</a></li>");
         if (config.hasRoutines())
             html.writeln("  <li" + (isRoutinesPage() ? " id='current'" : "") + "><a href='" + path + "routines.html' title='Stored Procedures / Functions'>Routines</a></li>");

@@ -299,7 +299,7 @@ public class HtmlMainIndexPage extends HtmlFormatter {
             }
         }
 
-        html.write("  <td>");
+        html.write("  <td class='detail' align='left'>");
         String comments = table.getComments();
         if (comments != null) {
             if (encodeComments)
@@ -314,6 +314,7 @@ public class HtmlMainIndexPage extends HtmlFormatter {
 
     protected void writeLocalsFooter(int numTables, int numTableCols, int numViews, int numViewCols, long numRows, LineWriter html) throws IOException {
         html.writeln("  <tr>");
+        html.writeln("    <td class='detail'>&nbsp;</td>");
         html.writeln("    <td class='detail'>&nbsp;</td>");
         html.writeln("    <td class='detail'>&nbsp;</td>");
         html.writeln("    <td class='detail'>&nbsp;</td>");
