@@ -251,7 +251,7 @@ public class HtmlTablePage extends HtmlFormatter {
      */
     private void writeCommentColumns(String comments, int idxFrom, int idxTo, LineWriter out) throws IOException {
 //        out.write(" <td class='comment detail'>");
-        out.write(" <td>");
+        out.write(" <td  class='detail' align='left'>");
         if (comments != null) {
             if (encodeComments)
                 for (int i = idxFrom; i < idxTo; ++i)
